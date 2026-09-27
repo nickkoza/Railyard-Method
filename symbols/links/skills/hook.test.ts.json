@@ -1,0 +1,259 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "skills/hook.test.ts",
+  "entries": [
+    {
+      "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.answers a command that changed 3,000 files with what it names bounded, and a count of the rest",
+      "witness": "333a90dd56458260",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.does not name again, after a command, a file a file tool wrote and the scan already answered",
+      "witness": "20f0a04e81c3c6a3",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.names a link a command's write made suspect, and not again after the next command",
+      "witness": "0ac93529abb7bec4",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.names a linked file a command deleted",
+      "witness": "7189672f254cc6ad",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.names, after a command rewrote a spec, the code linked to the text it changed",
+      "witness": "12b840cc628fe027",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.names, in one line, the files a command made that have no links at all",
+      "witness": "f68f1854f088bab3",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.says nothing after a command outside a git repository, where which files are the repository's is not known",
+      "witness": "d22bf52d283a40d2",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.says nothing after a command that wrote nothing",
+      "witness": "14f6a7c4d2dbdef4",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.answers --help with how to use each command, and a file that is not there in words",
+      "witness": "cad72b47d7b3beac",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.is the project's, installed into its settings, and never the skill's own frontmatter",
+      "witness": "d70975fd79b305ab",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.links from the command line, and then says nothing about a file whose links are all current",
+      "witness": "ea8b9d05af84311d",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "HPg",
+          "kind": "asserted",
+          "artifact": "9103ade2df51011f",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.names a link the edit made suspect, and what to do about it",
+      "witness": "b436731630c9c295",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.names a test by its title, and says how to link one whose title has spaces",
+      "witness": "1a43f05129165c53",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.names, after an artifact's text changes, the code linked to it and the command that confirms it",
+      "witness": "115e752fe1d62973",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.never refuses: input it cannot read is said, and it still exits 0",
+      "witness": "044e5c8867a2d28c",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.says how to link a title with double quotes and an apostrophe, and the exact command run through a real shell links it ([5jT])",
+      "witness": "003f4f3fbd83c0a3",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.stays silent about its own records, and files outside the project",
+      "witness": "ba0162f85dbb6603",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[HPg]: the skill's scan, as its hook runs it.tells the agent a file it just wrote is untracked, naming its things and the command to link them",
+      "witness": "266f44c0a2c86177",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "HPg",
+          "kind": "asserted",
+          "artifact": "9103ade2df51011f",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "witness": "fa36d7cf0509b380",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

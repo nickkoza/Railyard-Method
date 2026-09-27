@@ -1,0 +1,19 @@
+# Copyright 2026 Nicholas Koza
+# SPDX-License-Identifier: MIT
+
+[package]
+name = "railyard-index"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "The derived index a symbols directory is queried through: built to be seeked, never authoritative"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+panic = "abort"

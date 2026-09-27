@@ -1,0 +1,211 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "skills/tools.test.ts",
+  "entries": [
+    {
+      "name": "[18E]: the skill carries its tools.carries a repository's Tests rows from numbers to IDs, from the copy alone ([R6P])",
+      "witness": "290a0d210b93a057",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.carries what its source builds, byte for byte",
+      "witness": "e409899c20ae7b08",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.checks the repository, and traces in it",
+      "witness": "c512347abc824cb3",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.installs itself into a project from wherever it is, and says so",
+      "witness": "f0060d7f61d5c3a8",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.numbers a repository's decisions with IDs, from the copy alone ([RVv])",
+      "witness": "5ec4ffd91453f333",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.prints usage and exits 0 for --help and -h, at the top level, rather than the no-command error",
+      "witness": "da96822d32d2a405",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.records the method in a repository it has not worked in",
+      "witness": "be8ad4e441959417",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.says how to use it when given no command or an unknown one",
+      "witness": "a9757544b7b94781",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.stops quietly when its reader closes early, as `links <file> | head` does",
+      "witness": "f347f666042da3cf",
+      "links": [
+        {
+          "id": "irC",
+          "kind": "asserted",
+          "artifact": "4cb61b13beb0750f",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.takes and resolves identifiers from the copy alone",
+      "witness": "427462fe0a481306",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.tells a linter to leave the bundle alone, in its first lines ([4Ec])",
+      "witness": "7ee3ca1d5cbdc29c",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[18E]: the skill carries its tools.upgrades the repository it is run in",
+      "witness": "72e5e62880baa270",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

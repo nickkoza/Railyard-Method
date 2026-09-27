@@ -1,0 +1,151 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/artifacts.ts",
+  "entries": [
+    {
+      "name": "checkArtifacts",
+      "witness": "d9594fe2c5812636",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "checkArtifacts.notNumbered",
+      "witness": "a6c6f057e59afe28",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "checkRepository",
+      "witness": "f8a019f1346289fc",
+      "links": [
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "witness": "2d1256013653c1bd",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Finding",
+      "witness": "04ca68fb351ed8bd",
+      "links": [
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "modelProse",
+      "witness": "d276564d86101801",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "prose",
+      "witness": "161ddf08202ef872",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "readable",
+      "witness": "f6e0e05eda72d643",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "testsTable",
+      "witness": "b56b477fe340871c",
+      "links": [
+        {
+          "id": "98I",
+          "kind": "asserted",
+          "artifact": "b8db9d89b1207b29",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

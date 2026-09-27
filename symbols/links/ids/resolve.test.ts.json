@@ -1,0 +1,109 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/resolve.test.ts",
+  "entries": [
+    {
+      "name": "ids:resolve.keeps a criterion's ID pointing at it after a renumber",
+      "witness": "cc39abe4856f6496",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "vKz",
+          "kind": "asserted",
+          "artifact": "b9194da04b4eb571",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:resolve.names a decision in a spec's own Decisions as that spec's decision, not a criterion",
+      "witness": "0f27732942d99461",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:resolve.names a waymark",
+      "witness": "c43e10735e607f89",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:resolve.names each numbered decision inside a waymark, with its opening words",
+      "witness": "1af30ff60d7fe631",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:resolve.names the criterion a criterion ID belongs to, with its opening words",
+      "witness": "e8b31724763562d6",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:resolve.names the spec an artifact ID belongs to",
+      "witness": "4a4484fabc674af6",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:resolve.prints an ID with what it is and its file, and never a form the check would report",
+      "witness": "13e622a525be9e8a",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:resolve.says plainly when an ID names nothing",
+      "witness": "b0ff7cd96ef2274d",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

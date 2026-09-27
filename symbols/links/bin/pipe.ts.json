@@ -1,0 +1,19 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "bin/pipe.ts",
+  "entries": [
+    {
+      "name": "quietWhenTheReaderGoes",
+      "witness": "b77a59c3a622cac5",
+      "links": [
+        {
+          "id": "irC",
+          "kind": "asserted",
+          "artifact": "4cb61b13beb0750f",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

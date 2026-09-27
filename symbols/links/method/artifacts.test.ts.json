@@ -1,0 +1,319 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/artifacts.test.ts",
+  "entries": [
+    {
+      "name": "[f4v]: every check, over a repository.brings the architecture checks and these together, and this repository passes them all",
+      "witness": "d14c1e591b0e0738",
+      "links": [
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[v0F]: a citation of another repository resolves where it says it does.names each line a citation is written on, when it is written on more than one",
+      "witness": "a0f1b1a25217cd5c",
+      "links": [
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[v0F]: a citation of another repository resolves where it says it does.reports a citation of a repository it cannot reach as a notice naming what was not checked, never as a finding",
+      "witness": "7b6b64fa14216808",
+      "links": [
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[v0F]: a citation of another repository resolves where it says it does.reports a gone ID and an undeclared repository as findings, and a changed citation as a notice",
+      "witness": "0bccfac4f1d50b82",
+      "links": [
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[8g5], [BNb], [pY5]: a decision in a spec's own Decisions.carries its own ID, which a citation resolves, and one with none is reported",
+      "witness": "2f5ce0687aa48132",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[8g5], [BNb], [pY5]: a decision in a spec's own Decisions.reports a decision written as a bullet or a bold paragraph, in a spec and in a waymark, and leaves prose and what a numbered one holds alone",
+      "witness": "1cfbbed3aec06324",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[8g5]: every artifact and numbered item carries a stable ID.reports a criterion, a waymark decision and a principle with none",
+      "witness": "23f39dcb3fb88057",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[8g5]: every artifact and numbered item carries a stable ID.reports an artifact with none, and one with a malformed one, apart",
+      "witness": "ddb0bbc02c3c95d1",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[8g5]: every artifact and numbered item carries a stable ID.reports two things carrying the same ID",
+      "witness": "67dd856c199ab309",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[98I]: a Tests row's status is one of the method's words.reports a status in other words, naming the words, and reads what follows a word as a note",
+      "witness": "b7cd75cd399f3fad",
+      "links": [
+        {
+          "id": "98I",
+          "kind": "asserted",
+          "artifact": "b8db9d89b1207b29",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[98I]: a Tests row's status is one of the method's words.takes every one of the words, with or without a note",
+      "witness": "77e7d8d769a1dace",
+      "links": [
+        {
+          "id": "98I",
+          "kind": "asserted",
+          "artifact": "b8db9d89b1207b29",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[BNb]: a cited ID names something that exists.leaves a string, a code span, a dated document and a cross-repository citation alone",
+      "witness": "08d047710a6ff8f5",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[BNb]: a cited ID names something that exists.reports a cited ID nothing carries, in prose and in a code comment",
+      "witness": "7cb93d7a980f1eb3",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.leaves a dead form, a quoted form, and a form in a string alone",
+      "witness": "18ee15285a877c8b",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.reads an architecture model's descriptions, where a model's prose lives",
+      "witness": "1ed076db732159e5",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.reports a spec and a criterion named without backticks, with or without the word spec",
+      "witness": "6860efadea3ae5a1",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.reports a spec naming its own criterion by number, outside its Tests table",
+      "witness": "daeab1296a31913e",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.reports a spec naming itself and its criterion once, not twice",
+      "witness": "c588b472d40668e6",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.reports a waymark's decision cited by its number, however the waymark is named",
+      "witness": "9512c09dfd6e86fe",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.reports an old form in a code comment",
+      "witness": "89ad23b69749dcff",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.reports each old form where what it names exists, with the ID to write",
+      "witness": "7b70df3f68ef5d9a",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[Xtd]: a spec's Tests table accounts for every criterion, by its ID.leaves a count, a tier, a date, a quoted form and another spec's criterion in a row alone",
+      "witness": "90c34a2b2ad8bd95",
+      "links": [
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[Xtd]: a spec's Tests table accounts for every criterion, by its ID.reports a criterion cited by number anywhere in a row, with the ID it names today",
+      "witness": "a4282ec8870b364a",
+      "links": [
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.[Xtd]: a spec's Tests table accounts for every criterion, by its ID.reports every number of a row by number, those after a note among them, and leaves none unnamed",
+      "witness": "14a31762d43cea52",
+      "links": [
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the artifact checks, over repositories built to break each rule.finds nothing in a repository that meets every rule",
+      "witness": "27d8c23e0e62e761",
+      "links": [
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

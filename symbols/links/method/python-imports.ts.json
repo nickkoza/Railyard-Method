@@ -1,0 +1,307 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/python-imports.ts",
+  "entries": [
+    {
+      "name": "argumentsAt",
+      "witness": "f50508b31fb241b4",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "asPath",
+      "witness": "1539792f4951709d",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Ast",
+      "witness": "4638a8b613592c5b",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Context",
+      "witness": "2c13fe14ad1c7892",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "evaluate",
+      "witness": "18d4afcc9591f6c3",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "evaluate.ev",
+      "witness": "8771cf908e9389c4",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "join",
+      "witness": "536f2f8da585cef8",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "moduleFile",
+      "witness": "32ae1aed4dd2e795",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "parseExpression",
+      "witness": "1aa0445cd2793799",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "parseExpression.atom",
+      "witness": "cdc870a655dffd72",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "parseExpression.expr",
+      "witness": "1f5fdc945fa075a0",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "parseExpression.space",
+      "witness": "a212e436119148ff",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "parseExpression.term",
+      "witness": "f5042761cd9f7d44",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "pythonImports",
+      "witness": "fe6c98ca871dfb0f",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "PythonImports",
+      "witness": "95662df9e9ba3c2c",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "pythonImports.absolute",
+      "witness": "81b54eaa27887a4c",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "pythonImports.absolute.hit",
+      "witness": "999ac61ceb4e72d1",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "pythonImports.dots",
+      "witness": "add7d562cd977382",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "pythonImports.isPackage",
+      "witness": "8ddee99fe38be367",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "pythonImports.names",
+      "witness": "e760a36b68bedbe5",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "statementsOf",
+      "witness": "1d7b1234fdccb900",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "statementsOf.push",
+      "witness": "e2c1ded77e50bf7b",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "up",
+      "witness": "4ab67022b906e1d1",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Value",
+      "witness": "df7f7f222f868569",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "within",
+      "witness": "36361a1b7efe8641",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

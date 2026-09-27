@@ -1,0 +1,199 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/decisions-by-id.test.ts",
+  "entries": [
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv])",
+      "witness": "436b20ba677d2171",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).carries a waymark's decisions as a spec's",
+      "witness": "8bf066e30ae62800",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).from the command: a dry run says what it would change and writes nothing; a run writes and exits non-zero naming what it left",
+      "witness": "6940557041aeb632",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).indents by the width of the number once there are ten",
+      "witness": "b4e002ba2f3c3ab8",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).indents what follows a decision inside it, a table and a view among it, so a view is still read",
+      "witness": "9a5ae52582174631",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).leaves a section whose decisions all carry IDs exactly as it is, its numbering among it",
+      "witness": "cc4f84912b09b798",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).names every place in a section it cannot be sure of, not only the first",
+      "witness": "118911a24a1c2853",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).numbers a bullet, a bold paragraph and a numbered decision with no ID, keeping an ID already carried",
+      "witness": "1a93eb2324d93ff2",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).refuses a section it cannot be sure of, names it, and changes nothing in it",
+      "witness": "537a8d4a0414abad",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).refuses to write outside a git repository, since no ID can be taken there, and changes nothing",
+      "witness": "be02fa2258219c9b",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).says how many links name an artifact it would rewrite",
+      "witness": "2935698336a5f65b",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).takes an intro list's items as the decisions, since nothing above them is one",
+      "witness": "632e306841a8f277",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying decisions to numbered decisions with IDs ([RVv]).writes with IDs taken by the minting rule, none the repository mentions, and changes nothing the second time",
+      "witness": "6aeb0f2a26f60ce6",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "repository",
+      "witness": "ed806d384708cf22",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "repository.done",
+      "witness": "b37c3d3ea959c74a",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "spec",
+      "witness": "476027b1fe34ca69",
+      "links": [
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

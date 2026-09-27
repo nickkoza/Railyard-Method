@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/railyard-symbols/0.3.3/symbols.schema.json",
+  "title": "railyard-symbols 0.3.3",
+  "description": "A symbols file: source positions, and for each its links back to the artifacts that caused it. One index document describes a directory; one version document describes what changed at one version. A reader ignores any field it does not know, and refuses a formatVersion it does not know: while the major version is 0, its minor version is the compatibility unit. MIT-licensed.",
+  "oneOf": [{ "$ref": "#/$defs/index" }, { "$ref": "#/$defs/version" }],
+  "$defs": {
+    "index": {
+      "title": "The symbols directory's index (index.json)",
+      "type": "object",
+      "required": ["format", "formatVersion", "root", "files", "artifacts", "commits", "links", "versions"],
+      "properties": {
+        "format": { "const": "railyard-symbols" },
+        "formatVersion": { "$ref": "#/$defs/semver" },
+        "root": {
+          "description": "The path from this directory to the root of the tree the file paths are relative to: POSIX, relative, and \"..\" for a directory sitting in that root. It is how a symbols directory names the tree it describes, needing no git, no remote URL and no configuration. A reader given no root of its own resolves positions against this one.",
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[^/\\\\][^\\\\]*$"
+        },
+        "files": {
+          "description": "Every path any version names, relative to the root of the tree the positions are in. Referred to by its place in this list.",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "artifacts": {
+          "description": "Every artifact any version links to. Referred to by its place in this list.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/artifact" }
+        },
+        "commits": {
+          "description": "Every commit any version names: a version's own, an artifact's version, or the commit a link was made in. Referred to by its place in this list.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/commit" }
+        },
+        "links": {
+          "description": "Every distinct link any version carries, written once for the directory. A position names its links by their place in this list, so a link true of many positions is not repeated at each of them.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/link" }
+        },
+        "versions": {
+          "description": "The versions this directory holds, each a delta against the one it names as its base, oldest first.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/versionEntry" }
+        }
+      }
+    },
+    "version": {
+      "title": "One version's symbols (versions/<commit>.json)",
+      "type": "object",
+      "required": ["format", "formatVersion", "commit", "base", "generated", "files", "removed"],
+      "properties": {
+        "format": { "const": "railyard-symbols-version" },
+        "formatVersion": { "$ref": "#/$defs/semver" },
+        "commit": {
+          "description": "The commit this version describes, in full, so that the file stands alone. It must be the commit the index names for it.",
+          "$ref": "#/$defs/sha"
+        },
+        "base": {
+          "description": "The commit of the version this one is a delta against; null for the first version.",
+          "oneOf": [{ "$ref": "#/$defs/sha" }, { "type": "null" }]
+        },
+        "generated": { "description": "When this file was written.", "type": "string", "format": "date-time" },
+        "files": {
+          "description": "The positions of each file that changed since the base, each file restated whole. The key is the file's place in the index's files list, in decimal.",
+          "type": "object",
+          "propertyNames": { "pattern": "^(0|[1-9][0-9]*)$" },
+          "additionalProperties": { "type": "array", "items": { "$ref": "#/$defs/position" } }
+        },
+        "removed": {
+          "description": "The files whose positions are gone at this version, by their place in the index's files list.",
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "versionEntry": {
+      "type": "object",
+      "required": ["commit", "base", "file", "builds"],
+      "properties": {
+        "commit": { "description": "The version's commit, by its place in the index's commits list.", "type": "integer", "minimum": 0 },
+        "base": {
+          "description": "The version this one is a delta against, by its place in the versions list; it is always an earlier entry. Null for the first version.",
+          "oneOf": [{ "type": "integer", "minimum": 0 }, { "type": "null" }]
+        },
+        "file": { "description": "The version's own file, relative to the directory holding index.json.", "type": "string", "minLength": 1 },
+        "builds": {
+          "description": "The build hashes this version answers for: the value dev.railyard.build-hash carries in each build made from this version. A version may answer for several, since one commit can be built more than one way. No two versions may name the same hash.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/buildHash" }
+        }
+      }
+    },
+    "position": {
+      "description": "A range of a file, and its links back. The start is inclusive and the end exclusive, read as a pair (line, column): a whole line L of n characters is [L, 1] to [L, n + 1]. A range whose start equals its end covers exactly that one position, which is how an empty line is covered. Lines and columns are 1-based.",
+      "type": "object",
+      "required": ["at", "links"],
+      "properties": {
+        "at": {
+          "description": "[start line, start column, end line, end column].",
+          "type": "array",
+          "prefixItems": [
+            { "type": "integer", "minimum": 1 },
+            { "type": "integer", "minimum": 1 },
+            { "type": "integer", "minimum": 1 },
+            { "type": "integer", "minimum": 1 }
+          ],
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "names": {
+          "description": "What this position NAMES: the function, class, method or binding its first line falls inside. A position held by a file and a line is destroyed by an edit anywhere above it; one that names the thing it is in survives an edit above it, a reformat and a move within the file, which is what an anchor is for. Absent where nothing names the position \u2014 a comment, an import, a top-level constant \u2014 and absent is honest: a wrong name is worse than none, because a reader believes it. Producers are not required to emit it, and a consumer that has it should prefer it to the line numbers.",
+          "type": "string",
+          "minLength": 1
+        },
+        "links": {
+          "description": "This position's links, by their place in the index's links list.",
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "link": {
+      "description": "One artifact this position traces to, and how that is known.",
+      "type": "object",
+      "required": ["artifact", "evidence", "source", "state", "linked", "current", "madeBy"],
+      "properties": {
+        "artifact": { "description": "The artifact, by its place in the index's artifacts list.", "type": "integer", "minimum": 0 },
+        "evidence": {
+          "description": "How the link is known. recorded: recorded when the code was made. cited: cited in the code, a commit message or another document. tested: shown by a criterion's tests running this position. confirmed: proposed, and confirmed by a person. A cited or inferred link is never shown as verified.",
+          "enum": ["recorded", "cited", "tested", "confirmed"]
+        },
+        "source": { "description": "The concrete source the link was read from. A producer may use a name of its own; readers show it as written.", "type": "string", "minLength": 1 },
+        "state": {
+          "description": "current: the artifact has not changed since the link was made. suspect: it has, or it did not exist then, so the link waits to be confirmed again. missing: the artifact is not there at the version's commit.",
+          "enum": ["current", "suspect", "missing"]
+        },
+        "linked": {
+          "description": "The artifact's own version when the link was made, by its place in the index's commits list; null when the artifact did not exist then.",
+          "oneOf": [{ "type": "integer", "minimum": 0 }, { "type": "null" }]
+        },
+        "current": {
+          "description": "The artifact's own version at this version's commit, by its place in the index's commits list; null when it is missing.",
+          "oneOf": [{ "type": "integer", "minimum": 0 }, { "type": "null" }]
+        },
+        "linkedContent": {
+          "description": "A hash of the artifact's own content at `linked` \u2014 the criterion's text, not the file's. The WITNESS, where the id and the commit are the address: comparing it against `currentContent` says whether the artifact moved under this link, with no repository, network or walk through history, which is what makes the question askable of a deployed build and askable of every link at once. Absent on a link written before this was carried; absent means 'cannot compare', never 'unchanged'.",
+          "type": "string",
+          "minLength": 1
+        },
+        "currentContent": {
+          "description": "A hash of the artifact's own content at `current`, on the same terms as `linkedContent`.",
+          "type": "string",
+          "minLength": 1
+        },
+        "madeBy": { "$ref": "#/$defs/madeBy" }
+      }
+    },
+    "madeBy": {
+      "description": "Where the link was made: a commit, and the file and line it is written in when it is written in one.",
+      "type": "object",
+      "required": ["commit", "path", "line"],
+      "properties": {
+        "commit": { "description": "By its place in the index's commits list.", "type": "integer", "minimum": 0 },
+        "path": {
+          "description": "By its place in the index's files list; null when the link is not written in a file.",
+          "oneOf": [{ "type": "integer", "minimum": 0 }, { "type": "null" }]
+        },
+        "line": { "oneOf": [{ "type": "integer", "minimum": 1 }, { "type": "null" }] }
+      }
+    },
+    "artifact": {
+      "description": "An artifact a position traces to: a specification, one of its criteria, a decision record, an architecture model's node, or anything else a producer's adapter names. Nothing here belongs to a language, a framework or a build tool.",
+      "type": "object",
+      "required": ["kind", "path", "anchor", "label"],
+      "properties": {
+        "kind": { "description": "The artifact's kind, as the producer's adapter names it.", "type": "string", "minLength": 1 },
+        "path": { "description": "The artifact's document, relative to the root of the tree.", "type": "string", "minLength": 1 },
+        "anchor": {
+          "description": "The part of that document the artifact is, such as one criterion or one node; null for the whole document.",
+          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }]
+        },
+        "label": { "description": "How people READ it. Display only: a reader that stores this as the reference has stored a name that moves.", "type": "string", "minLength": 1 },
+        "id": { "description": "The artifact's stable ID, where it declares one: characters set when the artifact is created and never changed. THIS is the reference. `path`, `anchor` and `label` all move when a document is renamed or a part of it renumbered, and this does not, so a link held by it survives what a link held by position does not. Absent where the artifact declares no stable ID.", "type": "string", "minLength": 1 }
+      }
+    },
+    "commit": {
+      "description": "A commit, with its committer date and time for people to read. The pair of a stable id and a commit is how an artifact version is referred to.",
+      "type": "object",
+      "required": ["sha", "date"],
+      "properties": {
+        "sha": { "$ref": "#/$defs/sha" },
+        "date": { "oneOf": [{ "type": "string", "format": "date-time" }, { "type": "null" }] }
+      }
+    },
+    "sha": { "type": "string", "pattern": "^[0-9a-f]{40}([0-9a-f]{24})?$" },
+    "buildHash": {
+      "description": "A build's hash: the value dev.railyard.build-hash carries. A SHA-256 over the build's own content, as 64 lowercase hex characters.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "semver": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?$" }
+  }
+}

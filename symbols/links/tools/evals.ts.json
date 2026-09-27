@@ -1,0 +1,97 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "tools/evals.ts",
+  "entries": [
+    {
+      "name": "allowedTools",
+      "witness": "273ce454006d999e",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "zSJ",
+          "kind": "asserted",
+          "artifact": "2114c74d711bbd4a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "evalArgs",
+      "witness": "e3d1fa3b0507b38f",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "zSJ",
+          "kind": "asserted",
+          "artifact": "2114c74d711bbd4a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "flagsFor",
+      "witness": "68a483f92781cdf6",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "zSJ",
+          "kind": "asserted",
+          "artifact": "2114c74d711bbd4a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "isTheProgram",
+      "witness": "07eaa59cec1e227e",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "zSJ",
+          "kind": "asserted",
+          "artifact": "2114c74d711bbd4a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "scaffolds",
+      "witness": "44d05c12af9c20d9",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "zSJ",
+          "kind": "asserted",
+          "artifact": "2114c74d711bbd4a",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

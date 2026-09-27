@@ -1,0 +1,19 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "index/src/bin/bench.rs",
+  "entries": [
+    {
+      "name": "main",
+      "witness": "e34df470e5fd85b9",
+      "links": [
+        {
+          "id": "8rB",
+          "kind": "asserted",
+          "artifact": "5fe43677906fcc3f",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/lookup.test.ts",
+  "entries": [
+    {
+      "name": "railyard-trace backward, from a position in what was built.maps the built position to its source through the map, and from there to the artifacts",
+      "witness": "ee89ced183fc6fb1",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, from a position in what was built.says a source that lies outside the root, and a built file that is not there",
+      "witness": "6da1ba948b8b93e0",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, from a position in what was built.says where the map itself gives no source position for the built position",
+      "witness": "ce4eaf280cebd433",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, from a position in what was built.traces code with no source map at its own position",
+      "witness": "73b06e094cfdad24",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, from a symbols file.answers at a column, and says untraced where the position traces to nothing",
+      "witness": "47be702570acb7a1",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, from a symbols file.answers the build it is given, and never a link from another version",
+      "witness": "dbecce6000bf6e6e",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, from a symbols file.answers the newest version when no build is given",
+      "witness": "c00294b34b891f3e",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, from a symbols file.answers the position from the symbols file, says so, and names the version it read",
+      "witness": "c7e58d6286e37f53",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "qHR",
+          "kind": "asserted",
+          "artifact": "66db9aee7ebab2a6",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, from a symbols file.refuses a build the directory does not carry, naming it, and a symbols directory that is not there",
+      "witness": "0a70e53a05390340",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, where the repository is gone.answers from the symbols file alone, with no repository to read",
+      "witness": "31cbabaaaa399e12",
+      "links": [
+        {
+          "id": "qHR",
+          "kind": "asserted",
+          "artifact": "66db9aee7ebab2a6",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace backward, with no root given.resolves a mapped source against the root the symbols directory records",
+      "witness": "1958e1a6c33cc525",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

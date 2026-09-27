@@ -1,0 +1,85 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/upgrade.ts",
+  "entries": [
+    {
+      "name": "filesOf",
+      "witness": "80925994ab9d6e80",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "naming",
+      "witness": "d414457347826cdd",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "newer",
+      "witness": "71efb5dcc40e5d5b",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "upgrade",
+      "witness": "88226af00512cd00",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Upgrade",
+      "witness": "1bae7af6336c820f",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

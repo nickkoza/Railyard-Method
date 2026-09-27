@@ -1,0 +1,687 @@
+{
+  "$schema": "https://calm.finos.org/release/1.0/meta/calm.json",
+  "nodes": [
+    {
+      "unique-id": "trace-cli",
+      "node-type": "service",
+      "name": "The command",
+      "description": "railyard-trace: backward, forward, index and stamp, and how each answer is printed.",
+      "source-path": "traceability/cli.ts"
+    },
+    {
+      "unique-id": "trace-library",
+      "node-type": "service",
+      "name": "The library surface",
+      "description": "What the package exports for another tool to call. Nothing else in traceability is public.",
+      "source-path": "traceability/index.ts"
+    },
+    {
+      "unique-id": "query",
+      "node-type": "service",
+      "name": "Queries",
+      "description": "Backward from a position to the artifacts that caused it, forward from an artifact to every position that traces to it, and the whole-tree trace an index is written from.",
+      "source-path": "traceability/query.ts"
+    },
+    {
+      "unique-id": "indexing",
+      "node-type": "service",
+      "name": "Indexing",
+      "description": "Writes one commit's links into a symbols directory, as a new version against the one before it.",
+      "source-path": "traceability/indexing.ts"
+    },
+    {
+      "unique-id": "symbols-format",
+      "node-type": "data-asset",
+      "name": "The symbols format",
+      "description": "The symbols directory's record: the shared index, one file per version, and the anchors that name what a position is. Read and written only here.",
+      "source-path": [
+        "traceability/symbols.ts",
+        "traceability/anchor.ts"
+      ]
+    },
+    {
+      "unique-id": "lookup",
+      "node-type": "service",
+      "name": "Lookup",
+      "description": "Answers from a symbols directory alone, with no repository and no git: a built file's position, taken back through its source map.",
+      "source-path": "traceability/lookup.ts"
+    },
+    {
+      "unique-id": "build-hash",
+      "node-type": "service",
+      "name": "Build hash",
+      "description": "The hash a build carries so its symbols can be found, and the stamp that writes it into a page, a script or a source map.",
+      "source-path": "traceability/build-hash.ts"
+    },
+    {
+      "unique-id": "source-map",
+      "node-type": "service",
+      "name": "Source maps",
+      "description": "Reads the source maps a build already makes, from a position in what was built back to a position in its source.",
+      "source-path": "traceability/source-map.ts"
+    },
+    {
+      "unique-id": "adapters",
+      "node-type": "service",
+      "name": "Adapters",
+      "description": "What a repository's artifacts are and how they are cited: its specs, criteria, waymarks and tests tables, and its CALM models and their source paths.",
+      "source-path": [
+        "traceability/railyard-adapter.ts",
+        "traceability/calm-adapter.ts"
+      ]
+    },
+    {
+      "unique-id": "scope",
+      "node-type": "service",
+      "name": "Scope",
+      "description": "Which comments apply to a line, and which text of a line is comment and can cite. One textual rule for every language.",
+      "source-path": "traceability/scope.ts"
+    },
+    {
+      "unique-id": "git-reader",
+      "node-type": "service",
+      "name": "Git reader",
+      "description": "The only code that runs a process: git, read-only, hardened, with an environment of its own.",
+      "source-path": "traceability/git.ts"
+    },
+    {
+      "unique-id": "render",
+      "node-type": "service",
+      "name": "Rendering",
+      "description": "Turns an answer into the text a person reads.",
+      "source-path": "traceability/render.ts"
+    },
+    {
+      "unique-id": "trace-model",
+      "node-type": "data-asset",
+      "name": "Shared types",
+      "description": "The types every part shares: artifacts, links and how each is known, positions, versions and refusals.",
+      "source-path": "traceability/model.ts"
+    }
+  ],
+  "relationships": [
+    {
+      "unique-id": "trace-cli-to-build-hash",
+      "description": "The command stamps a build with its hash.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-cli"
+          },
+          "destination": {
+            "node": "build-hash"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-cli-to-git-reader",
+      "description": "The command names the commit it read.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-cli"
+          },
+          "destination": {
+            "node": "git-reader"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-cli-to-indexing",
+      "description": "The command writes a commit's symbols.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-cli"
+          },
+          "destination": {
+            "node": "indexing"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-cli-to-lookup",
+      "description": "The command answers from a symbols directory when given one.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-cli"
+          },
+          "destination": {
+            "node": "lookup"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-cli-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-cli"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-cli-to-query",
+      "description": "The command runs a backward or forward query.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-cli"
+          },
+          "destination": {
+            "node": "query"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-cli-to-render",
+      "description": "The command prints each answer.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-cli"
+          },
+          "destination": {
+            "node": "render"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-build-hash",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "build-hash"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-adapters",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "adapters"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-indexing",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "indexing"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-lookup",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "lookup"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-query",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "query"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-render",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "render"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-scope",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "scope"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-source-map",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "source-map"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "trace-library-to-symbols-format",
+      "description": "Re-exports it, as part of the public surface.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "trace-library"
+          },
+          "destination": {
+            "node": "symbols-format"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "query-to-adapters",
+      "description": "A query asks the adapters what the repository's artifacts are and how they are cited.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "query"
+          },
+          "destination": {
+            "node": "adapters"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "query-to-git-reader",
+      "description": "A query reads files, blame and history through git.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "query"
+          },
+          "destination": {
+            "node": "git-reader"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "query-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "query"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "query-to-scope",
+      "description": "A query asks which comment text applies to each line.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "query"
+          },
+          "destination": {
+            "node": "scope"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "query-to-symbols-format",
+      "description": "A query names positions by the anchors the format defines.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "query"
+          },
+          "destination": {
+            "node": "symbols-format"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "indexing-to-symbols-format",
+      "description": "Indexing writes the record, and the anchors of what each position names.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "indexing"
+          },
+          "destination": {
+            "node": "symbols-format"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "indexing-to-git-reader",
+      "description": "Indexing reads the commit it records.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "indexing"
+          },
+          "destination": {
+            "node": "git-reader"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "indexing-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "indexing"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "indexing-to-query",
+      "description": "Indexing writes what a whole-tree trace finds.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "indexing"
+          },
+          "destination": {
+            "node": "query"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "symbols-format-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "symbols-format"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "lookup-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "lookup"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "lookup-to-source-map",
+      "description": "Lookup takes a built position back to its source.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "lookup"
+          },
+          "destination": {
+            "node": "source-map"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "lookup-to-symbols-format",
+      "description": "Lookup reads the record.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "lookup"
+          },
+          "destination": {
+            "node": "symbols-format"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "build-hash-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "build-hash"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "build-hash-to-symbols-format",
+      "description": "The stamp carries the format's version beside the hash.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "build-hash"
+          },
+          "destination": {
+            "node": "symbols-format"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "source-map-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "source-map"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "adapters-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "adapters"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "git-reader-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "git-reader"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "render-to-build-hash",
+      "description": "Renders what it answers.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "render"
+          },
+          "destination": {
+            "node": "build-hash"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "render-to-indexing",
+      "description": "Renders what it answers.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "render"
+          },
+          "destination": {
+            "node": "indexing"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "render-to-lookup",
+      "description": "Renders what it answers.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "render"
+          },
+          "destination": {
+            "node": "lookup"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "render-to-trace-model",
+      "description": "Uses the shared types.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "render"
+          },
+          "destination": {
+            "node": "trace-model"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "render-to-query",
+      "description": "Renders what it answers.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "render"
+          },
+          "destination": {
+            "node": "query"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "render-to-symbols-format",
+      "description": "Renders what it answers.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "render"
+          },
+          "destination": {
+            "node": "symbols-format"
+          }
+        }
+      }
+    }
+  ],
+  "adrs": [
+    "docs/waymarks/182-derived-index.md",
+    "docs/waymarks/183-rust-core-wasm-package.md"
+  ],
+  "metadata": {
+    "id": "Kkq",
+    "name": "traceability",
+    "description": "Traceability's insides: the detailed architecture of the traceability component of railyard-method."
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/railyard-adapter.test.ts",
+  "entries": [
+    {
+      "name": "every artifact the adapter names carries its stable ID.leaves it absent for an artifact declaring none, rather than inventing one",
+      "witness": "0dd50ad26fde1bde",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "every artifact the adapter names carries its stable ID.stamps one a Tests row names",
+      "witness": "ed4b8b26b9883a58",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "every artifact the adapter names carries its stable ID.stamps one cited by the older grammar, so an unmigrated document still yields the reference",
+      "witness": "85fe1d51a699579a",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "every artifact the adapter names carries its stable ID.stamps one named by path and anchor",
+      "witness": "d89ffd9d70066bb8",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyardAdapter.reads a Tests row as the library does: its numbered criteria; the spec whole where it names NFRs or failure behaviour; and otherwise names it unreadable",
+      "witness": "81b59ab19f3c6fbb",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyardAdapter.reads ADR-<n> with any leading zeros, after anything but a letter or a digit, as named-by does",
+      "witness": "ef835554abb29655",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyardAdapter.resolves a criterion's ID to wherever it now sits, so a renumber cannot break the link",
+      "witness": "5d314bea633b39d5",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "vKz",
+          "kind": "asserted",
+          "artifact": "b9194da04b4eb571",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyardAdapter.resolves a stable ID to the artifact carrying it, so a rename cannot break the link",
+      "witness": "c82f2bc36632e73c",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "vKz",
+          "kind": "asserted",
+          "artifact": "b9194da04b4eb571",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the search pattern reaches a citation written as a stable ID.matches a criterion by its own ID",
+      "witness": "db27a94e51d40aff",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the search pattern reaches a citation written as a stable ID.matches a record by its own ID",
+      "witness": "c93879f5028d7825",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the search pattern reaches a citation written as a stable ID.matches a spec by its own ID",
+      "witness": "be5add08c62e4c72",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the search pattern reaches a citation written as a stable ID.still matches the older form, for a citation outside the migrated surface",
+      "witness": "0dada4c8caaac9a8",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

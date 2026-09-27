@@ -1,0 +1,241 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/backward.test.ts",
+  "entries": [
+    {
+      "name": "traceBackward, after a cited spec is renamed.recognises a backticked name by a spec name's shape: an M-name is one, a camel-cased name is not",
+      "witness": "50fda4dbe304dd62",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward, after a cited spec is renamed.still lists a criterion citation of the spec, and says it is missing, rather than dropping it",
+      "witness": "08eefe65774d840e",
+      "links": [
+        {
+          "id": "vKz",
+          "kind": "asserted",
+          "artifact": "b9194da04b4eb571",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward, where a line names an artifact in code rather than a comment.makes no link from a string, and still links a comment, trailing or above",
+      "witness": "5b17d015d53cc32d",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward, where a link was made before its artifact existed.shows the link as suspect, with no version linked, and says why",
+      "witness": "6a5bcd178f0d24ed",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward, where git cannot read part of the repository.names a file git cannot read, in git's words, and still answers from the rest",
+      "witness": "2cdf9aa74b6d3f24",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward, where git cannot read part of the repository.refuses a submodule in words, since it is no file",
+      "witness": "ef9951acee4eecd3",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.gives a criterion's own version, not its spec's: the last commit that changed its text",
+      "witness": "70a559f734ee9fbe",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.links a test file to the criteria a spec's Tests table names it for, a bare name included, and the nested node to it",
+      "witness": "6207f6cb70fe0dae",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.lists the links in order of trust: source path, Tests table, the code, the commit's message, its trailers",
+      "witness": "45fe67f2598f56bc",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.marks a link suspect once the artifact's own text changed after the link was made, and only that one",
+      "witness": "a1a7d83ad153460e",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.names a source it cannot read, and why, and still answers from the rest; HEAD by default",
+      "witness": "f3458c1b5a5105c1",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.names the commit it read and the line, with the commit that last changed the line",
+      "witness": "a11a6f6a0ccf456f",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.never guesses which of several files a bare test name means, and says so",
+      "witness": "09ab0ce7a901712f",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.reads every source, and says of each link how it is known: only an architecture source path is recorded",
+      "witness": "b4b9caf5f864cabe",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.refers to each artifact by its path and the commit of the version linked, with that commit's date and time",
+      "witness": "4b0a0e0093281031",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.refuses, in words, a file absent at the commit, a line out of range, an unknown commit, and a directory that is no repository",
+      "witness": "74f6091f457efd6f",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.says a cited artifact that does not exist is missing, rather than dropping it",
+      "witness": "9691c623c618e2df",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.says a line that traces to nothing is untraced, and guesses nothing",
+      "witness": "58f30b637fd43206",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceBackward.takes code citations only from the lines in scope: the line's own block, its enclosing lines' blocks, and the file's opening block",
+      "witness": "71797bdb35bfe883",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

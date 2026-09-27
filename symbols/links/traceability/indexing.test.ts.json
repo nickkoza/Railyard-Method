@@ -1,0 +1,121 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/indexing.test.ts",
+  "entries": [
+    {
+      "name": "railyard-trace index.makes one position of consecutive lines with the same links",
+      "witness": "0e37ae8851579e20",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index.names a source it could not read, and still writes the version",
+      "witness": "8dc8ebe0289c8ae8",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index.never indexes the symbols directory's own files, so a repository that carries one converges",
+      "witness": "525f26762b397d54",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index.records for a position exactly what the backward query answers for it, and no more",
+      "witness": "4e2b408eb0078911",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index.records no position that traces to nothing, and none in the artifacts' own documents",
+      "witness": "ee9114680c48b6c0",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index.records the root of the tree, from where the symbols directory sits against the repository",
+      "witness": "8352fe7498722ff3",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index.says of each link how it is known, as the query does: only a structural record is recorded, and nothing is tested or confirmed",
+      "witness": "56a2eb49366a5aa4",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index.writes a second version that records only the files that changed, and leaves the first answering as it did",
+      "witness": "77d38063d399af78",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index.writes no second version when the commit changed nothing that is indexed, and the build joins the version that is there",
+      "witness": "9fe1993461086d7a",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

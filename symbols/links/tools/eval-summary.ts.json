@@ -1,0 +1,31 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "tools/eval-summary.ts",
+  "entries": [
+    {
+      "name": "section",
+      "witness": "a7628cbbca93b675",
+      "links": [
+        {
+          "id": "6HK",
+          "kind": "asserted",
+          "artifact": "ae425f5f34c82509",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "summarise",
+      "witness": "3a8382ffc5becdb0",
+      "links": [
+        {
+          "id": "6HK",
+          "kind": "asserted",
+          "artifact": "ae425f5f34c82509",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

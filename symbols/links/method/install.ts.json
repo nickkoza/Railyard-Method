@@ -1,0 +1,115 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/install.ts",
+  "entries": [
+    {
+      "name": "filesUnder",
+      "witness": "fc329a63def02f4b",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "filesUnder.walk",
+      "witness": "3c01d970a14a87f1",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "install",
+      "witness": "897dac7c1e71c66b",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "isLink",
+      "witness": "895347bd28d167af",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "witness": "907294a83c1a60e2",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "readSettings",
+      "witness": "dacc1e1ffb2e43e4",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "sameFiles",
+      "witness": "57a8b17045a177fb",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "sessionFolder",
+      "witness": "02103630cefa428a",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "sessionNote",
+      "witness": "9192912e3485a17e",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

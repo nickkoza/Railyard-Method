@@ -1,0 +1,67 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/cli.test.ts",
+  "entries": [
+    {
+      "name": "npm run ids:take.gives an ID that appears nowhere in the repository",
+      "witness": "bcd0c090c1849195",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "npm run ids:take.prints as many as asked for, all different",
+      "witness": "929962d22449fc84",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "npm run ids:take.prints one well-formed ID by default",
+      "witness": "fba31b7829597608",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "npm run ids:take.refuses a count that is not a positive whole number, rather than guessing",
+      "witness": "f9f314d462ebe033",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "npm run ids:take.writes nothing: the repository is unchanged after taking",
+      "witness": "e79ece8c2e78adba",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

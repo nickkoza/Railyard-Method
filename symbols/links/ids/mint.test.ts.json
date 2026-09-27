@@ -1,0 +1,151 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/mint.test.ts",
+  "entries": [
+    {
+      "name": "a large tracked file never holds the event loop ([9pu]'s non-functional requirement).lets a 5 ms timer tick throughout a read of one 48 MB tracked file, never more than 100 ms apart",
+      "witness": "77d04607b9676c92",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an answer's size ([9pu]'s non-functional requirement).holds at most 4 MiB an answer, eight answers held at once",
+      "witness": "d78546d1fdc8304e",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an answer's size ([9pu]'s non-functional requirement).says exactly which of a sample of the whole ID space a repository mentions, and no other",
+      "witness": "db20f47de2804314",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "generated",
+      "witness": "c59b5d5821422f7d",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "mentionsIn.reads a bare clone's history and commit messages, and says it read no tracked tree ([9pu])",
+      "witness": "fbd7b67b669ba29c",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "mentionsIn.reads a tracked file, deleted history and a commit message, as ids-take does ([9pu])",
+      "witness": "bb55a1c3e9ac428d",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "mentionsSince ([9pu]'s incremental read).reads only the commits and blobs reachable from a tip that moved, not the ones the previous read already held",
+      "witness": "c0cd645a53dc11b5",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "mentionsSince ([9pu]'s incremental read).sees a new commit's ID without a fresh full read",
+      "witness": "b4883686e2a5a8d8",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "mintIds with a consumer's own rule ([9pu]).never offers an ID the consumer's rule says is taken, whether it answers at once or later",
+      "witness": "29da5999a07eb4d3",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "mintIds with a consumer's own rule ([9pu]).offers nothing when the consumer's rule cannot answer",
+      "witness": "39bb7ed7143c4af7",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "mintIds.draws IDs mentionsIn says are free, none the same within a batch",
+      "witness": "15a1a4e82b71275e",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the exported read never holds the event loop ([9pu]'s non-functional requirement).lets a 5 ms timer tick throughout a read of 48 MB of file versions, never more than 100 ms apart",
+      "witness": "f01b9a27d152de05",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

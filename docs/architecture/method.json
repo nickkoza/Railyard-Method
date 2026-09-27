@@ -1,0 +1,294 @@
+{
+  "$schema": "https://calm.finos.org/release/1.0/meta/calm.json",
+  "nodes": [
+    {
+      "unique-id": "agent",
+      "node-type": "actor",
+      "name": "Agent",
+      "description": "An agent, such as Claude Code, doing work in a repository with the skill loaded. It follows the skill and runs the tools the skill names."
+    },
+    {
+      "unique-id": "repository",
+      "node-type": "data-asset",
+      "name": "Repository",
+      "description": "The repository being worked on: its artifacts under docs/, its code, its git history and its symbols directory. The method never assumes anything about it that the repository has not recorded."
+    },
+    {
+      "unique-id": "cited-repository",
+      "node-type": "data-asset",
+      "name": "A cited repository",
+      "description": "Another repository, cited by name and commit. It is fetched read-only into the tool's own cache and read at the commit a citation names; nothing is ever written to it."
+    },
+    {
+      "unique-id": "skill",
+      "node-type": "data-asset",
+      "name": "The skill",
+      "description": "The spec-driven-change skill: the method written for an agent to read, and the tools it names, bundled into its folder so that installing it is all it takes. It grants nothing and enforces nothing; what must hold is held by the tools and checks it carries.",
+      "source-path": "skills/spec-driven-change"
+    },
+    {
+      "unique-id": "identifiers",
+      "node-type": "service",
+      "name": "Identifiers",
+      "description": "The stable-ID tools: take identifiers nothing in the repository uses yet, and say what an identifier names.",
+      "source-path": "ids"
+    },
+    {
+      "unique-id": "conventions",
+      "node-type": "service",
+      "name": "Conventions",
+      "description": "What the method fixes for every repository and what a repository says about itself: the conventional paths, the method version, the upgrade that carries a repository forward, the migration that carries its Tests rows from criteria's numbers to their IDs, and the checks every repository is held to.",
+      "source-path": "method"
+    },
+    {
+      "unique-id": "traceability",
+      "node-type": "system",
+      "name": "Traceability",
+      "description": "The library and command that link code to the artifacts that caused it, both ways, and write and read the symbols directory. Its insides have their own model.",
+      "source-path": "traceability",
+      "details": {
+        "detailed-architecture": "docs/architecture/traceability.json"
+      }
+    },
+    {
+      "unique-id": "index-core",
+      "node-type": "service",
+      "name": "Index core",
+      "description": "The derived index's builder and reader, in Rust, to be shipped as WebAssembly. Throw-away and rebuilt from the symbols record, never authoritative.",
+      "source-path": "index"
+    },
+    {
+      "unique-id": "commands",
+      "node-type": "service",
+      "name": "Commands",
+      "description": "The entry points a person or an agent runs: one per command for the package, and one that dispatches to all of them, which is what the skill carries bundled in its folder. Each only calls the main of the component it runs.",
+      "source-path": "bin"
+    },
+    {
+      "unique-id": "repository-tooling",
+      "node-type": "service",
+      "name": "Repository tooling",
+      "description": "What builds and records this repository rather than being part of the method: the bundler that puts the tools into the skill's folder, and the summary of the evaluations' runs. Nothing the skill carries, and nothing a repository using the method runs of its own accord.",
+      "source-path": "tools"
+    }
+  ],
+  "relationships": [
+    {
+      "unique-id": "agent-uses-the-method",
+      "description": "The agent follows the skill, and runs the commands it names from the skill's folder: to take and resolve identifiers, to trace, to check, and to upgrade the repository.",
+      "relationship-type": {
+        "interacts": {
+          "actor": "agent",
+          "nodes": [
+            "skill",
+            "commands"
+          ]
+        }
+      }
+    },
+    {
+      "unique-id": "identifiers-to-conventions",
+      "description": "Finds artifacts at the method's conventional paths.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "identifiers"
+          },
+          "destination": {
+            "node": "conventions"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "traceability-to-conventions",
+      "description": "Finds artifacts and models at the method's conventional paths.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "traceability"
+          },
+          "destination": {
+            "node": "conventions"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "conventions-to-traceability",
+      "description": "The artifact checks read a line's comment text by the rule traceability uses, so what counts as a comment is decided in one place.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "conventions"
+          },
+          "destination": {
+            "node": "traceability"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "identifiers-to-repository",
+      "description": "Reads the repository's artifacts to find a free identifier, or what one names.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "identifiers"
+          },
+          "destination": {
+            "node": "repository"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "traceability-to-identifiers",
+      "description": "Reads what each stable ID names from the identifiers' one index, so a query and ids-resolve never disagree about what an ID is.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "traceability"
+          },
+          "destination": {
+            "node": "identifiers"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "traceability-to-repository",
+      "description": "Reads the repository's artifacts, code and history through git, never writing to them, and writes its symbols directory.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "traceability"
+          },
+          "destination": {
+            "node": "repository"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "conventions-to-repository",
+      "description": "Reads and records the method version the repository was laid out under, and moves artifacts when it upgrades.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "conventions"
+          },
+          "destination": {
+            "node": "repository"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "traceability-to-index-core",
+      "description": "Answers queries through the index core once it ships as WebAssembly; the TypeScript reader answers until then, and stays for differential testing.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "traceability"
+          },
+          "destination": {
+            "node": "index-core"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "identifiers-to-cited-repository",
+      "description": "Fetches a cited repository into its cache and reads what a citation names at the commit it gives, and at the tip, to say whether it has changed since.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "identifiers"
+          },
+          "destination": {
+            "node": "cited-repository"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "conventions-to-identifiers",
+      "description": "The checks ask the identifiers whether a citation of another repository resolves.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "conventions"
+          },
+          "destination": {
+            "node": "identifiers"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "commands-to-identifiers",
+      "description": "Runs ids-take and ids-resolve.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "commands"
+          },
+          "destination": {
+            "node": "identifiers"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "commands-to-traceability",
+      "description": "Runs trace.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "commands"
+          },
+          "destination": {
+            "node": "traceability"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "commands-to-conventions",
+      "description": "Runs check and upgrade.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "commands"
+          },
+          "destination": {
+            "node": "conventions"
+          }
+        }
+      }
+    },
+    {
+      "unique-id": "repository-tooling-to-commands",
+      "description": "The bundler builds the skill's tools from the commands' entry point.",
+      "relationship-type": {
+        "connects": {
+          "source": {
+            "node": "repository-tooling"
+          },
+          "destination": {
+            "node": "commands"
+          }
+        }
+      }
+    }
+  ],
+  "adrs": [
+    "docs/waymarks/181-method-one-repository.md"
+  ],
+  "metadata": {
+    "id": "TAe",
+    "name": "railyard-method",
+    "description": "The Railyard Method: the skill, and the tools that hold a repository to it."
+  }
+}

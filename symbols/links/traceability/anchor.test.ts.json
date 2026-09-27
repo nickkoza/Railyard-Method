@@ -1,0 +1,211 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/anchor.test.ts",
+  "entries": [
+    {
+      "name": "[5jT]: the named things in a file, each with its span and a witness of its own lines.changes a thing's witness when its own lines change, and leaves what encloses it current",
+      "witness": "c197aafc8e9001c1",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[5jT]: the named things in a file, each with its span and a witness of its own lines.closes a braced block on its closing brace, and tells two things of one name apart",
+      "witness": "a68c031d244e3f0c",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[5jT]: the named things in a file, each with its span and a witness of its own lines.keeps a witness through an edit above the thing, and through trailing whitespace",
+      "witness": "30fdf36ff461a93d",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[5jT]: the named things in a file, each with its span and a witness of its own lines.names each thing by its qualified name, with the lines it spans",
+      "witness": "caf4dcff9346ba46",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a test is a named thing, named by its title.names a line inside a test after the test",
+      "witness": "e5ffadef0def31ea",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a test is a named thing, named by its title.names test(), it() and describe() by the title they are given, nested in the describe that holds them",
+      "witness": "334c6b3f1d6636a1",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.answers span for a line outside the text rather than throwing",
+      "witness": "4f52a8573c0d36e8",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.does not mistake a call for a declaration",
+      "witness": "8cf54a84850b19a3",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.does not name a control structure, which has the shape of a method and is not one",
+      "witness": "f362f66e2d02d683",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.does not name a local variable, because granularity stops at the function",
+      "witness": "7a897c4255115ab2",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.names a const holding an arrow function, which is how much of this repository is written",
+      "witness": "89ca179b4ea48f0f",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.names a function in TypeScript, from a line in its body",
+      "witness": "652b48cb22486ea3",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.names the declaration line itself, not whatever encloses it",
+      "witness": "93f28f224d94a818",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.prefers the nearest enclosing thing, by indentation",
+      "witness": "abe58f6dabef8e5b",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.reads languages it was not written for, because it looks at shape rather than grammar",
+      "witness": "21daf5412a2d7206",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.says span where nothing names the line, rather than inventing a name",
+      "witness": "10a67a98031128e8",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the named thing a line falls inside.still names a binding that holds a function, which is a thing and not a value",
+      "witness": "e294d5a5f8753907",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

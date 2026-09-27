@@ -1,0 +1,127 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/identifiers.test.ts",
+  "entries": [
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.[QBm]: refuses an item by its place where it carries an ID, naming the ID to give instead",
+      "witness": "7409d70700ea1407",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.[QBm]: says a repository with no commit has none, in those words",
+      "witness": "f470a6beaeb3b4df",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.[QBm]: takes a query as it is written, a position as backward and an ID as forward, with no command word",
+      "witness": "553d891735cad4be",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.names no retired form in its usage",
+      "witness": "7efa1d11c8e47a31",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.prints each artifact as [ID] (its file), and no retired form",
+      "witness": "449dc867ee746216",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.takes a criterion as [ID], as a bare ID, and as its file and ID, alike",
+      "witness": "fdb54532d2fa9d8b",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.takes a decision kept in its spec by its own ID, and reads that decision's text rather than a criterion's",
+      "witness": "0aa6c9a5db93c59c",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.takes an architecture model by its metadata.id, and lists what its nodes own",
+      "witness": "0d49328ce767588e",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR]: a query takes an artifact by its own ID, and names it by that ID and its file.takes the principles and a principle by their own IDs",
+      "witness": "fe6d7a84fa17b256",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

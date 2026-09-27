@@ -1,0 +1,217 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "index/tests/roundtrip.rs",
+  "entries": [
+    {
+      "name": "a_commit_that_is_not_there_reads_as_absent_and_not_as_the_first_one",
+      "witness": "d87b38243249998b",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a_file_is_found_however_the_builder_was_given_it",
+      "witness": "1a79a20c080ccd7e",
+      "links": [
+        {
+          "id": "e4q",
+          "kind": "asserted",
+          "artifact": "d84b333fe982ce9d",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a_file_the_index_does_not_hold_finds_nothing_rather_than_someone_else_s_positions",
+      "witness": "58b53752c4dbd5c4",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a_layout_this_build_does_not_know_is_refused_by_number_so_the_caller_can_rebuild",
+      "witness": "7952916935b3b894",
+      "links": [
+        {
+          "id": "z3s",
+          "kind": "asserted",
+          "artifact": "7b3cbc3ecc3e3f05",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a_line_outside_every_position_finds_nothing",
+      "witness": "f23eee5623b17019",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a_position_is_read_back_exactly_as_it_was_written",
+      "witness": "58b73b6960f1b3c2",
+      "links": [
+        {
+          "id": "e4q",
+          "kind": "asserted",
+          "artifact": "d84b333fe982ce9d",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a_position_s_links_come_back_with_their_evidence_and_state",
+      "witness": "d10da52d90e03221",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a_position_that_names_nothing_reads_as_nothing_rather_than_as_an_empty_name",
+      "witness": "bcd6a80c78e127ce",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a_truncated_index_answers_nothing_rather_than_reading_past_its_end",
+      "witness": "0c34618e02368ea2",
+      "links": [
+        {
+          "id": "8rB",
+          "kind": "asserted",
+          "artifact": "5fe43677906fcc3f",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "mmQ",
+          "kind": "asserted",
+          "artifact": "3571a6276dc15f6f",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an_artifact_nothing_reaches_finds_nothing",
+      "witness": "8be1288a49955da7",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an_artifact_reads_back_with_its_anchor_and_id_where_it_has_them",
+      "witness": "9774ba608a6f5bb9",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an_artifact_without_an_anchor_or_an_id_reads_as_having_none",
+      "witness": "13cc353458bfdac4",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an_empty_index_is_a_valid_one_that_holds_nothing",
+      "witness": "d92de806a81d776c",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "something_that_is_not_an_index_is_refused_rather_than_read",
+      "witness": "881b305a95aa5382",
+      "links": [
+        {
+          "id": "z3s",
+          "kind": "asserted",
+          "artifact": "7b3cbc3ecc3e3f05",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the_reverse_direction_finds_every_position_that_reaches_an_artifact",
+      "witness": "2343667f910408b1",
+      "links": [
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the_witness_reads_back_what_it_was_built_from",
+      "witness": "5af1218e34884c3e",
+      "links": [
+        {
+          "id": "z3s",
+          "kind": "asserted",
+          "artifact": "7b3cbc3ecc3e3f05",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

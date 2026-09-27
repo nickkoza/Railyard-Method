@@ -1,0 +1,373 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/architecture.test.ts",
+  "entries": [
+    {
+      "name": "[L7b]: the check runs calm validate.passes a model calm validate accepts",
+      "witness": "be7ccf577a0f284e",
+      "links": [
+        {
+          "id": "L7b",
+          "kind": "asserted",
+          "artifact": "2579337d4b5de0d0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[L7b]: the check runs calm validate.reports a model calm validate refuses, naming it",
+      "witness": "79564adde0ab295c",
+      "links": [
+        {
+          "id": "L7b",
+          "kind": "asserted",
+          "artifact": "2579337d4b5de0d0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[L7b]: the check runs calm validate.says it could not validate when there is no calm to run, rather than passing",
+      "witness": "a5c02afd0bfc0bd9",
+      "links": [
+        {
+          "id": "9p5",
+          "kind": "asserted",
+          "artifact": "d10b5d13cd51e8d6",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "L7b",
+          "kind": "asserted",
+          "artifact": "2579337d4b5de0d0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[C4P] counts every kind of test file as a test, not as source to own",
+      "witness": "dc5cfbf7b2481c77",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[C4P] leaves the agent's own configuration alone: a skill installed under .claude/ is not the repository's source",
+      "witness": "efb9d942989b77c0",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[C4P] notes a component whose source path names nothing yet, as unbuilt, without failing",
+      "witness": "72f54718f1af1ace",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[C4P] reports a source file no component owns, and one two components own",
+      "witness": "ed249730ef7feaf4",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[C4P] reports source with no model at all, rather than passing for want of one",
+      "witness": "280c5ee7e941341e",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[CC6] leaves a view quoted as an example, inside a longer fence, alone",
+      "witness": "eaa69799fb888025",
+      "links": [
+        {
+          "id": "CC6",
+          "kind": "asserted",
+          "artifact": "10cca831b08240c1",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[CC6] reads a view indented inside a numbered decision, as any other",
+      "witness": "df896b6e70c34adc",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "CC6",
+          "kind": "asserted",
+          "artifact": "10cca831b08240c1",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[CC6] reports a component drawn with no arrow where the model connects it to another box the view draws",
+      "witness": "750d3772895531d6",
+      "links": [
+        {
+          "id": "CC6",
+          "kind": "asserted",
+          "artifact": "10cca831b08240c1",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[CC6] reports a diagram that is not a view, a component or connection the model lacks, and a label",
+      "witness": "c17027d01873a940",
+      "links": [
+        {
+          "id": "CC6",
+          "kind": "asserted",
+          "artifact": "10cca831b08240c1",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[CC6] takes an arrow between two boxes as the model's where it holds through what each contains",
+      "witness": "02091f140f4ae914",
+      "links": [
+        {
+          "id": "CC6",
+          "kind": "asserted",
+          "artifact": "10cca831b08240c1",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[CC6], [SKi] read a box as a component: drawn by the model's ID, and counted",
+      "witness": "e57b2a6ceb419289",
+      "links": [
+        {
+          "id": "CC6",
+          "kind": "asserted",
+          "artifact": "10cca831b08240c1",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "SKi",
+          "kind": "asserted",
+          "artifact": "306ca0d3bb2ecd95",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[CLM] reports a component no view shows, and counts one inside a drawn box as seen",
+      "witness": "f8280223da425f83",
+      "links": [
+        {
+          "id": "CLM",
+          "kind": "asserted",
+          "artifact": "8832be6b845accdc",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[CLM] reports a model of more than one component with no view at all",
+      "witness": "c2d544745fcb9a71",
+      "links": [
+        {
+          "id": "CLM",
+          "kind": "asserted",
+          "artifact": "8832be6b845accdc",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[L7b] reports a model with no ID, and a detailed architecture that is not there",
+      "witness": "a5da5fed4ea8eac7",
+      "links": [
+        {
+          "id": "L7b",
+          "kind": "asserted",
+          "artifact": "2579337d4b5de0d0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[L7b] takes a CALM pattern and a URL mapping beside the model for what they are, and still reports a broken model",
+      "witness": "e1e76d05701b1505",
+      "links": [
+        {
+          "id": "L7b",
+          "kind": "asserted",
+          "artifact": "2579337d4b5de0d0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[lLm] notes a language whose imports are not read, and a sys.path addition it cannot follow, without failing",
+      "witness": "49cabd83ed134703",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[lLm] reads no Python import from a comment or a string, nor from a package directory as if it were a script's, nor a declared one",
+      "witness": "eb55d7fb59dcbc68",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[lLm] reports an import across components the model does not declare",
+      "witness": "46cc5f5d5708f776",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[lLm] resolves a Python import however it is written, and reports one across components the model does not declare",
+      "witness": "5851b00cac165888",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[lLm] resolves an import however it is written: .ts, NodeNext's .js, extensionless, a directory's index, and require",
+      "witness": "08a877a7b7d21fda",
+      "links": [
+        {
+          "id": "lLm",
+          "kind": "asserted",
+          "artifact": "4e2d351849f62a54",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[SKi] reports a view of more than twelve components",
+      "witness": "84019e229b1e6d24",
+      "links": [
+        {
+          "id": "SKi",
+          "kind": "asserted",
+          "artifact": "306ca0d3bb2ecd95",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.[W7x] reports a detailed architecture reaching outside its parent, and leaves its parent's files owned",
+      "witness": "8ad4030ecc638a16",
+      "links": [
+        {
+          "id": "W7x",
+          "kind": "asserted",
+          "artifact": "03c1b77c66dc0d92",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.collapsible",
+      "witness": "66e23810209fdf4b",
+      "links": [
+        {
+          "id": "CC6",
+          "kind": "asserted",
+          "artifact": "10cca831b08240c1",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the architecture checks, over repositories built to break each rule.finds nothing in a repository that meets every rule",
+      "witness": "f8e30f7501237568",
+      "links": [
+        {
+          "id": "iVr",
+          "kind": "asserted",
+          "artifact": "0ab2fe4c3a011b9b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the method's own architecture.[L7b] is valid CALM, every model of it, by the pinned calm validate",
+      "witness": "ba3c5c062ede0770",
+      "links": [
+        {
+          "id": "L7b",
+          "kind": "asserted",
+          "artifact": "2579337d4b5de0d0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the method's own architecture.meets every rule of its own architecture spec",
+      "witness": "75d4931c7eb13054",
+      "links": [
+        {
+          "id": "iVr",
+          "kind": "asserted",
+          "artifact": "0ab2fe4c3a011b9b",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/cli.test.ts",
+  "entries": [
+    {
+      "name": "railyard-trace index, and backward from a symbols directory.refuses a build the directory does not carry, in words, with status 1",
+      "witness": "be82cb7635e9634c",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index, and backward from a symbols directory.says how to use it, with status 2, where an option means nothing to the command",
+      "witness": "052bc48c1cf6ff4d",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace index, and backward from a symbols directory.writes a version of the symbols, then answers a position from it, saying so and naming the version",
+      "witness": "4f91ec875f6343ae",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace stamp.prints the build's hash and writes it into the page, and stamping again gives the same hash",
+      "witness": "94e2be8d541c64be",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.answers backward as JSON in the answer's own shape",
+      "witness": "332bfb6197ff4d55",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.answers backward as text: the commit read, the line and its commit, and each link's kind, source, artifact, version and state",
+      "witness": "bf4eaf23907c3f9c",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.answers forward as text, each position with its link, and as JSON",
+      "witness": "2cb69b392b071820",
+      "links": [
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.answers with status 0 where git cannot read part of the repository, and refuses a submodule in words with status 1",
+      "witness": "fa3a356250c561b9",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.ignores the caller's global git configuration",
+      "witness": "c1f525b8342cde8c",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.lists an artifact it recognises that does not exist as missing, with status 0",
+      "witness": "241e3ddae0c36a2a",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.names a source it cannot read, and why",
+      "witness": "dce3aeb3098b4e4e",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.reads a bare repository as any other",
+      "witness": "2405d759cdc253ee",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.reads the repository --repo names, whatever the caller's GIT_DIR and GIT_WORK_TREE say",
+      "witness": "5abd01251e172680",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.refuses in words, with status 1, what it cannot answer",
+      "witness": "f5564b215a88bab6",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.runs no textconv program the repository's own configuration names",
+      "witness": "eba9056be5fd548d",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.says how to use it, with status 2, when it is used wrongly; and with status 0 when asked",
+      "witness": "f2a88ee74e853cf8",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "railyard-trace.says untraced of a line, or an artifact, that traces to nothing",
+      "witness": "9665e81968cbd85c",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

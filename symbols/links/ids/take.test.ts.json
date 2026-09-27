@@ -1,0 +1,67 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/take.test.ts",
+  "entries": [
+    {
+      "name": "ids:take.gives back exactly what it drew, and judges nothing about its shape",
+      "witness": "3326234cad90fb3f",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:take.re-rolls past a draw the repository already holds, and says how many draws it cost",
+      "witness": "608a2940bd6b3e1a",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:take.re-rolls past a repeat within one run: an ID drawn already is taken, though nothing is written yet",
+      "witness": "85056ad2c2656350",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:take.refuses rather than looping for ever when every draw is taken",
+      "witness": "d0e43da41a4b113c",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "ids:take.takes the first draw when it appears nowhere",
+      "witness": "7396722423b26459",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

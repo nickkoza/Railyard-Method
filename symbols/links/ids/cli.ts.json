@@ -1,0 +1,31 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/cli.ts",
+  "entries": [
+    {
+      "name": "main",
+      "witness": "bdaf5d8cb422ada4",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "takenIn",
+      "witness": "91d544cca0aadb5c",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

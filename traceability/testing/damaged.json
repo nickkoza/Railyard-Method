@@ -1,0 +1,36 @@
+{
+  "commits": [
+    {
+      "message": "The first ADR",
+      "files": {
+        "docs/waymarks/001-first.md": ["# ADR-001 — First", "", "Decided first."]
+      }
+    },
+    {
+      "message": "The model",
+      "files": {
+        "docs/architecture/model.json": [
+          "{",
+          "  \"nodes\": [",
+          "    {",
+          "      \"unique-id\": \"app\",",
+          "      \"node-type\": \"service\",",
+          "      \"name\": \"App\",",
+          "      \"description\": \"The app\",",
+          "      \"source-path\": \"src\"",
+          "    }",
+          "  ]",
+          "}"
+        ]
+      }
+    },
+    {
+      "message": "Build the app (ADR-001)",
+      "files": {
+        "src/a.ts": ["// ADR-001: the app.", "export const a = 1;"]
+      }
+    }
+  ],
+  "submodule": { "path": "vendor/sub", "message": "Vendor a submodule (ADR-001)" },
+  "unreadable": "docs/architecture/model.json"
+}

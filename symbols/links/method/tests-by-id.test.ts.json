@@ -1,0 +1,151 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/tests-by-id.test.ts",
+  "entries": [
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P])",
+      "witness": "d262853f3d7f85a6",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).carries a criterion a row cites by number in its text to its ID, lists each, and names what it cannot carry",
+      "witness": "95d40449d66356e5",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).carries every number a row names, before, between and after its notes, and says which criterion a note described",
+      "witness": "2ffaa49ca49f32d6",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).changes nothing the second time",
+      "witness": "284e3cad10e37a44",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).leaves a row it cannot carry as it was, and names it with why",
+      "witness": "e6906f8bf27d6022",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).leaves a row whole, and names it, where a number after its list may be another criterion",
+      "witness": "d3abcd5377e411d1",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).rewrites the numbers and ranges a row opens with to the IDs they name, keeping the rest of the row",
+      "witness": "f30080db66a75a4a",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).says how many links name a spec it rewrote, and what lists them",
+      "witness": "d3091a62e94cdc0e",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).says how many links name a spec it rewrote, and what lists them.links",
+      "witness": "63a01ef1aca05118",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).says what it would change on a dry run, and writes nothing",
+      "witness": "37e6284556690c3f",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "carrying Tests rows from numbers to IDs ([R6P]).writes, and exits non-zero naming each row it left, from the command",
+      "witness": "2d9db819d380a895",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "repository",
+      "witness": "8e1ccf511cdf6ca2",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

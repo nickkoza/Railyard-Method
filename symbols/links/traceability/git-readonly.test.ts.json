@@ -1,0 +1,67 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/git-readonly.test.ts",
+  "entries": [
+    {
+      "name": "the traceability piece reads git and nothing else.gives git an environment of its own, so the caller's GIT_* and configuration change nothing",
+      "witness": "15e7fb1a5d19690e",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the traceability piece reads git and nothing else.runs a process from one file only",
+      "witness": "f47450593ac062e1",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the traceability piece reads git and nothing else.runs nothing but the literal git, always with the hardened flags and its own environment",
+      "witness": "abd086d5bfcc70df",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the traceability piece reads git and nothing else.runs only subcommands that read",
+      "witness": "b1c0a42902e3df55",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the traceability piece reads git and nothing else.turns off everything in git that runs a program of the repository's owner",
+      "witness": "1a2ae972297cacb3",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

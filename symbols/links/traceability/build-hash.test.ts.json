@@ -1,0 +1,181 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/build-hash.test.ts",
+  "entries": [
+    {
+      "name": "the build hash.can be recomputed from the stamped build: stamping again gives the same hash and stamps once",
+      "witness": "56b885e7d2e06bc1",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the build hash.carries the hash and the format's version, and nothing else; the rest of the file is untouched",
+      "witness": "39a707064bb16537",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the build hash.differs when what was built differs, so two builds of one commit made with different settings get their own symbols",
+      "witness": "06941fbe45395a75",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the build hash.hashes a file by its path in the build, so moving a file changes the hash",
+      "witness": "5e03e73d76da31d1",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the build hash.is 64 hex characters over the build's own content, wherever the build sits",
+      "witness": "302fcfe6d53131f5",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the build hash.names a file whose kind has no place for the stamp, and still counts it in the hash",
+      "witness": "e70a3dd3e8fb1377",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the build hash.refuses a build no file of which can carry the hash, rather than stamping nothing quietly",
+      "witness": "bb25125b25c91791",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the build hash.writes it where each kind of artifact already keeps one, under Railyard's own name, and reads it back",
+      "witness": "0c7eefc84de82196",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the format's version rides with the build hash.answers null for a file whose kind has no place for either",
+      "witness": "bf59c77711d09d93",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the format's version rides with the build hash.does not change the build hash, which is over content and not over its own stamp",
+      "witness": "cd71566dc1ab7430",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the format's version rides with the build hash.stamps both into a page, and reads both back",
+      "witness": "a34ccf0d90da613e",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the format's version rides with the build hash.stamps both into a script and a source map",
+      "witness": "53f3b336c72746e6",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the format's version rides with the build hash.stays idempotent: stamping a stamped file gives the same bytes",
+      "witness": "409a3612169501d0",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

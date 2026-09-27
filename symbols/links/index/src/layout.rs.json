@@ -1,0 +1,43 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "index/src/layout.rs",
+  "entries": [
+    {
+      "name": "from_byte",
+      "witness": "4c050a0642f9884c",
+      "links": [
+        {
+          "id": "e4q",
+          "kind": "asserted",
+          "artifact": "d84b333fe982ce9d",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "from_byte~2",
+      "witness": "574d64e34e6ea474",
+      "links": [
+        {
+          "id": "e4q",
+          "kind": "asserted",
+          "artifact": "d84b333fe982ce9d",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

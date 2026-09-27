@@ -1,0 +1,25 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "tools/bundle.ts",
+  "entries": [
+    {
+      "name": "bundleTools",
+      "witness": "1d7666ac3ff55629",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

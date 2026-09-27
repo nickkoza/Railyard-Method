@@ -1,0 +1,91 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "skills/skill.test.ts",
+  "entries": [
+    {
+      "name": "the skill.has an eval case covering every section",
+      "witness": "56035577de93338f",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the skill.has every LLM grader anchored to facts its prompt still states",
+      "witness": "9c7facc4b5d838eb",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the skill.has no case covering a section that does not exist, or nothing at all",
+      "witness": "9b14f4e279af4415",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the skill.is installed from the README as the skill says, and the README lists every command it carries ([4Ec])",
+      "witness": "7a2cfda803c43814",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the skill.names every conventional path",
+      "witness": "501da2fd5b144e5d",
+      "links": [
+        {
+          "id": "ZNz",
+          "kind": "asserted",
+          "artifact": "085d3efb113efd78",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the skill.shows a model the checks read: its own ID, and a node owning code by its source-path ([obW], [C4P], [L7b])",
+      "witness": "88edcb316fa48cfb",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "L7b",
+          "kind": "asserted",
+          "artifact": "2579337d4b5de0d0",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "obW",
+          "kind": "asserted",
+          "artifact": "e2949c3b1638640e",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/build-hash.ts",
+  "entries": [
+    {
+      "name": "bare",
+      "witness": "a265ec79a5d88c7d",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "BuildFile",
+      "witness": "ae3a54f93bcb9852",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "buildHash",
+      "witness": "90c0aff9bf2b7e2d",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "kindOf",
+      "witness": "2844623789e9453d",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "rootOf",
+      "witness": "6c160b17eb1a520d",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "StampAnswer",
+      "witness": "d0b66502076a4e45",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "stampBuild",
+      "witness": "90faebca33fbf48f",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "stampInto",
+      "witness": "d88331cf7ebd9418",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "stampOf",
+      "witness": "48df2a1818de8889",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "versionOf",
+      "witness": "d27c4cfcb9334c70",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

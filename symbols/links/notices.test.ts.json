@@ -1,0 +1,31 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "notices.test.ts",
+  "entries": [
+    {
+      "name": "copyright notices.gives the skill its licence in its frontmatter",
+      "witness": "902972ecc4788daf",
+      "links": [
+        {
+          "id": "OWt",
+          "kind": "asserted",
+          "artifact": "fb70f92e9cccf417",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "copyright notices.opens every source file with the copyright and the licence, after any shebang",
+      "witness": "5f82e850a163767f",
+      "links": [
+        {
+          "id": "OWt",
+          "kind": "asserted",
+          "artifact": "fb70f92e9cccf417",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

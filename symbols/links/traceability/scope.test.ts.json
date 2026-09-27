@@ -1,0 +1,79 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/scope.test.ts",
+  "entries": [
+    {
+      "name": "[ei5]: the comment text of a line.does not take a marker glued to code for a comment",
+      "witness": "dc4f1e99b43c1737",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[ei5]: the comment text of a line.does not take a marker inside a quoted run for a comment",
+      "witness": "3b3bd82aaf4a55f2",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[ei5]: the comment text of a line.does not take Markdown emphasis for the * of a comment block",
+      "witness": "d8ebc01eb9260f24",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[ei5]: the comment text of a line.is a trailing comment on a code line, from its marker",
+      "witness": "59b8d6b28fe80132",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[ei5]: the comment text of a line.is all of a comment line, in any of the markers",
+      "witness": "dd0f561e1fee3594",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[ei5]: the comment text of a line.is nothing on a code line with no comment, however much it looks like a citation",
+      "witness": "87f54c1b6851d57f",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": ".",
+    "declaration": true,
+    "rewriteRelativeImportExtensions": true,
+    "allowJs": false,
+    "checkJs": false
+  },
+  "include": [
+    "bin/**/*.ts",
+    "ids/**/*.ts",
+    "method/**/*.ts",
+    "traceability/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "traceability/testing/**"
+  ]
+}

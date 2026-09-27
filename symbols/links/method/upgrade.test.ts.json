@@ -1,0 +1,343 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/upgrade.test.ts",
+  "entries": [
+    {
+      "name": "[o7Y], [RVv]: carrying a repository to 1.0.0, its decisions to numbered decisions with IDs",
+      "witness": "ba750c33c36aa96f",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y], [RVv]: carrying a repository to 1.0.0, its decisions to numbered decisions with IDs.commit",
+      "witness": "d246c3930ea449a0",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y], [RVv]: carrying a repository to 1.0.0, its decisions to numbered decisions with IDs.leaves the decisions alone while the method is below 1.0.0",
+      "witness": "4d6e62f7cfeab698",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y], [RVv]: carrying a repository to 1.0.0, its decisions to numbered decisions with IDs.numbers every decision with a fresh ID, a waymark's that moves among them, and says so",
+      "witness": "75bcce6c9288ce3b",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y], [RVv]: carrying a repository to 1.0.0, its decisions to numbered decisions with IDs.refuses where decisions need IDs and no ID can be taken, outside git, and changes nothing",
+      "witness": "c03bf302876b035a",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y], [RVv]: carrying a repository to 1.0.0, its decisions to numbered decisions with IDs.refuses, naming each section it cannot carry, and changes nothing, a move among them",
+      "witness": "0edb37bbc927bc78",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y], [RVv]: carrying a repository to 1.0.0, its decisions to numbered decisions with IDs.spec",
+      "witness": "ea3c011258da2e39",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "RVv",
+          "kind": "asserted",
+          "artifact": "1ae65f8bdc905547",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.does not take the word, a new path or a sibling file for an old path",
+      "witness": "89907e0a958c304f",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.does nothing to a repository already at this version, and refuses one from the future",
+      "witness": "1a5f3667faade504",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.leaves out documents the repository says record a moment, and what git ignores",
+      "witness": "973604e9c45d144e",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.lists the repository's files that still name an old path, and rewrites none of them",
+      "witness": "7eb66a848c25e9bb",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.moves the architecture models and the waymarks under docs/, and everything inside them",
+      "witness": "870ef45be4aa2cb8",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.records the new version and keeps every other field of the marker",
+      "witness": "80b8e27b78385854",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.refuses when a destination already exists, and changes nothing",
+      "witness": "c3c77c2caee5c286",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.upgrades a repository that never had one of the old directories",
+      "witness": "c2a5b16a2e9547c8",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.works to 1.0.0, the version the skill is",
+      "witness": "a9acf97d422b29a6",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.writes the marker at its own version where there is none, and says so",
+      "witness": "997b0834cf00ded5",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository to 1.0.0, its Tests rows to IDs",
+      "witness": "8285ebf7eb045368",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository to 1.0.0, its Tests rows to IDs.carries every Tests row to IDs, and records 1.0.0",
+      "witness": "327c54b14d2d0bf2",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository to 1.0.0, its Tests rows to IDs.leaves the rows alone while the method is below 1.0.0",
+      "witness": "61881f89fafa387f",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository to 1.0.0, its Tests rows to IDs.refuses, naming each row it cannot carry, and changes nothing, a move among them",
+      "witness": "91fe9b1c0174e8aa",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: carrying a repository to 1.0.0, its Tests rows to IDs.spec",
+      "witness": "080cbf2efea45e1b",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: the version a skill works to.is never older than the newest upgrade it carries, or that upgrade never runs",
+      "witness": "84a57f1689b6299d",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/source-map.ts",
+  "entries": [
+    {
+      "name": "decode",
+      "witness": "f94469e97b5b0294",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "readSourceMap",
+      "witness": "f125437687edbaf2",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "rooted",
+      "witness": "645577eb3d7a1a23",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "segmentsOf",
+      "witness": "df341f4aab6b5adf",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "SourceMap",
+      "witness": "0c611aaacfd7abb8",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "SourceMapping",
+      "witness": "ab6f57e5a40fc9b6",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

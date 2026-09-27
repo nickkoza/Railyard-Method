@@ -1,0 +1,31 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/self.test.ts",
+  "entries": [
+    {
+      "name": "[ei5]: the method's trace of itself.keeps a symbols directory that reads, whose newest version is a commit of this repository",
+      "witness": "c44577f4d7497ef0",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[ei5]: the method's trace of itself.links, from its own comments, only to artifacts this repository has",
+      "witness": "70146c6e0e089240",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

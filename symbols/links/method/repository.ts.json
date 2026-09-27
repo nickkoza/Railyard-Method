@@ -1,0 +1,55 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/repository.ts",
+  "entries": [
+    {
+      "name": "datedPaths",
+      "witness": "af32523167de4968",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "recordsAMoment",
+      "witness": "55ad0d82b23e59f3",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "repositoriesOf",
+      "witness": "69e528bfb7986ac3",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

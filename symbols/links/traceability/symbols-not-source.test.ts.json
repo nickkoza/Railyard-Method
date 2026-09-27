@@ -1,0 +1,43 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/symbols-not-source.test.ts",
+  "entries": [
+    {
+      "name": "a symbols directory is not source.gives a forward query no position inside it, though it cites the artifact on nearly every line",
+      "witness": "8a252260ac8f400d",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory is not source.gives traceAll no entry inside it, without being told to exclude it",
+      "witness": "c5b81ffbfcc2c079",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory is not source.still traces the source beside it, so the exclusion removes the record and nothing else",
+      "witness": "9f5bbcbbd8e12d55",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

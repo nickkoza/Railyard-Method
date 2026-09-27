@@ -1,0 +1,91 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "tools/evals.test.ts",
+  "entries": [
+    {
+      "name": "[xCF]: every case run as its files say",
+      "witness": "428af304e80f5f4c",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[xCF]: every case run as its files say.adds nothing where no case needs a repository or a gated tool",
+      "witness": "a49647962a78c52d",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[xCF]: every case run as its files say.grants no tool a case does not list, and a commented scaffold is no scaffold",
+      "witness": "349f065e5dd82d06",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[xCF]: every case run as its files say.keeps the suite's own flags and what the person passes, after the cases' own",
+      "witness": "79117846d2bdb4c6",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[xCF]: every case run as its files say.passes --scaffold where a case names a scaffold script, and grants each gated tool a case lists",
+      "witness": "0df259b2f465a523",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[xCF]: every case run as its files say.reads this repository's cases: the multi-step one gets its repository and its tools",
+      "witness": "ce241085a0d9a847",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "aCase",
+      "witness": "6c3a8613f749e247",
+      "links": [
+        {
+          "id": "xCF",
+          "kind": "asserted",
+          "artifact": "64fe98aeefcc4103",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

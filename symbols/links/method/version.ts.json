@@ -1,0 +1,67 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/version.ts",
+  "entries": [
+    {
+      "name": "ordered",
+      "witness": "d10bef6cddca4b8c",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "plan",
+      "witness": "97242d6d116bf432",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Plan",
+      "witness": "68f6f1c37e54c44c",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "readMethodVersion",
+      "witness": "545b764da3b129bb",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "writeMethodVersion",
+      "witness": "9289bad84d13df1a",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

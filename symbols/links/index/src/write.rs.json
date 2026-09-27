@@ -1,0 +1,31 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "index/src/write.rs",
+  "entries": [
+    {
+      "name": "build",
+      "witness": "96a071002033d4bd",
+      "links": [
+        {
+          "id": "e4q",
+          "kind": "asserted",
+          "artifact": "d84b333fe982ce9d",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "mmQ",
+          "kind": "asserted",
+          "artifact": "3571a6276dc15f6f",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "yZH",
+          "kind": "asserted",
+          "artifact": "bfef17e601bfff1b",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

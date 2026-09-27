@@ -1,0 +1,193 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "release.test.ts",
+  "entries": [
+    {
+      "name": "the package, installed.carries mint's types a consumer's own compiler accepts",
+      "witness": "100a1a73dc2459c5",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.carries types a consumer's own compiler accepts",
+      "witness": "e909937b0ea27c04",
+      "links": [
+        {
+          "id": "dXi",
+          "kind": "asserted",
+          "artifact": "0580c8edf2f97f94",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.checks a repository, through the installed command, and fails on a finding",
+      "witness": "d03b3e7d80af2f80",
+      "links": [
+        {
+          "id": "dXi",
+          "kind": "asserted",
+          "artifact": "0580c8edf2f97f94",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.is importable by its package name, and what it exports is what it says",
+      "witness": "a910dad416f31201",
+      "links": [
+        {
+          "id": "dXi",
+          "kind": "asserted",
+          "artifact": "0580c8edf2f97f94",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.mints IDs by package path, incrementally, from a consumer's own repository",
+      "witness": "3e79e7af2863ed0c",
+      "links": [
+        {
+          "id": "9pu",
+          "kind": "asserted",
+          "artifact": "25d6a3d7e2b4b30a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.resolves an identifier, through the installed command, and says so when it names nothing",
+      "witness": "f7122232c6400b6d",
+      "links": [
+        {
+          "id": "dXi",
+          "kind": "asserted",
+          "artifact": "0580c8edf2f97f94",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.runs every script through an entry point, never a module that no longer starts itself",
+      "witness": "10a7a358cdc81832",
+      "links": [
+        {
+          "id": "18E",
+          "kind": "asserted",
+          "artifact": "b62bd5fa167614cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.says one version everywhere: the package, the plugin and the method it works to",
+      "witness": "44c52e1ce1cb5ad6",
+      "links": [
+        {
+          "id": "IKA",
+          "kind": "asserted",
+          "artifact": "e4b585cea7c88ef6",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.ships every command executable, however it is installed",
+      "witness": "74344b483bb31659",
+      "links": [
+        {
+          "id": "dXi",
+          "kind": "asserted",
+          "artifact": "0580c8edf2f97f94",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.takes identifiers, through the installed command",
+      "witness": "22a5a207879637a4",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "dXi",
+          "kind": "asserted",
+          "artifact": "0580c8edf2f97f94",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.traces, through the installed command, and says how to use it when given nothing to do",
+      "witness": "e58b73f680c18928",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the package, installed.upgrades a repository, through the installed command, and lists what still names an old path",
+      "witness": "50840ce183608e5c",
+      "links": [
+        {
+          "id": "dXi",
+          "kind": "asserted",
+          "artifact": "0580c8edf2f97f94",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

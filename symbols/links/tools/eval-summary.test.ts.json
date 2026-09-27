@@ -1,0 +1,55 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "tools/eval-summary.test.ts",
+  "entries": [
+    {
+      "name": "the evaluations' summary.adds a run once, however often it is made, and keeps runs in order",
+      "witness": "9645127e28c9b682",
+      "links": [
+        {
+          "id": "6HK",
+          "kind": "asserted",
+          "artifact": "ae425f5f34c82509",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the evaluations' summary.keeps what the summary already holds when the full results are gone",
+      "witness": "40d05fc97de6abf1",
+      "links": [
+        {
+          "id": "6HK",
+          "kind": "asserted",
+          "artifact": "ae425f5f34c82509",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the evaluations' summary.records each run's date, version, cost and every case's scores, and nothing of its prompts",
+      "witness": "e0bea21a44e4938f",
+      "links": [
+        {
+          "id": "6HK",
+          "kind": "asserted",
+          "artifact": "ae425f5f34c82509",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the evaluations' summary.records the runs that happened, not the runs the case asks for, when the command asked for more",
+      "witness": "b14fc2aff744b43a",
+      "links": [
+        {
+          "id": "6HK",
+          "kind": "asserted",
+          "artifact": "ae425f5f34c82509",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

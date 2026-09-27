@@ -1,0 +1,151 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/install.test.ts",
+  "entries": [
+    {
+      "name": "[4Ec]: the skill installs itself in a project.adds the shell's scan to a project installed before the shell was scanned, and nothing twice",
+      "witness": "4175b3d93cac0b96",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: the skill installs itself in a project.changes nothing the second time, and says so",
+      "witness": "d2b6e2cee28eb6bc",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: the skill installs itself in a project.copies again when any file of the skill changed, its notices alone among them",
+      "witness": "2f861f4bb472d04c",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: the skill installs itself in a project.copies the skill in, records the method, and turns the scan on, saying each",
+      "witness": "1218ed61e4ff7726",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: the skill installs itself in a project.does not copy the skill onto itself when it already runs from the project",
+      "witness": "39c366287bbfc74e",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: the skill installs itself in a project.drops from the copy a file the skill no longer carries",
+      "witness": "6f987de75e1096cb",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: the skill installs itself in a project.keeps everything else the project's settings hold, its own hooks among them",
+      "witness": "bde9492ebbf12953",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: the skill installs itself in a project.refuses settings it cannot read, and changes nothing at all",
+      "witness": "01ef6fca26fa92c2",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: the skill installs itself in a project.replaces a link to the skill with a copy, since a link outside the repository is not committed with it",
+      "witness": "15fdf90191a23325",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: whether the session installing it will run the scan.says the scan is on from the next write when the session was started in the project",
+      "witness": "c803b3e7c08a222f",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: whether the session installing it will run the scan.says what it cannot tell, where the session's folder is not known",
+      "witness": "12a33bd32b97e5a9",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[4Ec]: whether the session installing it will run the scan.warns, naming both folders, when the session was started somewhere else",
+      "witness": "2abe7cc2e8fd1cd8",
+      "links": [
+        {
+          "id": "4Ec",
+          "kind": "asserted",
+          "artifact": "7be8fb58b97027e5",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/elsewhere.test.ts",
+  "entries": [
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.answers railyard-ids-resolve for a cross-repository citation",
+      "witness": "340eb9a100df92bd",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.finds each citation in text, and only the cross-repository form",
+      "witness": "9067bd56c5cc105d",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.is current when the cited text has not changed since",
+      "witness": "2384c50d3b19172e",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.is missing when the ID names nothing at that commit",
+      "witness": "589a4aca1011b86c",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.is suspect when the cited text has changed since, and says at which tip",
+      "witness": "9f9ade338543924e",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.is unreachable, not unresolvable, for a commit its cache lacks while the repository cannot be fetched",
+      "witness": "de007b1ce2c9d802",
+      "links": [
+        {
+          "id": "9p5",
+          "kind": "asserted",
+          "artifact": "d10b5d13cd51e8d6",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.is unreachable, saying why, for a repository it cannot fetch and has never fetched",
+      "witness": "78bfad7d6fa5c9c7",
+      "links": [
+        {
+          "id": "9p5",
+          "kind": "asserted",
+          "artifact": "d10b5d13cd51e8d6",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.is unresolvable, saying why, for an undeclared name or a commit the repository does not have",
+      "witness": "a3acc426de79efed",
+      "links": [
+        {
+          "id": "9p5",
+          "kind": "asserted",
+          "artifact": "d10b5d13cd51e8d6",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.never lets ssh stop to ask, and passes the caller's agent through",
+      "witness": "7a226babd27fa98f",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.resolves a prefix that has become ambiguous by where the ID exists, and refuses to guess past that",
+      "witness": "ed103f61c7359cf9",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.still resolves a commit it already has when the repository cannot be reached, and says so",
+      "witness": "daf1e0f1282ffb08",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.takes a commit of five hex characters or more, and not four",
+      "witness": "f206ee3b3dfcdb75",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[Bvq]: a citation of another repository, resolved at the commit it names.writes nothing to the other repository, and keeps its copy in the user's cache",
+      "witness": "a15d7ca1f712075a",
+      "links": [
+        {
+          "id": "2sV",
+          "kind": "asserted",
+          "artifact": "516f670e8a16eff6",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

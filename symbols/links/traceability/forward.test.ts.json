@@ -1,0 +1,217 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/forward.test.ts",
+  "entries": [
+    {
+      "name": "a commit's message, cited, links only the code the commit changed.gives no link to a manifest, the agent's configuration, the symbols directory or a document",
+      "witness": "1881ba1d3a7d0502",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a Tests row for a test not written yet.is passed over quietly when it names a file not there yet, and still named when a written test is missing",
+      "witness": "52364532f911ddd1",
+      "links": [
+        {
+          "id": "98I",
+          "kind": "asserted",
+          "artifact": "b8db9d89b1207b29",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward, after a cited spec is renamed.still lists what cites the renamed spec's criterion, and says it is missing; current at the citing commit",
+      "witness": "791d6d3840834a87",
+      "links": [
+        {
+          "id": "vKz",
+          "kind": "asserted",
+          "artifact": "b9194da04b4eb571",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward, from a node whose source-path is a list.reaches the files under every path in the list",
+      "witness": "f31291c0fdff2b6f",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward, where a line names an artifact in code rather than a comment.reaches the comments that cite it and never the string that names it",
+      "witness": "710c422cca148a11",
+      "links": [
+        {
+          "id": "ei5",
+          "kind": "asserted",
+          "artifact": "e76d43f88c453b76",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward, where git cannot read part of the repository.names a file it could not read, even one git's own search passed over, and still lists what it could; a submodule is no file",
+      "witness": "75803fae1c058b04",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward, where git cannot read part of the repository.names a search of the history it could not run as the repository's, and still lists the code's citations",
+      "witness": "093ab843113c1988",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.gives a criterion's own current version, not its spec's",
+      "witness": "a450ef46f8becbcc",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.gives a spec every position of each of its criteria",
+      "witness": "9b820bf919f9533b",
+      "links": [
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.gives an architecture node the files under its source path that no nested node claims, as recorded",
+      "witness": "62c673d7b8e94fba",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.lists a criterion's positions: the commits citing it, and the tests its Tests table names; suspect once it changed",
+      "witness": "02161a64f51d050c",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.lists every position that cites an ADR, in the code and in commits, each with how it is known",
+      "witness": "6de521ec7d1e673e",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.names a source it cannot read, and still answers",
+      "witness": "89e4c049e6fef4a6",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.refuses, in words, a reference no adapter recognises, and one that names several artifacts",
+      "witness": "c4221b5258b88110",
+      "links": [
+        {
+          "id": "BNb",
+          "kind": "asserted",
+          "artifact": "3127e0c35e94a85b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.runs both ways: a backward query of each position it lists names the same artifact",
+      "witness": "782d0f3ea561071d",
+      "links": [
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.says untraced when no position traces to an artifact",
+      "witness": "a95a7b26e8f22299",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.still lists what cites an artifact no file carries, and says it is missing",
+      "witness": "7026fd19bf742bc2",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

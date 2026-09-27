@@ -1,0 +1,120 @@
+{
+  "commits": [
+    {
+      "name": "docs",
+      "message": "The ADRs and the widget's spec",
+      "files": {
+        "docs/waymarks/001-first.md": ["# ADR-001 — First", "", "Decided first."],
+        "docs/waymarks/002-second.md": ["# ADR-002 — Second", "", "Decided second."],
+        "docs/specs/widget.md": [
+          "# Widget",
+          "",
+          "## Acceptance criteria",
+          "",
+          "1. **It spins.** The widget spins.",
+          "2. **It stops.** The widget stops when asked.",
+          "",
+          "## Tests",
+          "",
+          "| Criterion | Test | Status |",
+          "|---|---|---|",
+          "| 1 (spinning) | `src/widget/spin.test.ts` [1] | Written |",
+          "| 2 | `stop.test.ts` [1] | Written |",
+          "| 1 | `twin.test.ts` [1] | Written |",
+          "| NFRs | — | Planned |"
+        ]
+      }
+    },
+    {
+      "name": "model",
+      "message": "The architecture model",
+      "files": {
+        "docs/architecture/model.json": [
+          "{",
+          "  \"nodes\": [",
+          "    {",
+          "      \"unique-id\": \"widget\",",
+          "      \"node-type\": \"service\",",
+          "      \"name\": \"Widget\",",
+          "      \"description\": \"The widget\",",
+          "      \"source-path\": \"src/widget\"",
+          "    },",
+          "    {",
+          "      \"unique-id\": \"widget-core\",",
+          "      \"node-type\": \"service\",",
+          "      \"name\": \"Widget core\",",
+          "      \"description\": \"Its core\",",
+          "      \"source-path\": \"src/widget/core\"",
+          "    }",
+          "  ],",
+          "  \"relationships\": []",
+          "}"
+        ]
+      }
+    },
+    {
+      "name": "code",
+      "message": "Spin the widget (ADR-001)\n\nImplements `widget` criteria 1–2.\n\nRefs: ADR-002\nCo-Authored-By: Someone <someone@example.com>",
+      "files": {
+        "src/widget/rate.ts": ["export const rate = 3;"],
+        "src/widget/spin.ts": [
+          "// The widget's spinning (`widget` criterion 1).",
+          "import { rate } from \"./rate.ts\";",
+          "",
+          "export function spin(): number {",
+          "  // ADR-002: spin at a fixed rate.",
+          "  const turns = rate;",
+          "  return turns;",
+          "}",
+          "",
+          "export function rest(): void {",
+          "  // ADR-009 is cited here, and no such ADR exists.",
+          "  return;",
+          "}"
+        ],
+        "src/widget/spin.test.ts": ["// `widget` criterion 1: it spins.", "import { spin } from \"./spin.ts\";", "spin();"],
+        "src/widget/core/stop.test.ts": ["// Stopping.", "export {};"],
+        "src/a/twin.test.ts": ["export {};"],
+        "src/b/twin.test.ts": ["export {};"]
+      }
+    },
+    {
+      "name": "plain",
+      "message": "Plain words",
+      "author": "Other Author",
+      "files": {
+        "other/plain.txt": ["nothing cites this"]
+      }
+    },
+    {
+      "name": "stops",
+      "message": "Tighten when the widget stops",
+      "files": {
+        "docs/specs/widget.md": [
+          "# Widget",
+          "",
+          "## Acceptance criteria",
+          "",
+          "1. **It spins.** The widget spins.",
+          "2. **It stops.** The widget stops within a second of being asked.",
+          "",
+          "## Tests",
+          "",
+          "| Criterion | Test | Status |",
+          "|---|---|---|",
+          "| 1 (spinning) | `src/widget/spin.test.ts` [1] | Written |",
+          "| 2 | `stop.test.ts` [1] | Written |",
+          "| 1 | `twin.test.ts` [1] | Written |",
+          "| NFRs | — | Planned |"
+        ]
+      }
+    },
+    {
+      "name": "broken",
+      "message": "An architecture document that cannot be read",
+      "files": {
+        "docs/architecture/broken.json": ["{ \"nodes\": ["]
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/asserted.test.ts",
+  "entries": [
+    {
+      "name": "[CS8]: asserted links, read by the queries.answers a line in no linked thing with no asserted link",
+      "witness": "5ca19617e8adf548",
+      "links": [
+        {
+          "id": "CS8",
+          "kind": "asserted",
+          "artifact": "f801635fc16f382a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[CS8]: asserted links, read by the queries.answers a line inside a linked thing with its link, recorded, and says where it was read",
+      "witness": "c5d505780d792a9b",
+      "links": [
+        {
+          "id": "CS8",
+          "kind": "asserted",
+          "artifact": "f801635fc16f382a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[CS8]: asserted links, read by the queries.lists, from a criterion, the thing linked to it, by its span",
+      "witness": "0b606455122a842f",
+      "links": [
+        {
+          "id": "CS8",
+          "kind": "asserted",
+          "artifact": "f801635fc16f382a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR], [5jT]: each asserted link is dated by its own lines in the links file.finds a link added to a thing already linked current, not made before its criterion existed",
+      "witness": "fdae54e7d31975d3",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[EaR], [5jT]: each asserted link is dated by its own lines in the links file.finds a link confirmed after its criterion changed current",
+      "witness": "1c22cd4259112c6e",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/library.test.ts",
+  "entries": [
+    {
+      "name": "@railyard/traceability, imported by its package name.exports the two queries, the same functions as the directory's own index",
+      "witness": "3a7fb84e9b363856",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

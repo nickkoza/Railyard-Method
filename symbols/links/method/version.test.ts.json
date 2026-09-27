@@ -1,0 +1,115 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/version.test.ts",
+  "entries": [
+    {
+      "name": "[o7Y]: what a skill does about the version it finds.does nothing where the version is the one it works to",
+      "witness": "667dc98a71df59ea",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: what a skill does about the version it finds.refuses a version from the future, and changes nothing",
+      "witness": "30412e01c94afb7b",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: what a skill does about the version it finds.refuses a version it cannot read as a version, rather than guessing at its order",
+      "witness": "e2cd958ed21dc741",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: what a skill does about the version it finds.upgrades where the version is older, and says what it is carrying forward from",
+      "witness": "944609a195d4fbf5",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[o7Y]: what a skill does about the version it finds.writes the version where there is none: a repository it has not worked in is not refused",
+      "witness": "3b790d9a9d1a7a43",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the method version a repository records.is absent in a repository the skill has not worked in",
+      "witness": "7f6557d3b6acb6dc",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the method version a repository records.is absent, rather than a crash, when the marker cannot be read as the record it should be",
+      "witness": "f1252fa302362841",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the method version a repository records.is written where it is looked for, and read back",
+      "witness": "7cc27438936f5b3c",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the method version a repository records.is written without losing any other field the repository keeps in the marker",
+      "witness": "f92620db902be8a0",
+      "links": [
+        {
+          "id": "o7Y",
+          "kind": "asserted",
+          "artifact": "df3f64954afba906",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

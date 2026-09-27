@@ -1,0 +1,91 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/source-map.test.ts",
+  "entries": [
+    {
+      "name": "a source map.gives none for a segment that names no source, which is a generated position with no origin",
+      "witness": "95ee79b935f36ff4",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a source map.gives the source position a generated position maps to, by lines and columns that start at one",
+      "witness": "992db8eedf184586",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a source map.puts sourceRoot before each source, as the standard has it",
+      "witness": "30d2998942d01085",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a source map.refuses an index map in words, rather than half-reading it",
+      "witness": "f3f87952f369c7b6",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a source map.refuses what is not a source map, naming the file and why",
+      "witness": "e5ac45d7971a5899",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a source map.says which source a segment names, even where the map lists several",
+      "witness": "173fd6e3553f114f",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a source map.takes the mapping at or before the column asked about, and gives none where the line has none",
+      "witness": "f9c5c04b61cf0314",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

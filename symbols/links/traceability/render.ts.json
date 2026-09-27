@@ -1,0 +1,121 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/render.ts",
+  "entries": [
+    {
+      "name": "named",
+      "witness": "fe695ae1934959fe",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "renderBackward",
+      "witness": "ff72159772dbca5d",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "renderForward",
+      "witness": "21361a7899216a4a",
+      "links": [
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "renderIndexed",
+      "witness": "7bab43adbba2f4cc",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "renderStamped",
+      "witness": "cfb1e6f873f7b936",
+      "links": [
+        {
+          "id": "DHL",
+          "kind": "asserted",
+          "artifact": "c93ec8b797859af0",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "renderSymbols",
+      "witness": "9d042f6da4709e7d",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "state",
+      "witness": "4a29afb728466918",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "unreadableLines",
+      "witness": "08dbf6f2e760d980",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "untraced",
+      "witness": "b67d587b04b00464",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

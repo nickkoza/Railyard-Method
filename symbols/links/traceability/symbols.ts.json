@@ -1,0 +1,469 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/symbols.ts",
+  "entries": [
+    {
+      "name": "artifactAt",
+      "witness": "dba7006b582360e2",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "byPathOf",
+      "witness": "64881bfc5c775c57",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "canonical",
+      "witness": "ded6dde8950900e2",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "claimBuilds",
+      "witness": "26283880dc002577",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "commitAt",
+      "witness": "b4510fa3a29f68d5",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "covers",
+      "witness": "78cda3d988a8d6b3",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "document",
+      "witness": "48fb3bca44b97703",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "emptyIndex",
+      "witness": "eb332ee088f072eb",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "IndexDocument",
+      "witness": "36720e1ab8376012",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "known",
+      "witness": "f6c7edb070c4be9b",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "linkAt",
+      "witness": "94e09e090aa2d0e8",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "parsed",
+      "witness": "a0cb51056172f7fc",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Place",
+      "witness": "36fc678b5f2c95e9",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "positionOf",
+      "witness": "df6dd56744a727c3",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "readJson",
+      "witness": "7274d6b929fa7f22",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "readSymbols",
+      "witness": "1167d33e330bb428",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "readVersionFile",
+      "witness": "d7590030c383fe87",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "refuse",
+      "witness": "34dbfb4981ddac84",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "resolveChain",
+      "witness": "a8a2a51696dc0e92",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Resolved",
+      "witness": "f8a1a7e5dbc4f2f8",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "rowOf",
+      "witness": "bd9fcb9a63c11e44",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "sameFile",
+      "witness": "934e6ff9c92c9d64",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "SymbolLink",
+      "witness": "6de44acc224b1d19",
+      "links": [
+        {
+          "id": "63N",
+          "kind": "asserted",
+          "artifact": "5ca54d4aacd18905",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "SymbolPosition",
+      "witness": "81d2fa5ba5b45d78",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Symbols",
+      "witness": "e075b6ced342dc30",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Tables",
+      "witness": "577875babf06418c",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "tablesOf",
+      "witness": "85e6d6242b5465d9",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "versionAt",
+      "witness": "6239687c3dfd3c86",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "VersionDocument",
+      "witness": "be1e703342b797b1",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "VersionEntry",
+      "witness": "d396cd68eef04a29",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "write",
+      "witness": "2bb21b4bcaeb23a9",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "writeVersion",
+      "witness": "75726c1610628289",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Written",
+      "witness": "a3777247b8abf860",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

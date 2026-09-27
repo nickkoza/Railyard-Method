@@ -1,0 +1,223 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/spec-shape.ts",
+  "entries": [
+    {
+      "name": "closing",
+      "witness": "7bce01897c1ad97d",
+      "links": [
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Covered",
+      "witness": "c4a2b3694db00fa8",
+      "links": [
+        {
+          "id": "MHU",
+          "kind": "asserted",
+          "artifact": "847c3f58f1789770",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "coveredBy",
+      "witness": "774920b45fcce4ad",
+      "links": [
+        {
+          "id": "MHU",
+          "kind": "asserted",
+          "artifact": "847c3f58f1789770",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "CRITERIA",
+      "witness": "9e1548a1eb0e2553",
+      "links": [
+        {
+          "id": "MHU",
+          "kind": "asserted",
+          "artifact": "847c3f58f1789770",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "CriterionCitation",
+      "witness": "39be7f281d6adb70",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "criterionCitations",
+      "witness": "1bd1d359615e225f",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "criterionCitations.plural",
+      "witness": "176dbbbf9b15a1ca",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "witness": "e6d58c1fca49a659",
+      "links": [
+        {
+          "id": "MHU",
+          "kind": "asserted",
+          "artifact": "847c3f58f1789770",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "itemsOf",
+      "witness": "1d6f14f6f102d2f4",
+      "links": [
+        {
+          "id": "MHU",
+          "kind": "asserted",
+          "artifact": "847c3f58f1789770",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Numbered",
+      "witness": "cd41fec5200784b4",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "numberedList",
+      "witness": "bbefa9f0b7361849",
+      "links": [
+        {
+          "id": "R6P",
+          "kind": "asserted",
+          "artifact": "46d912cd4c4245ac",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Xtd",
+          "kind": "asserted",
+          "artifact": "af262c516893a872",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Unnumbered",
+      "witness": "1691b6a760db3187",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "unnumberedDecisions",
+      "witness": "eca4c63804168c0e",
+      "links": [
+        {
+          "id": "8g5",
+          "kind": "asserted",
+          "artifact": "7369b3b3d7ef786a",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

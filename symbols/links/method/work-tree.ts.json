@@ -1,0 +1,115 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/work-tree.ts",
+  "entries": [
+    {
+      "name": "changedSinceLastScan",
+      "witness": "d781c10cc45d373d",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Changes",
+      "witness": "b3420b63ff8ecc88",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "git",
+      "witness": "17b92a24dc74c9b4",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "inTheChange",
+      "witness": "4e2de1b528fa518e",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "readSeen",
+      "witness": "65c177da659796b4",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "remember",
+      "witness": "8facff9aac74dce2",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "signature",
+      "witness": "f7494f58b970be46",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "statePath",
+      "witness": "757792ede708240e",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "writeSeen",
+      "witness": "e6f4d4fe843e244f",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

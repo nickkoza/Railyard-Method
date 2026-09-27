@@ -1,0 +1,43 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/check-cli.ts",
+  "entries": [
+    {
+      "name": "main",
+      "witness": "f99e65eff9828907",
+      "links": [
+        {
+          "id": "9p5",
+          "kind": "asserted",
+          "artifact": "d10b5d13cd51e8d6",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "summary",
+      "witness": "15f28467660ebfa3",
+      "links": [
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

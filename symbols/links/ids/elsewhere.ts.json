@@ -1,0 +1,145 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/elsewhere.ts",
+  "entries": [
+    {
+      "name": "atCommit",
+      "witness": "881a1ec08bfaf1eb",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "cacheFor",
+      "witness": "d2e1622ece847ffe",
+      "links": [
+        {
+          "id": "2sV",
+          "kind": "asserted",
+          "artifact": "516f670e8a16eff6",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "chooseCommit",
+      "witness": "46df360a00137730",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "commitsFor",
+      "witness": "bb9cf73d40dcb0da",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "CrossCitation",
+      "witness": "0c99c9c98cacb4b8",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "crossCitationsIn",
+      "witness": "6e9e5e0b6805b111",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "fetch",
+      "witness": "a403a7326c9756fe",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "git",
+      "witness": "1bff16cc3c1766d5",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "Resolution",
+      "witness": "ece030f3b01079c2",
+      "links": [
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "resolveElsewhere",
+      "witness": "e96968f821962451",
+      "links": [
+        {
+          "id": "9p5",
+          "kind": "asserted",
+          "artifact": "d10b5d13cd51e8d6",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Bvq",
+          "kind": "asserted",
+          "artifact": "3360cdccf2901bab",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "v0F",
+          "kind": "asserted",
+          "artifact": "0a5502652e5da2c4",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

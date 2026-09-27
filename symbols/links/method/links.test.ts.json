@@ -1,0 +1,217 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/links.test.ts",
+  "entries": [
+    {
+      "name": "[G0i]: a linked thing moved to another file in the same change.follows a whole file moved, its old one deleted",
+      "witness": "96c8d659f4ad26c9",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a linked thing moved to another file in the same change.says where a gone name is now, and what the new file's name was linked to, with the command that moves the link",
+      "witness": "1c1ad565181f353c",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: check shows the state of the links, as notices and never as findings.[f4v]: closes by counting the notices that are links a change left to answer, and how to answer them",
+      "witness": "d36d4f9c5c715382",
+      "links": [
+        {
+          "id": "f4v",
+          "kind": "asserted",
+          "artifact": "3c9c932346508476",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: check shows the state of the links, as notices and never as findings.counts only code as source: a patch, a document or data holding a def line is not",
+      "witness": "dcf9ea945705c996",
+      "links": [
+        {
+          "id": "C4P",
+          "kind": "asserted",
+          "artifact": "bcfaad32de5e3757",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: check shows the state of the links, as notices and never as findings.names suspect links and a links file whose source is gone, and counts untracked files",
+      "witness": "1f808a251b1768c3",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: check shows the state of the links, as notices and never as findings.says nothing where every file is tracked and every link current",
+      "witness": "ad001554cc79a58d",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.[5jT]: finds a link suspect when the criterion it names has changed",
+      "witness": "a435ec7bbe40335e",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.[5jT]: finds every link current until the code under it changes, and then suspect",
+      "witness": "89efa1902e84ba67",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.[5jT]: names a linked thing that is gone as missing, and a new one as unlinked",
+      "witness": "743a929828f3f07e",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.[CS8]: records an asserted link beside the source, at a path derived from the file's own",
+      "witness": "eebadbd2944d1047",
+      "links": [
+        {
+          "id": "CS8",
+          "kind": "asserted",
+          "artifact": "f801635fc16f382a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.[G0i]: bounds what it names for an artifact under many links, and says how many more",
+      "witness": "5b748a98449cbe74",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.[G0i]: names, for an artifact whose text changed, each link it leaves to confirm, with the command",
+      "witness": "6572291b269fcc31",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.[Zs7]: calls a file with no links untracked, and names its things",
+      "witness": "17e428bb48182cbc",
+      "links": [
+        {
+          "id": "Zs7",
+          "kind": "asserted",
+          "artifact": "ad9a46786c7cc21a",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.names an ID a link holds that no longer names anything",
+      "witness": "81d2e546c437a4f0",
+      "links": [
+        {
+          "id": "5jT",
+          "kind": "asserted",
+          "artifact": "53580c5b73621fc7",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.refuses a name the file does not have, and an ID that names nothing",
+      "witness": "91801570edb329b8",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.removes a link, and the file's links file with its last one",
+      "witness": "4918e3f964e3e827",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "links kept per source file, and the scan that keeps them true.writes the same bytes whatever order the same links were made in",
+      "witness": "f806547c2f59f0d6",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "86618428fd4e5ab2",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

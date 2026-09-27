@@ -1,0 +1,8 @@
+# The repository this case works in is written by scaffold.sh, which only a case.yaml can
+# name. Run with --scaffold and --allow-tools Write Edit 'Bash(python3 sim/grasp.py:*)' 'Bash(python3 -m unittest:*)'
+# (so every file the agent writes goes through Write or Edit, where the trace shows it), or the agent
+# works in an empty directory and the case scores nothing in either arm.
+schema_version: "1.0"
+name: artifacts-across-a-session
+context:
+  scaffold_script: scaffold.sh

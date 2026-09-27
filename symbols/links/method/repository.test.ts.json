@@ -1,0 +1,79 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/repository.test.ts",
+  "entries": [
+    {
+      "name": "the directories a repository says record a moment.ignores entries that are not paths, rather than failing the whole list",
+      "witness": "523a42bac18a8a6f",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the directories a repository says record a moment.is empty rather than fatal where the marker cannot be read",
+      "witness": "61b8855c9abe8653",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the directories a repository says record a moment.is empty where the repository says nothing: a repository is not assumed to have any",
+      "witness": "e772b50d95565383",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the directories a repository says record a moment.is what the repository named",
+      "witness": "d8c044246d6f0eff",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the directories a repository says record a moment.matches a file inside a directory it named, and nothing outside it",
+      "witness": "0c4d2cdb315d2964",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the directories a repository says record a moment.reads a named file as well as a directory, because a register is one file",
+      "witness": "f8011391179a9db0",
+      "links": [
+        {
+          "id": "pY5",
+          "kind": "asserted",
+          "artifact": "aedfe55f91c4bbae",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

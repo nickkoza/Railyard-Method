@@ -1,0 +1,78 @@
+{
+  "name": "railyard-method",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Spec-driven change: a development method that travels as a Claude Code skill, with the tooling it needs to be followed",
+  "exports": {
+    "./traceability": {
+      "types": "./dist/traceability/index.d.ts",
+      "default": "./dist/traceability/index.js"
+    },
+    "./ids": {
+      "types": "./dist/ids/resolve.d.ts",
+      "default": "./dist/ids/resolve.js"
+    },
+    "./ids/mint": {
+      "types": "./dist/ids/mint.d.ts",
+      "default": "./dist/ids/mint.js"
+    },
+    "./method": {
+      "types": "./dist/method/paths.d.ts",
+      "default": "./dist/method/paths.js"
+    },
+    "./method/version": {
+      "types": "./dist/method/version.d.ts",
+      "default": "./dist/method/version.js"
+    },
+    "./method/repository": {
+      "types": "./dist/method/repository.d.ts",
+      "default": "./dist/method/repository.js"
+    },
+    "./method/spec-shape": {
+      "types": "./dist/method/spec-shape.d.ts",
+      "default": "./dist/method/spec-shape.js"
+    }
+  },
+  "bin": {
+    "railyard-trace": "./dist/bin/railyard-trace.js",
+    "railyard-ids-take": "./dist/bin/railyard-ids-take.js",
+    "railyard-ids-resolve": "./dist/bin/railyard-ids-resolve.js",
+    "railyard-upgrade": "./dist/bin/railyard-upgrade.js",
+    "railyard-check": "./dist/bin/railyard-check.js"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types \"**/*.test.ts\"",
+    "ids:take": "node bin/railyard-ids-take.ts",
+    "ids:resolve": "node bin/railyard-ids-resolve.ts",
+    "build": "tsc -p tsconfig.build.json && node -e \"const fs=require('fs');for(const f of Object.values(JSON.parse(fs.readFileSync('package.json','utf8')).bin))fs.chmodSync(f,0o755)\"",
+    "prepare": "npm run build",
+    "evals": "rm -rf index/target && node --experimental-strip-types tools/evals.ts",
+    "symbols:index": "npm run --silent build && node dist/bin/railyard-trace.js index --symbols symbols --repo .",
+    "check": "npm run --silent build && node dist/bin/railyard-check.js",
+    "evals:summary": "node --experimental-strip-types tools/eval-summary.ts",
+    "tools:build": "node --input-type=module -e \"import('./tools/bundle.ts').then((m) => m.bundleTools(m.TOOLS))\""
+  },
+  "dependencies": {
+    "@types/node": "^24.13.4",
+    "zod": "4.6.4"
+  },
+  "devDependencies": {
+    "@finos/calm-cli": "1.59.0",
+    "esbuild": "0.28.2",
+    "typescript": "6.0.3"
+  },
+  "files": [
+    "dist",
+    "skills/spec-driven-change",
+    "traceability/FORMAT.md",
+    "traceability/symbols.schema.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24"
+  }
+}

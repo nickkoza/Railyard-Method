@@ -1,0 +1,379 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/symbols.test.ts",
+  "entries": [
+    {
+      "name": "a position records the thing it names.leaves it absent where nothing names the position, rather than inventing a name",
+      "witness": "5e1097656bf54b59",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a position records the thing it names.round-trips an anchor through a version and back",
+      "witness": "81e2a6996ec42115",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory that cannot answer.answers from a directory holding no version at all by saying so",
+      "witness": "2a1277cb554188a4",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory that cannot answer.refuses a version whose own commit is not the one the index names for it",
+      "witness": "6fad2179cad9ecfe",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory that cannot answer.refuses when two versions carry one build hash, rather than guessing which",
+      "witness": "90a16e7e9d51a3fc",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory that cannot answer.says a build hash it does not carry, naming the hash and the directory, and answers from no other version",
+      "witness": "a045ef6de0f7fa71",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory that cannot answer.says a directory or an index that is missing, naming it",
+      "witness": "a34b4910cdd089e6",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory that cannot answer.says a file it cannot read, or that is not the format, naming the file and why",
+      "witness": "5b1e3c47c7e32ae5",
+      "links": [
+        {
+          "id": "Wuq",
+          "kind": "asserted",
+          "artifact": "80506d56daebe37e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.a build hash is answered by the newest version indexed for it, never by two",
+      "witness": "f840f9ef6e344d2c",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.a build joins the newest version and leaves the older one, even when nothing changed",
+      "witness": "83c5b5b75f0cad58",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.covers a range whose start is its end at that one position, as an empty line is covered",
+      "witness": "ab3b2b3dd4e522cf",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.drops a file whose positions are gone, and says so in the version",
+      "witness": "37a3d6bc7d3dbfe5",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.holds a position in a file of any language, naming no language, framework or build tool",
+      "witness": "95a92bd6524c5b7b",
+      "links": [
+        {
+          "id": "LdF",
+          "kind": "asserted",
+          "artifact": "a659d393accb7217",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.ignores a field it does not know, in the index and in a version",
+      "witness": "7b1cba943b2e7ea1",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.reads every position back, whole, with its links",
+      "witness": "b8e637c919a181ef",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.records only the files that changed since the base, and resolves the chain",
+      "witness": "a1723ba00b0dd455",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.says nothing of a position it records nothing for, and guesses nothing",
+      "witness": "728ca6e17eb51d9a",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.writes an index and one file per version, in the published format",
+      "witness": "7ee7e35fb3f13c95",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory.writes no version when nothing changed, and joins a new build hash to the version that is there",
+      "witness": "7b7af3159621d758",
+      "links": [
+        {
+          "id": "LPv",
+          "kind": "asserted",
+          "artifact": "dd269293c2b46a6b",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory's root.records the root of the tree it describes, and reads it back",
+      "witness": "f6bc472c0627b1d3",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory's root.refuses a document of a minor version it does not know, by its version",
+      "witness": "cd851b9001ebfa37",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "a symbols directory's root.refuses a version whose root would differ from the one the directory records, naming both",
+      "witness": "bd39398148cafb8f",
+      "links": [
+        {
+          "id": "LRA",
+          "kind": "asserted",
+          "artifact": "e931009efdf4999e",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an artifact reference in a symbols file is its stable ID.leaves the ID absent for an artifact that declares none, rather than inventing one",
+      "witness": "a854d9724970cd41",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an artifact reference in a symbols file is its stable ID.round-trips the ID through a version and back",
+      "witness": "9397219c587476b8",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an artifact version is witnessed by a content hash.leaves the hash absent for a version written before it was carried, rather than inventing one",
+      "witness": "250dd2692c7508f9",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an artifact version is witnessed by a content hash.round-trips the hash on both ends of a link",
+      "witness": "248b30407e7760d6",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an artifact version is witnessed by a content hash.says whether a link is suspect by comparing the two, with no repository in reach",
+      "witness": "64c28ed060cbf970",
+      "links": [
+        {
+          "id": "EaR",
+          "kind": "asserted",
+          "artifact": "ea6dda1dc1878257",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "an index declares the format version of the writer that last wrote it.re-stamps a document created by an earlier writer of the same minor",
+      "witness": "c43666998ad336cd",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the published schema.is versioned with the format, and names every field a version and an index carry",
+      "witness": "aaa8e51c74323d50",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "the reader is conformant about fields it does not know.reads a document carrying a field from a later writer, rather than refusing it",
+      "witness": "5bac0ddc31b9b1ce",
+      "links": [
+        {
+          "id": "QBm",
+          "kind": "asserted",
+          "artifact": "f47fb52ff3181f96",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}

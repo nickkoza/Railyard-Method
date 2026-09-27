@@ -1,0 +1,85 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "traceability/lookup.ts",
+  "entries": [
+    {
+      "name": "follow",
+      "witness": "6db0baf5d99b6915",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "lookUp",
+      "witness": "2502d3431c5536ff",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        },
+        {
+          "id": "qHR",
+          "kind": "asserted",
+          "artifact": "66db9aee7ebab2a6",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "LookupQuery",
+      "witness": "8842178af1f3b0ac",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "mapBeside",
+      "witness": "c8f3ff2ca6c64d44",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "SymbolsAnswer",
+      "witness": "84fa1dedd4c32807",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "within",
+      "witness": "901ee1378f6858f8",
+      "links": [
+        {
+          "id": "BKY",
+          "kind": "asserted",
+          "artifact": "a3b885405b3ba9cd",
+          "at": "2026-09-27"
+        }
+      ]
+    }
+  ]
+}
