@@ -26,29 +26,48 @@ Ask one line of this repository's own source why it exists. From a clone of it:
 
 ```console
 $ node skills/spec-driven-change/tools/railyard.mjs trace backward ids/elsewhere.ts:15
-ids/elsewhere.ts:15 at 4a4166c1ce40 (2026-09-27 10:44 -07:00)
+ids/elsewhere.ts:15 at e6e6b1f7a73b (2026-09-27 15:28 -07:00)
   | // What it cannot check it says it cannot check ([9p5]): an undeclared name or a commit the
-last changed in fa032f9d1713 (2026-09-24 11:11 -07:00) by Nick: A repository the reader cannot reach is a notice, not a failure
+last changed in 1c98ef4662e5 (2026-09-27 15:28 -07:00) by Nick: Railyard Method 1.0.0
   Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
-  Claude-Session: https://claude.ai/code/session_01TjNnpFsj5mYtCJhMoCW9W5
 
-recorded  architecture-source-path  CALM node `identifiers` (docs/architecture/method.json#identifiers) @ 03fd8d0b22a5 (2026-09-23 15:14 -07:00)  current  at docs/architecture/method.json:34 (03fd8d0b22a5)
-cited     code-citation             [Bvq] (docs/specs/traceability.md) @ d60cf166d332 (2026-09-23 13:29 -07:00)  current  at ids/elsewhere.ts:4 (0361ad7a663d)
-cited     code-citation             [2sV] (docs/principles/principles.md) @ 603237bad804 (2026-09-23 11:42 -07:00)  suspect: changed since the link was made, now 43b351c62781 (2026-09-24 10:09 -07:00)  at ids/elsewhere.ts:9 (0361ad7a663d)
-cited     code-citation             [QBm] (docs/specs/traceability.md) @ d60cf166d332 (2026-09-23 13:29 -07:00)  suspect: changed since the link was made, now 64046c9b269b (2026-09-24 09:57 -07:00)  at ids/elsewhere.ts:12 (0361ad7a663d)
-cited     code-citation             [9p5] (docs/principles/principles.md) @ 43b351c62781 (2026-09-24 10:09 -07:00)  current  at ids/elsewhere.ts:15 (fa032f9d1713)
-cited     commit-message            [v0F] (docs/specs/artifacts.md) @ 64046c9b269b (2026-09-24 09:57 -07:00)  suspect: changed since the link was made, now 4d94dfe14512 (2026-09-24 19:13 -07:00)  in commit fa032f9d1713
+recorded  architecture-source-path  CALM node `identifiers` (docs/architecture/method.json#identifiers) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at docs/architecture/method.json:34 (1c98ef4662e5)
+cited     code-citation             [Bvq] (docs/specs/traceability.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at ids/elsewhere.ts:4 (1c98ef4662e5)
+cited     code-citation             [2sV] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at ids/elsewhere.ts:9 (1c98ef4662e5)
+cited     code-citation             [QBm] (docs/specs/traceability.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at ids/elsewhere.ts:12 (1c98ef4662e5)
+cited     code-citation             [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at ids/elsewhere.ts:15 (1c98ef4662e5)
 ```
 
-*(Real output, complete. The lines are long: the end of each says where the link was read.)*
+*(Real output, complete. The first line names the commit you have checked out, and the end of
+each row says where the link was read.)*
 
 It answers the first question: this line belongs to the architecture model's `identifiers`
 component, implements the requirement [Bvq] cited at the top of its file, and honours the
-principle [9p5] cited on the line itself, *absence of signal is not evidence of health*. Then it
-answers the second, which nobody asked out loud and no reviewer would have caught: two other
-requirements the same comment cites, and one the commit that wrote it cites, **changed after
-the code was written**. The code may no longer be what they ask for, and the trace says which
-to reread.
+principle [9p5] cited on the line itself, *absence of signal is not evidence of health*.
+
+Now change that principle, the way a requirement changes in any project, and ask again. In
+`docs/principles/principles.md`, add to [9p5] "and a check that read nothing fails", commit,
+and run the same command:
+
+```console
+$ git commit -qam "A check that read nothing fails"
+$ node skills/spec-driven-change/tools/railyard.mjs trace backward ids/elsewhere.ts:15
+ids/elsewhere.ts:15 at 11ad96b1cd0a (2026-09-27 15:30 -07:00)
+  | // What it cannot check it says it cannot check ([9p5]): an undeclared name or a commit the
+last changed in 1c98ef4662e5 (2026-09-27 15:28 -07:00) by Nick: Railyard Method 1.0.0
+  Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+
+recorded  architecture-source-path  CALM node `identifiers` (docs/architecture/method.json#identifiers) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at docs/architecture/method.json:34 (1c98ef4662e5)
+cited     code-citation             [Bvq] (docs/specs/traceability.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at ids/elsewhere.ts:4 (1c98ef4662e5)
+cited     code-citation             [2sV] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at ids/elsewhere.ts:9 (1c98ef4662e5)
+cited     code-citation             [QBm] (docs/specs/traceability.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at ids/elsewhere.ts:12 (1c98ef4662e5)
+cited     code-citation             [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  suspect: changed since the link was made, now 11ad96b1cd0a (2026-09-27 15:30 -07:00)  at ids/elsewhere.ts:15 (1c98ef4662e5)
+```
+
+*(Your commit's hash stands where `11ad96b1cd0a` does.)* That answers the second question,
+which nobody asked out loud and no reviewer would have
+caught: the principle this line honours **changed after the code was written**. The code may no
+longer be what it asks for, and the trace says which to reread.
 
 ## Why specs alone don't get you there
 
@@ -164,19 +183,31 @@ touch before you make the change:
 
 ```console
 $ node skills/spec-driven-change/tools/railyard.mjs trace forward 9p5
-[9p5] (docs/principles/principles.md) at 8e08873e432d (2026-09-27 10:47 -07:00)
-  its current version: 43b351c62781 (2026-09-24 10:09 -07:00)
+[9p5] (docs/principles/principles.md) at 9910fe6d0b8e (2026-09-27 15:31 -07:00)
+  its current version: 1c98ef4662e5 (2026-09-27 15:28 -07:00)
 
-cited     code-citation             ids/elsewhere.ts:15-18  [9p5] (docs/principles/principles.md) @ 43b351c62781 (2026-09-24 10:09 -07:00)  current  at ids/elsewhere.ts:15 (fa032f9d1713)
-cited     code-citation             method/architecture.ts:189-190  [9p5] (docs/principles/principles.md) @ 43b351c62781 (2026-09-24 10:09 -07:00)  current  at method/architecture.ts:189 (e67a5614c5e4)
-cited     code-citation             method/check-cli.ts:6-7  [9p5] (docs/principles/principles.md) @ 603237bad804 (2026-09-23 11:42 -07:00)  suspect: changed since the link was made, now 43b351c62781 (2026-09-24 10:09 -07:00)  at method/check-cli.ts:6 (8ddc59eaf27f)
-cited     code-citation             README.md:30  [9p5] (docs/principles/principles.md) @ 43b351c62781 (2026-09-24 10:09 -07:00)  current  at README.md:30 (ebab801041ae)
+recorded  asserted-link             ids/elsewhere.test.ts:103-109  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at symbols/links/ids/elsewhere.test.ts.json:137 (1c98ef4662e5)
+recorded  asserted-link             ids/elsewhere.test.ts:111-115  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at symbols/links/ids/elsewhere.test.ts.json:113 (1c98ef4662e5)
+recorded  asserted-link             ids/elsewhere.test.ts:117-126  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at symbols/links/ids/elsewhere.test.ts.json:95 (1c98ef4662e5)
+recorded  asserted-link             ids/elsewhere.ts:141-182  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at symbols/links/ids/elsewhere.ts.json:125 (1c98ef4662e5)
+recorded  asserted-link             method/architecture.test.ts:350-359  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at symbols/links/method/architecture.test.ts.json:35 (1c98ef4662e5)
+recorded  asserted-link             method/architecture.ts:181-184  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at symbols/links/method/architecture.ts.json:11 (1c98ef4662e5)
+recorded  asserted-link             method/check-cli.ts:12-29  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at symbols/links/method/check-cli.ts.json:11 (1c98ef4662e5)
+recorded  asserted-link             method/links.ts:288-323  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at symbols/links/method/links.ts.json:35 (1c98ef4662e5)
+cited     code-citation             ids/elsewhere.ts:15-18  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at ids/elsewhere.ts:15 (1c98ef4662e5)
+cited     code-citation             method/architecture.ts:224-225  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at method/architecture.ts:224 (1c98ef4662e5)
+cited     code-citation             method/check-cli.ts:6-7  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at method/check-cli.ts:6 (1c98ef4662e5)
+cited     code-citation             README.md:30  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at README.md:30 (1c98ef4662e5)
+cited     code-citation             README.md:56  [9p5] (docs/principles/principles.md) @ 1c98ef4662e5 (2026-09-27 15:28 -07:00)  current  at README.md:56 (9910fe6d0b8e)
 ```
 
-Three places in the code answer to that principle. Two cite it as it reads now. The third,
-where `check` decides its exit code, was written against an earlier wording, and shows as
-*suspect* until someone reads the two side by side. The fourth row is this README, quoting that
-line in the trace above: a mention, and shown as nothing more.
+*(Its first line, too, names the commit you have checked out.)* Four places in the code say they
+implement that principle, recorded when they were written:
+the command that runs the checks, where the architecture check finds the CALM CLI, the
+resolver of citations across repositories, and the check that keeps links true. Their tests say so too, and three more places cite it in a comment.
+The last row is this README, quoting that line above: a mention, and shown as nothing more.
+Change the principle, as in the example above, and every one of these rows reads *suspect*
+until someone rereads it.
 
 ### It never overstates what it knows
 
