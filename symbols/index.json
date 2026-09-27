@@ -1,0 +1,6804 @@
+{
+  "format": "railyard-symbols",
+  "formatVersion": "0.3.3",
+  "root": "..",
+  "files": [
+    "bin/pipe.ts",
+    "docs/architecture/method.json",
+    "bin/railyard-check.ts",
+    "bin/railyard-ids-resolve.ts",
+    "bin/railyard-ids-take.ts",
+    "bin/railyard-trace.ts",
+    "bin/railyard-upgrade.ts",
+    "bin/railyard.ts",
+    "ids/cli.test.ts",
+    "docs/specs/artifacts.md",
+    "ids/cli.ts",
+    "ids/elsewhere.test.ts",
+    "docs/specs/traceability.md",
+    "ids/elsewhere.ts",
+    "ids/mint.test.ts",
+    "ids/mint.ts",
+    "ids/resolve.test.ts",
+    "ids/resolve.ts",
+    "ids/take.test.ts",
+    "ids/take.ts",
+    "index/Cargo.lock",
+    "index/Cargo.toml",
+    "index/src/bin/bench.rs",
+    "index/src/bin/make.rs",
+    "index/src/bin/query.rs",
+    "index/src/layout.rs",
+    "index/src/lib.rs",
+    "index/src/read.rs",
+    "index/src/write.rs",
+    "index/tests/roundtrip.rs",
+    "method/architecture.test.ts",
+    "docs/specs/architecture.md",
+    "method/architecture.ts",
+    "method/artifacts.test.ts",
+    "method/artifacts.ts",
+    "method/check-cli.ts",
+    "method/decisions-by-id.test.ts",
+    "method/decisions-by-id.ts",
+    "method/install.test.ts",
+    "docs/specs/skill.md",
+    "method/install.ts",
+    "method/links-cli.ts",
+    "method/links.test.ts",
+    "method/links.ts",
+    "method/paths.ts",
+    "method/python-imports.ts",
+    "method/repository.test.ts",
+    "method/repository.ts",
+    "method/spec-shape.ts",
+    "method/tests-by-id.test.ts",
+    "method/tests-by-id.ts",
+    "method/upgrade-cli.ts",
+    "method/upgrade.test.ts",
+    "method/upgrade.ts",
+    "method/version.test.ts",
+    "method/version.ts",
+    "method/work-tree.ts",
+    "README.md",
+    "release.test.ts",
+    "skills/hook.test.ts",
+    "skills/skill.test.ts",
+    "skills/spec-driven-change/SKILL.md",
+    "skills/spec-driven-change/THIRD_PARTY_NOTICES.md",
+    "skills/spec-driven-change/tools/railyard.mjs",
+    "skills/tools.test.ts",
+    "tools/bundle.ts",
+    "tools/eval-summary.test.ts",
+    "tools/eval-summary.ts",
+    "tools/evals.test.ts",
+    "tools/evals.ts",
+    "traceability/anchor.test.ts",
+    "traceability/anchor.ts",
+    "docs/architecture/traceability.json",
+    "traceability/asserted.test.ts",
+    "traceability/backward.test.ts",
+    "traceability/build-hash.test.ts",
+    "traceability/build-hash.ts",
+    "traceability/calm-adapter.ts",
+    "traceability/cli.test.ts",
+    "traceability/cli.ts",
+    "traceability/FORMAT.md",
+    "traceability/forward.test.ts",
+    "traceability/git-readonly.test.ts",
+    "traceability/git.ts",
+    "traceability/identifiers.test.ts",
+    "traceability/index.ts",
+    "traceability/indexing.test.ts",
+    "traceability/indexing.ts",
+    "traceability/library.test.ts",
+    "traceability/lookup.test.ts",
+    "traceability/lookup.ts",
+    "traceability/model.test.ts",
+    "traceability/model.ts",
+    "traceability/package.json",
+    "traceability/query.ts",
+    "traceability/railyard-adapter.test.ts",
+    "traceability/railyard-adapter.ts",
+    "traceability/render.ts",
+    "traceability/scope.test.ts",
+    "traceability/scope.ts",
+    "traceability/self.test.ts",
+    "traceability/source-map.test.ts",
+    "traceability/source-map.ts",
+    "traceability/symbols-not-source.test.ts",
+    "traceability/symbols.schema.json",
+    "traceability/symbols.test.ts",
+    "traceability/symbols.ts",
+    "traceability/testing/damaged.json",
+    "traceability/testing/fixture.ts",
+    "traceability/testing/widget.json"
+  ],
+  "artifacts": [
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/method.json",
+      "anchor": "commands",
+      "label": "CALM node `commands`"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-6",
+      "label": "[f4v]",
+      "id": "f4v"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-20",
+      "label": "[BNb]",
+      "id": "BNb"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-21",
+      "label": "[Bvq]",
+      "id": "Bvq"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-1",
+      "label": "[8g5]",
+      "id": "8g5"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-7",
+      "label": "[QzV]",
+      "id": "QzV"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-6",
+      "label": "[o7Y]",
+      "id": "o7Y"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-11",
+      "label": "[18E]",
+      "id": "18E"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/method.json",
+      "anchor": "identifiers",
+      "label": "CALM node `identifiers`"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-7",
+      "label": "[9pu]",
+      "id": "9pu"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-11",
+      "label": "[QBm]",
+      "id": "QBm"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-2",
+      "label": "[pY5]",
+      "id": "pY5"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-5",
+      "label": "[v0F]",
+      "id": "v0F"
+    },
+    {
+      "kind": "principle",
+      "path": "docs/principles/principles.md",
+      "anchor": "principle-18",
+      "label": "[2sV]",
+      "id": "2sV"
+    },
+    {
+      "kind": "principle",
+      "path": "docs/principles/principles.md",
+      "anchor": "principle-16",
+      "label": "[9p5]",
+      "id": "9p5"
+    },
+    {
+      "kind": "spec",
+      "path": "docs/specs/artifacts.md",
+      "anchor": null,
+      "label": "[XLT]",
+      "id": "XLT"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-10",
+      "label": "[EaR]",
+      "id": "EaR"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/method.json",
+      "anchor": "index-core",
+      "label": "CALM node `index-core`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/method.json",
+      "anchor": "conventions",
+      "label": "CALM node `conventions`"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-1",
+      "label": "[6aC]",
+      "id": "6aC"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-2",
+      "label": "[7m8]",
+      "id": "7m8"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-3",
+      "label": "[CC6]",
+      "id": "CC6"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-4",
+      "label": "[SKi]",
+      "id": "SKi"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-5",
+      "label": "[CLM]",
+      "id": "CLM"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-6",
+      "label": "[C4P]",
+      "id": "C4P"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-7",
+      "label": "[lLm]",
+      "id": "lLm"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-8",
+      "label": "[W7x]",
+      "id": "W7x"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/architecture.md",
+      "anchor": "criterion-9",
+      "label": "[L7b]",
+      "id": "L7b"
+    },
+    {
+      "kind": "spec",
+      "path": "docs/specs/architecture.md",
+      "anchor": null,
+      "label": "[iVr]",
+      "id": "iVr"
+    },
+    {
+      "kind": "principle",
+      "path": "docs/principles/principles.md",
+      "anchor": "principle-5",
+      "label": "[rZB]",
+      "id": "rZB"
+    },
+    {
+      "kind": "principle",
+      "path": "docs/principles/principles.md",
+      "anchor": "principle-10",
+      "label": "[AUx]",
+      "id": "AUx"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-3",
+      "label": "[Xtd]",
+      "id": "Xtd"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-4",
+      "label": "[98I]",
+      "id": "98I"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-23",
+      "label": "[ei5]",
+      "id": "ei5"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-17",
+      "label": "[G0i]",
+      "id": "G0i"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-9",
+      "label": "[RVv]",
+      "id": "RVv"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-14",
+      "label": "[4Ec]",
+      "id": "4Ec"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-15",
+      "label": "[CS8]",
+      "id": "CS8"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-13",
+      "label": "[HPg]",
+      "id": "HPg"
+    },
+    {
+      "kind": "principle",
+      "path": "docs/principles/principles.md",
+      "anchor": "principle-17",
+      "label": "[Wuq]",
+      "id": "Wuq"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-16",
+      "label": "[5jT]",
+      "id": "5jT"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-18",
+      "label": "[Zs7]",
+      "id": "Zs7"
+    },
+    {
+      "kind": "spec",
+      "path": "docs/specs/traceability.md",
+      "anchor": null,
+      "label": "[irC]",
+      "id": "irC"
+    },
+    {
+      "kind": "adr",
+      "path": "docs/waymarks/181-method-one-repository.md",
+      "anchor": null,
+      "label": "[MVi]",
+      "id": "MVi"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-5",
+      "label": "[ZNz]",
+      "id": "ZNz"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-24",
+      "label": "[MHU]",
+      "id": "MHU"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/artifacts.md",
+      "anchor": "criterion-8",
+      "label": "[R6P]",
+      "id": "R6P"
+    },
+    {
+      "kind": "principle",
+      "path": "docs/principles/principles.md",
+      "anchor": "principle-19",
+      "label": "[epm]",
+      "id": "epm"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-3",
+      "label": "[IKA]",
+      "id": "IKA"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-7",
+      "label": "[xCF]",
+      "id": "xCF"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-12",
+      "label": "[obW]",
+      "id": "obW"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/method.json",
+      "anchor": "skill",
+      "label": "CALM node `skill`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/method.json",
+      "anchor": "repository-tooling",
+      "label": "CALM node `repository-tooling`"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-9",
+      "label": "[6HK]",
+      "id": "6HK"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/skill.md",
+      "anchor": "criterion-8",
+      "label": "[fcg]",
+      "id": "fcg"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/method.json",
+      "anchor": "traceability",
+      "label": "CALM node `traceability`"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-4",
+      "label": "[LdF]",
+      "id": "LdF"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-5",
+      "label": "[BKY]",
+      "id": "BKY"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "symbols-format",
+      "label": "CALM node `symbols-format`"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-3",
+      "label": "[63N]",
+      "id": "63N"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-9",
+      "label": "[LPv]",
+      "id": "LPv"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-1",
+      "label": "[DHL]",
+      "id": "DHL"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "build-hash",
+      "label": "CALM node `build-hash`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "adapters",
+      "label": "CALM node `adapters`"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-6",
+      "label": "[03N]",
+      "id": "03N"
+    },
+    {
+      "kind": "decision",
+      "path": "docs/waymarks/181-method-one-repository.md",
+      "anchor": "decision-4",
+      "label": "[dXi]",
+      "id": "dXi"
+    },
+    {
+      "kind": "criterion",
+      "path": "docs/specs/traceability.md",
+      "anchor": "criterion-2",
+      "label": "[LRA]",
+      "id": "LRA"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "trace-cli",
+      "label": "CALM node `trace-cli`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "git-reader",
+      "label": "CALM node `git-reader`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "trace-library",
+      "label": "CALM node `trace-library`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "indexing",
+      "label": "CALM node `indexing`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "lookup",
+      "label": "CALM node `lookup`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "trace-model",
+      "label": "CALM node `trace-model`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "query",
+      "label": "CALM node `query`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "render",
+      "label": "CALM node `render`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "scope",
+      "label": "CALM node `scope`"
+    },
+    {
+      "kind": "architecture-node",
+      "path": "docs/architecture/traceability.json",
+      "anchor": "source-map",
+      "label": "CALM node `source-map`"
+    }
+  ],
+  "commits": [
+    {
+      "sha": "1c98ef4662e583f03d10856022ea5c323aa4c761",
+      "date": "2026-09-27T15:28:45-07:00"
+    }
+  ],
+  "links": [
+    {
+      "artifact": 0,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7353803e2661e2906d2097df7606b7fa530dd87684134eec88d60bdfe6fa8fd6",
+      "currentContent": "7353803e2661e2906d2097df7606b7fa530dd87684134eec88d60bdfe6fa8fd6",
+      "madeBy": {
+        "commit": 0,
+        "path": 1,
+        "line": 65
+      }
+    },
+    {
+      "artifact": 1,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "currentContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "madeBy": {
+        "commit": 0,
+        "path": 2,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 2,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3127e0c35e94a85b2ff5c5f20dadf5fa02cf6d42568ab521a51d69208e819bf6",
+      "currentContent": "3127e0c35e94a85b2ff5c5f20dadf5fa02cf6d42568ab521a51d69208e819bf6",
+      "madeBy": {
+        "commit": 0,
+        "path": 3,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 3,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "currentContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "madeBy": {
+        "commit": 0,
+        "path": 3,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 4,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 5,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "850e2735088c6050f149593ee580957073694a41cfeafb1e3ec4c095cdee2b82",
+      "currentContent": "850e2735088c6050f149593ee580957073694a41cfeafb1e3ec4c095cdee2b82",
+      "madeBy": {
+        "commit": 0,
+        "path": 5,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 6,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 7,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b62bd5fa167614cdcb4ebe0cc23bfa797fd009da24b7d709a1e06bd17245019c",
+      "currentContent": "b62bd5fa167614cdcb4ebe0cc23bfa797fd009da24b7d709a1e06bd17245019c",
+      "madeBy": {
+        "commit": 0,
+        "path": 7,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 8,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c79fbdc592b26be0fd3ea70c805d2f0699fd394a1751a2c9162f65cd33d6cea5",
+      "currentContent": "c79fbdc592b26be0fd3ea70c805d2f0699fd394a1751a2c9162f65cd33d6cea5",
+      "madeBy": {
+        "commit": 0,
+        "path": 1,
+        "line": 34
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 319
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 8,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 8,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 8,
+        "line": 19
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 10,
+        "line": 7
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 10,
+        "line": 20
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 10,
+        "line": 37
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 314
+      }
+    },
+    {
+      "artifact": 12,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "currentContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 317
+      }
+    },
+    {
+      "artifact": 3,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "currentContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 896
+      }
+    },
+    {
+      "artifact": 3,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "currentContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "madeBy": {
+        "commit": 0,
+        "path": 11,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 12,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "currentContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "madeBy": {
+        "commit": 0,
+        "path": 11,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 3,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "currentContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "madeBy": {
+        "commit": 0,
+        "path": 13,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 13,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "516f670e8a16eff66037684dec399a4a03bc3ba992c268e831f8f22c172f47a0",
+      "currentContent": "516f670e8a16eff66037684dec399a4a03bc3ba992c268e831f8f22c172f47a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 13,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 13,
+        "line": 12
+      }
+    },
+    {
+      "artifact": 14,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "d10b5d13cd51e8d6a7d6d30100d5441991e0f982bb5147001e6bceab289d26b9",
+      "currentContent": "d10b5d13cd51e8d6a7d6d30100d5441991e0f982bb5147001e6bceab289d26b9",
+      "madeBy": {
+        "commit": 0,
+        "path": 13,
+        "line": 15
+      }
+    },
+    {
+      "artifact": 15,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "currentContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 322
+      }
+    },
+    {
+      "artifact": 15,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "currentContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 323
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 14,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 15,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 15,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "currentContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "madeBy": {
+        "commit": 0,
+        "path": 15,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 15,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 15,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "currentContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "madeBy": {
+        "commit": 0,
+        "path": 15,
+        "line": 19
+      }
+    },
+    {
+      "artifact": 15,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "currentContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "madeBy": {
+        "commit": 0,
+        "path": 15,
+        "line": 23
+      }
+    },
+    {
+      "artifact": 15,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "currentContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "madeBy": {
+        "commit": 0,
+        "path": 15,
+        "line": 27
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 15,
+        "line": 136
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 15,
+        "line": 274
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 312
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 17,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 17,
+        "line": 26
+      }
+    },
+    {
+      "artifact": 3,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "currentContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "madeBy": {
+        "commit": 0,
+        "path": 17,
+        "line": 151
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 18,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 18,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 19,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 17,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b4a8cdf88bceda48cc3c1f9a882c992f254d4f93f68659c1df89941b90827b1d",
+      "currentContent": "b4a8cdf88bceda48cc3c1f9a882c992f254d4f93f68659c1df89941b90827b1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 1,
+        "line": 58
+      }
+    },
+    {
+      "artifact": 18,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "db8117873f16c51d82c6f0cd6a616dcc6ea656fb2feb20c2da9f0cd09000371f",
+      "currentContent": "db8117873f16c51d82c6f0cd6a616dcc6ea656fb2feb20c2da9f0cd09000371f",
+      "madeBy": {
+        "commit": 0,
+        "path": 1,
+        "line": 41
+      }
+    },
+    {
+      "artifact": 19,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c9073b18c71689914d49c623f66237fa31b47cd06f62439bcb211c1eca15782d",
+      "currentContent": "c9073b18c71689914d49c623f66237fa31b47cd06f62439bcb211c1eca15782d",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 183
+      }
+    },
+    {
+      "artifact": 20,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "747422a20a82538af4385ff3bbc02c33b31baa3a20155d53dc01192cf94557e5",
+      "currentContent": "747422a20a82538af4385ff3bbc02c33b31baa3a20155d53dc01192cf94557e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 183
+      }
+    },
+    {
+      "artifact": 21,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "currentContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 184
+      }
+    },
+    {
+      "artifact": 22,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "306ca0d3bb2ecd9542d95db06b7a5bbac625e8e4384af0ec42c9821cc4f80549",
+      "currentContent": "306ca0d3bb2ecd9542d95db06b7a5bbac625e8e4384af0ec42c9821cc4f80549",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 185
+      }
+    },
+    {
+      "artifact": 23,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "currentContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 186
+      }
+    },
+    {
+      "artifact": 24,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "currentContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 187
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 188
+      }
+    },
+    {
+      "artifact": 26,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "03c1b77c66dc0d925e7c312a6302c61cce62984b6890e580f4bba4d825accd16",
+      "currentContent": "03c1b77c66dc0d925e7c312a6302c61cce62984b6890e580f4bba4d825accd16",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 189
+      }
+    },
+    {
+      "artifact": 27,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "currentContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 190
+      }
+    },
+    {
+      "artifact": 27,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "currentContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "madeBy": {
+        "commit": 0,
+        "path": 31,
+        "line": 191
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 30,
+        "line": 366
+      }
+    },
+    {
+      "artifact": 28,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "0ab2fe4c3a011b9b91d1e58d4aa56fb751ea9bb4169c1281d65d142fef9dac93",
+      "currentContent": "0ab2fe4c3a011b9b91d1e58d4aa56fb751ea9bb4169c1281d65d142fef9dac93",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 29,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "487ae8487b6213762346f678cd2f589559fcc4715c959064da689bf668e8d504",
+      "currentContent": "487ae8487b6213762346f678cd2f589559fcc4715c959064da689bf668e8d504",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 21,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "currentContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 30,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "40410eefac32d82263ec50d2a1d6c6b905297dfe0ce41cfcf902f5dc77e8c204",
+      "currentContent": "40410eefac32d82263ec50d2a1d6c6b905297dfe0ce41cfcf902f5dc77e8c204",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 22,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "306ca0d3bb2ecd9542d95db06b7a5bbac625e8e4384af0ec42c9821cc4f80549",
+      "currentContent": "306ca0d3bb2ecd9542d95db06b7a5bbac625e8e4384af0ec42c9821cc4f80549",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 51
+      }
+    },
+    {
+      "artifact": 23,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "currentContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 97
+      }
+    },
+    {
+      "artifact": 21,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "currentContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 126
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 148
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 163
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 165
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 168
+      }
+    },
+    {
+      "artifact": 27,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "currentContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 203
+      }
+    },
+    {
+      "artifact": 27,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "currentContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 217
+      }
+    },
+    {
+      "artifact": 14,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "d10b5d13cd51e8d6a7d6d30100d5441991e0f982bb5147001e6bceab289d26b9",
+      "currentContent": "d10b5d13cd51e8d6a7d6d30100d5441991e0f982bb5147001e6bceab289d26b9",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 224
+      }
+    },
+    {
+      "artifact": 26,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "03c1b77c66dc0d925e7c312a6302c61cce62984b6890e580f4bba4d825accd16",
+      "currentContent": "03c1b77c66dc0d925e7c312a6302c61cce62984b6890e580f4bba4d825accd16",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 278
+      }
+    },
+    {
+      "artifact": 24,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "currentContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 289
+      }
+    },
+    {
+      "artifact": 24,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "currentContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 296
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 306
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 321
+      }
+    },
+    {
+      "artifact": 21,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "currentContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 340
+      }
+    },
+    {
+      "artifact": 22,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "306ca0d3bb2ecd9542d95db06b7a5bbac625e8e4384af0ec42c9821cc4f80549",
+      "currentContent": "306ca0d3bb2ecd9542d95db06b7a5bbac625e8e4384af0ec42c9821cc4f80549",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 340
+      }
+    },
+    {
+      "artifact": 23,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "currentContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 341
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 345
+      }
+    },
+    {
+      "artifact": 21,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "currentContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 362
+      }
+    },
+    {
+      "artifact": 23,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "currentContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 379
+      }
+    },
+    {
+      "artifact": 21,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "currentContent": "10cca831b08240c12dff176d6681533780a9e5a54b5cee61998f5e6d159e8b3c",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 403
+      }
+    },
+    {
+      "artifact": 23,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "currentContent": "8832be6b845accdc46b539cef7d83628c987954ec8efae69c107a01ce74dbee7",
+      "madeBy": {
+        "commit": 0,
+        "path": 32,
+        "line": 424
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 313
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 315
+      }
+    },
+    {
+      "artifact": 32,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "currentContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 316
+      }
+    },
+    {
+      "artifact": 1,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "currentContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 318
+      }
+    },
+    {
+      "artifact": 2,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3127e0c35e94a85b2ff5c5f20dadf5fa02cf6d42568ab521a51d69208e819bf6",
+      "currentContent": "3127e0c35e94a85b2ff5c5f20dadf5fa02cf6d42568ab521a51d69208e819bf6",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 895
+      }
+    },
+    {
+      "artifact": 12,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "currentContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "madeBy": {
+        "commit": 0,
+        "path": 33,
+        "line": 368
+      }
+    },
+    {
+      "artifact": 15,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "currentContent": "673e02592489a331c75463261231253b00972ac84c0d2e0d966fa6979d4e0aaf",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 2,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3127e0c35e94a85b2ff5c5f20dadf5fa02cf6d42568ab521a51d69208e819bf6",
+      "currentContent": "3127e0c35e94a85b2ff5c5f20dadf5fa02cf6d42568ab521a51d69208e819bf6",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 1,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "currentContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 7
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 10
+      }
+    },
+    {
+      "artifact": 30,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "40410eefac32d82263ec50d2a1d6c6b905297dfe0ce41cfcf902f5dc77e8c204",
+      "currentContent": "40410eefac32d82263ec50d2a1d6c6b905297dfe0ce41cfcf902f5dc77e8c204",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 14
+      }
+    },
+    {
+      "artifact": 12,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "currentContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 27
+      }
+    },
+    {
+      "artifact": 32,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "currentContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 28
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 36
+      }
+    },
+    {
+      "artifact": 1,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "currentContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 36
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 55
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 83
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 96
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 111
+      }
+    },
+    {
+      "artifact": 27,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "currentContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 145
+      }
+    },
+    {
+      "artifact": 2,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3127e0c35e94a85b2ff5c5f20dadf5fa02cf6d42568ab521a51d69208e819bf6",
+      "currentContent": "3127e0c35e94a85b2ff5c5f20dadf5fa02cf6d42568ab521a51d69208e819bf6",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 153
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 153
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 205
+      }
+    },
+    {
+      "artifact": 12,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "currentContent": "0a5502652e5da2c439a00b0fed921b05499e49817bfc0e2d26f004e2bcb89961",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 220
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 236
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 245
+      }
+    },
+    {
+      "artifact": 32,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "currentContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 270
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 285
+      }
+    },
+    {
+      "artifact": 1,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "currentContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "madeBy": {
+        "commit": 0,
+        "path": 34,
+        "line": 322
+      }
+    },
+    {
+      "artifact": 1,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "currentContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "madeBy": {
+        "commit": 0,
+        "path": 35,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 14,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "d10b5d13cd51e8d6a7d6d30100d5441991e0f982bb5147001e6bceab289d26b9",
+      "currentContent": "d10b5d13cd51e8d6a7d6d30100d5441991e0f982bb5147001e6bceab289d26b9",
+      "madeBy": {
+        "commit": 0,
+        "path": 35,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 1,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "currentContent": "3c9c9323465084769c59ba5fc918371f3d665f4f7e4590f226f1ce7bc62b5eef",
+      "madeBy": {
+        "commit": 0,
+        "path": 35,
+        "line": 32
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 35,
+        "line": 33
+      }
+    },
+    {
+      "artifact": 35,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "1ae65f8bdc905547658a4b29c04cbb78677225ce2e521b7a743e50f7b67676c8",
+      "currentContent": "1ae65f8bdc905547658a4b29c04cbb78677225ce2e521b7a743e50f7b67676c8",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 321
+      }
+    },
+    {
+      "artifact": 35,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "1ae65f8bdc905547658a4b29c04cbb78677225ce2e521b7a743e50f7b67676c8",
+      "currentContent": "1ae65f8bdc905547658a4b29c04cbb78677225ce2e521b7a743e50f7b67676c8",
+      "madeBy": {
+        "commit": 0,
+        "path": 36,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 35,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "1ae65f8bdc905547658a4b29c04cbb78677225ce2e521b7a743e50f7b67676c8",
+      "currentContent": "1ae65f8bdc905547658a4b29c04cbb78677225ce2e521b7a743e50f7b67676c8",
+      "madeBy": {
+        "commit": 0,
+        "path": 37,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 37,
+        "line": 8
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 37,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 9,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "currentContent": "25d6a3d7e2b4b30aa1e7c440e0763e29adb68e9f6ee52064a2cffa92faaba47d",
+      "madeBy": {
+        "commit": 0,
+        "path": 37,
+        "line": 238
+      }
+    },
+    {
+      "artifact": 36,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "currentContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 441
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 868
+      }
+    },
+    {
+      "artifact": 36,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "currentContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "madeBy": {
+        "commit": 0,
+        "path": 38,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 36,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "currentContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "madeBy": {
+        "commit": 0,
+        "path": 40,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 36,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "currentContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "madeBy": {
+        "commit": 0,
+        "path": 40,
+        "line": 117
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 41,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 41,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 38,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "9103ade2df51011fceb7e6f1f9a93b3111431e9010e6718bbb86c81916788cfa",
+      "currentContent": "9103ade2df51011fceb7e6f1f9a93b3111431e9010e6718bbb86c81916788cfa",
+      "madeBy": {
+        "commit": 0,
+        "path": 41,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 41,
+        "line": 8
+      }
+    },
+    {
+      "artifact": 39,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "80506d56daebe37e2892879ff6f68c8393917b1b0d3a20e8c8614c0327f0b59b",
+      "currentContent": "80506d56daebe37e2892879ff6f68c8393917b1b0d3a20e8c8614c0327f0b59b",
+      "madeBy": {
+        "commit": 0,
+        "path": 41,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 41,
+        "line": 32
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 41,
+        "line": 83
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 41,
+        "line": 109
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 864
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 865
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 866
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 867
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 869
+      }
+    },
+    {
+      "artifact": 41,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "currentContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 870
+      }
+    },
+    {
+      "artifact": 42,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "currentContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 891
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 42,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 42,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 42,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 41,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "currentContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "madeBy": {
+        "commit": 0,
+        "path": 42,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 41,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "currentContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 41,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "currentContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 11
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 28
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 90
+      }
+    },
+    {
+      "artifact": 41,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "currentContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 123
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 161
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 191
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 262
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 284
+      }
+    },
+    {
+      "artifact": 41,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "currentContent": "ad9a46786c7cc21ad600c0261a8c27e157de013a6b90db350a6edd6fb67cf0f9",
+      "madeBy": {
+        "commit": 0,
+        "path": 43,
+        "line": 286
+      }
+    },
+    {
+      "artifact": 43,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c2cea3765baee2722eb366cbd2ca24edb6562d24bfa063a0ae91d71f0820e445",
+      "currentContent": "c2cea3765baee2722eb366cbd2ca24edb6562d24bfa063a0ae91d71f0820e445",
+      "madeBy": {
+        "commit": 0,
+        "path": 44,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 44,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "currentContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "madeBy": {
+        "commit": 0,
+        "path": 44,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 44,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "currentContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "madeBy": {
+        "commit": 0,
+        "path": 44,
+        "line": 14
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 44,
+        "line": 14
+      }
+    },
+    {
+      "artifact": 24,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "currentContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "madeBy": {
+        "commit": 0,
+        "path": 44,
+        "line": 44
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 44,
+        "line": 48
+      }
+    },
+    {
+      "artifact": 44,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "currentContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "madeBy": {
+        "commit": 0,
+        "path": 44,
+        "line": 56
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 45,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 25,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "currentContent": "4e2d351849f62a5476b299bbc8ad7671ebc73bf265b463fcff25f1755a2ac02c",
+      "madeBy": {
+        "commit": 0,
+        "path": 45,
+        "line": 361
+      }
+    },
+    {
+      "artifact": 43,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c2cea3765baee2722eb366cbd2ca24edb6562d24bfa063a0ae91d71f0820e445",
+      "currentContent": "c2cea3765baee2722eb366cbd2ca24edb6562d24bfa063a0ae91d71f0820e445",
+      "madeBy": {
+        "commit": 0,
+        "path": 46,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 43,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c2cea3765baee2722eb366cbd2ca24edb6562d24bfa063a0ae91d71f0820e445",
+      "currentContent": "c2cea3765baee2722eb366cbd2ca24edb6562d24bfa063a0ae91d71f0820e445",
+      "madeBy": {
+        "commit": 0,
+        "path": 47,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 3,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "currentContent": "3360cdccf2901bab42a7f69e2ac1924a4d419d25d4a285fea04400e985c753ec",
+      "madeBy": {
+        "commit": 0,
+        "path": 47,
+        "line": 57
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 48,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 45,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "currentContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "madeBy": {
+        "commit": 0,
+        "path": 48,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 48,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 48,
+        "line": 37
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 48,
+        "line": 69
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 48,
+        "line": 72
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 48,
+        "line": 107
+      }
+    },
+    {
+      "artifact": 46,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "46d912cd4c4245ac08b3e70f19c1b662d18beef04ec26d0fc5ce32549c36f0ee",
+      "currentContent": "46d912cd4c4245ac08b3e70f19c1b662d18beef04ec26d0fc5ce32549c36f0ee",
+      "madeBy": {
+        "commit": 0,
+        "path": 9,
+        "line": 320
+      }
+    },
+    {
+      "artifact": 46,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "46d912cd4c4245ac08b3e70f19c1b662d18beef04ec26d0fc5ce32549c36f0ee",
+      "currentContent": "46d912cd4c4245ac08b3e70f19c1b662d18beef04ec26d0fc5ce32549c36f0ee",
+      "madeBy": {
+        "commit": 0,
+        "path": 49,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 46,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "46d912cd4c4245ac08b3e70f19c1b662d18beef04ec26d0fc5ce32549c36f0ee",
+      "currentContent": "46d912cd4c4245ac08b3e70f19c1b662d18beef04ec26d0fc5ce32549c36f0ee",
+      "madeBy": {
+        "commit": 0,
+        "path": 50,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 50,
+        "line": 8
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 51,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 430
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 431
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 432
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 52,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 53,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 53,
+        "line": 28
+      }
+    },
+    {
+      "artifact": 46,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "46d912cd4c4245ac08b3e70f19c1b662d18beef04ec26d0fc5ce32549c36f0ee",
+      "currentContent": "46d912cd4c4245ac08b3e70f19c1b662d18beef04ec26d0fc5ce32549c36f0ee",
+      "madeBy": {
+        "commit": 0,
+        "path": 53,
+        "line": 28
+      }
+    },
+    {
+      "artifact": 4,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "currentContent": "7369b3b3d7ef786a80e4b0966b78faf0c654374da8127bfbf212f9749df732a0",
+      "madeBy": {
+        "commit": 0,
+        "path": 53,
+        "line": 29
+      }
+    },
+    {
+      "artifact": 35,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "1ae65f8bdc905547658a4b29c04cbb78677225ce2e521b7a743e50f7b67676c8",
+      "currentContent": "1ae65f8bdc905547658a4b29c04cbb78677225ce2e521b7a743e50f7b67676c8",
+      "madeBy": {
+        "commit": 0,
+        "path": 53,
+        "line": 29
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 53,
+        "line": 102
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 429
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 54,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 55,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 55,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 47,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "d42bce6132b3c75a2d3d5a0541c2ba15a9e34fe378cc3381ab5ce92f9d4c168f",
+      "currentContent": "d42bce6132b3c75a2d3d5a0541c2ba15a9e34fe378cc3381ab5ce92f9d4c168f",
+      "madeBy": {
+        "commit": 0,
+        "path": 55,
+        "line": 49
+      }
+    },
+    {
+      "artifact": 6,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "currentContent": "df3f64954afba9062461f3d8535a584e4d5bf8edd3c537c4bf6367edae55636a",
+      "madeBy": {
+        "commit": 0,
+        "path": 55,
+        "line": 93
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 56,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 14,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "d10b5d13cd51e8d6a7d6d30100d5441991e0f982bb5147001e6bceab289d26b9",
+      "currentContent": "d10b5d13cd51e8d6a7d6d30100d5441991e0f982bb5147001e6bceab289d26b9",
+      "madeBy": {
+        "commit": 0,
+        "path": 57,
+        "line": 30
+      }
+    },
+    {
+      "artifact": 48,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e4b585cea7c88ef698c0ebdd797512430c8591ec4d00555d02a9eff321a0e0cf",
+      "currentContent": "e4b585cea7c88ef698c0ebdd797512430c8591ec4d00555d02a9eff321a0e0cf",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 426
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 877
+      }
+    },
+    {
+      "artifact": 38,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "9103ade2df51011fceb7e6f1f9a93b3111431e9010e6718bbb86c81916788cfa",
+      "currentContent": "9103ade2df51011fceb7e6f1f9a93b3111431e9010e6718bbb86c81916788cfa",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 440
+      }
+    },
+    {
+      "artifact": 42,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "currentContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 872
+      }
+    },
+    {
+      "artifact": 38,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "9103ade2df51011fceb7e6f1f9a93b3111431e9010e6718bbb86c81916788cfa",
+      "currentContent": "9103ade2df51011fceb7e6f1f9a93b3111431e9010e6718bbb86c81916788cfa",
+      "madeBy": {
+        "commit": 0,
+        "path": 59,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 34,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "currentContent": "86618428fd4e5ab2f17ee6be015faed82faf1b9f7a5ff5ec173d90681cfe1b4c",
+      "madeBy": {
+        "commit": 0,
+        "path": 59,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 59,
+        "line": 80
+      }
+    },
+    {
+      "artifact": 44,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "currentContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 427
+      }
+    },
+    {
+      "artifact": 49,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "currentContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 433
+      }
+    },
+    {
+      "artifact": 50,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e2949c3b1638640e84b79a85ea05a89ba274fd070036b9d23047728d5082b9f3",
+      "currentContent": "e2949c3b1638640e84b79a85ea05a89ba274fd070036b9d23047728d5082b9f3",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 439
+      }
+    },
+    {
+      "artifact": 36,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "currentContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 442
+      }
+    },
+    {
+      "artifact": 49,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "currentContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "madeBy": {
+        "commit": 0,
+        "path": 60,
+        "line": 11
+      }
+    },
+    {
+      "artifact": 44,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "currentContent": "085d3efb113efd78679e7f9afd211b6338b3f9663b809ac5623907140488ee30",
+      "madeBy": {
+        "commit": 0,
+        "path": 60,
+        "line": 18
+      }
+    },
+    {
+      "artifact": 51,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "db125677a88f6804e920062bbc81bd2486bddc61229091c6a0951f3c2fdaed49",
+      "currentContent": "db125677a88f6804e920062bbc81bd2486bddc61229091c6a0951f3c2fdaed49",
+      "madeBy": {
+        "commit": 0,
+        "path": 1,
+        "line": 27
+      }
+    },
+    {
+      "artifact": 7,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b62bd5fa167614cdcb4ebe0cc23bfa797fd009da24b7d709a1e06bd17245019c",
+      "currentContent": "b62bd5fa167614cdcb4ebe0cc23bfa797fd009da24b7d709a1e06bd17245019c",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 438
+      }
+    },
+    {
+      "artifact": 42,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "currentContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 892
+      }
+    },
+    {
+      "artifact": 42,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "currentContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 893
+      }
+    },
+    {
+      "artifact": 7,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b62bd5fa167614cdcb4ebe0cc23bfa797fd009da24b7d709a1e06bd17245019c",
+      "currentContent": "b62bd5fa167614cdcb4ebe0cc23bfa797fd009da24b7d709a1e06bd17245019c",
+      "madeBy": {
+        "commit": 0,
+        "path": 64,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 52,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a788b99967caa11cc388802d5570df05eb0f945c6025141c99c1502c25d64195",
+      "currentContent": "a788b99967caa11cc388802d5570df05eb0f945c6025141c99c1502c25d64195",
+      "madeBy": {
+        "commit": 0,
+        "path": 1,
+        "line": 72
+      }
+    },
+    {
+      "artifact": 7,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b62bd5fa167614cdcb4ebe0cc23bfa797fd009da24b7d709a1e06bd17245019c",
+      "currentContent": "b62bd5fa167614cdcb4ebe0cc23bfa797fd009da24b7d709a1e06bd17245019c",
+      "madeBy": {
+        "commit": 0,
+        "path": 65,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 36,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "currentContent": "7be8fb58b97027e5b2f9dd1db900a2596bb644d92915f7bbe6813af9e7dc1dfd",
+      "madeBy": {
+        "commit": 0,
+        "path": 65,
+        "line": 60
+      }
+    },
+    {
+      "artifact": 49,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "currentContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 434
+      }
+    },
+    {
+      "artifact": 53,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ae425f5f34c825098495c46859f5360545e6b1bbe085afc693afd12e3fe16eb3",
+      "currentContent": "ae425f5f34c825098495c46859f5360545e6b1bbe085afc693afd12e3fe16eb3",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 434
+      }
+    },
+    {
+      "artifact": 54,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "d490bf06f473a63f6e5c6d123339365477227ea8e6655f5e5d338d35a1e9baab",
+      "currentContent": "d490bf06f473a63f6e5c6d123339365477227ea8e6655f5e5d338d35a1e9baab",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 435
+      }
+    },
+    {
+      "artifact": 53,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ae425f5f34c825098495c46859f5360545e6b1bbe085afc693afd12e3fe16eb3",
+      "currentContent": "ae425f5f34c825098495c46859f5360545e6b1bbe085afc693afd12e3fe16eb3",
+      "madeBy": {
+        "commit": 0,
+        "path": 66,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 53,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ae425f5f34c825098495c46859f5360545e6b1bbe085afc693afd12e3fe16eb3",
+      "currentContent": "ae425f5f34c825098495c46859f5360545e6b1bbe085afc693afd12e3fe16eb3",
+      "madeBy": {
+        "commit": 0,
+        "path": 67,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 49,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "currentContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "madeBy": {
+        "commit": 0,
+        "path": 39,
+        "line": 449
+      }
+    },
+    {
+      "artifact": 49,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "currentContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "madeBy": {
+        "commit": 0,
+        "path": 68,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 49,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "currentContent": "64fe98aeefcc4103f618803f8d1bf4c83c1d254b76d738c60f24a7b98ff30bb8",
+      "madeBy": {
+        "commit": 0,
+        "path": 69,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 55,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "2d6c501b536a12b3bc0d9b585cae795e092b10bb9febdad343c748137771c2fe",
+      "currentContent": "2d6c501b536a12b3bc0d9b585cae795e092b10bb9febdad343c748137771c2fe",
+      "madeBy": {
+        "commit": 0,
+        "path": 1,
+        "line": 48
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 885
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 885
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 70,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 58,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "487b2451edc45da5a484bbc0cbf8f0c56306ebddb6ebcba575a77876d67a695a",
+      "currentContent": "487b2451edc45da5a484bbc0cbf8f0c56306ebddb6ebcba575a77876d67a695a",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 37
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 71,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 71,
+        "line": 121
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 73,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 59,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "currentContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "madeBy": {
+        "commit": 0,
+        "path": 73,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 5,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "850e2735088c6050f149593ee580957073694a41cfeafb1e3ec4c095cdee2b82",
+      "currentContent": "850e2735088c6050f149593ee580957073694a41cfeafb1e3ec4c095cdee2b82",
+      "madeBy": {
+        "commit": 0,
+        "path": 73,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 59,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "currentContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 861
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 863
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 875
+      }
+    },
+    {
+      "artifact": 42,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "currentContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 878
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 898
+      }
+    },
+    {
+      "artifact": 59,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "currentContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "madeBy": {
+        "commit": 0,
+        "path": 74,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 74,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 74,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 74,
+        "line": 6
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 74,
+        "line": 93
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 74,
+        "line": 190
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 74,
+        "line": 210
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 879
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 886
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 75,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 75,
+        "line": 105
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 75,
+        "line": 165
+      }
+    },
+    {
+      "artifact": 62,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f45f6ce559b8098fe9561ec64bfd6f10c89fbcb87be72d79f8310a484f7ca8f3",
+      "currentContent": "f45f6ce559b8098fe9561ec64bfd6f10c89fbcb87be72d79f8310a484f7ca8f3",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 54
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 76,
+        "line": 12
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 76,
+        "line": 25
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 76,
+        "line": 32
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 76,
+        "line": 37
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 76,
+        "line": 95
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 76,
+        "line": 148
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 76,
+        "line": 149
+      }
+    },
+    {
+      "artifact": 63,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e2daa37563555c47deba07c85c6d24eb56602bf1db0f209a27c7dc467305df3f",
+      "currentContent": "e2daa37563555c47deba07c85c6d24eb56602bf1db0f209a27c7dc467305df3f",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 68
+      }
+    },
+    {
+      "artifact": 27,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "currentContent": "2579337d4b5de0d03639bfa7585d7ad9bc066bb32be03dbf2f86b74695e642fa",
+      "madeBy": {
+        "commit": 0,
+        "path": 77,
+        "line": 16
+      }
+    },
+    {
+      "artifact": 24,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "currentContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "madeBy": {
+        "commit": 0,
+        "path": 77,
+        "line": 125
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 883
+      }
+    },
+    {
+      "artifact": 64,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "1200a45ec2fe73dca035c826feda7f1ad6312a139472c2522d88d668c0586428",
+      "currentContent": "1200a45ec2fe73dca035c826feda7f1ad6312a139472c2522d88d668c0586428",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 883
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 903
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 78,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 78,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 78,
+        "line": 129
+      }
+    },
+    {
+      "artifact": 65,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "0580c8edf2f97f94be3ae94c39794c1b41c834a4b473cc333394020dbe1fecf1",
+      "currentContent": "0580c8edf2f97f94be3ae94c39794c1b41c834a4b473cc333394020dbe1fecf1",
+      "madeBy": {
+        "commit": 0,
+        "path": 78,
+        "line": 196
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 78,
+        "line": 201
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 78,
+        "line": 201
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 78,
+        "line": 254
+      }
+    },
+    {
+      "artifact": 67,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "be50ce09c896878b8fbf22199ea1907f18e4842f63d4747cf6bd076ed0451a49",
+      "currentContent": "be50ce09c896878b8fbf22199ea1907f18e4842f63d4747cf6bd076ed0451a49",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 9
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 79,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 79,
+        "line": 97
+      }
+    },
+    {
+      "artifact": 5,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "850e2735088c6050f149593ee580957073694a41cfeafb1e3ec4c095cdee2b82",
+      "currentContent": "850e2735088c6050f149593ee580957073694a41cfeafb1e3ec4c095cdee2b82",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 862
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 887
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 887
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 899
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 900
+      }
+    },
+    {
+      "artifact": 45,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "currentContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 904
+      }
+    },
+    {
+      "artifact": 59,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "currentContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 5,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "850e2735088c6050f149593ee580957073694a41cfeafb1e3ec4c095cdee2b82",
+      "currentContent": "850e2735088c6050f149593ee580957073694a41cfeafb1e3ec4c095cdee2b82",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 73
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 79
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 196
+      }
+    },
+    {
+      "artifact": 24,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "currentContent": "bcfaad32de5e375768938d5a1fd7435d3f0a144903f7b899404f524daae79211",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 218
+      }
+    },
+    {
+      "artifact": 32,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "currentContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 267
+      }
+    },
+    {
+      "artifact": 45,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "currentContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "madeBy": {
+        "commit": 0,
+        "path": 81,
+        "line": 290
+      }
+    },
+    {
+      "artifact": 68,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "431e7ff6f79eb63bb7a4e82480129bc294f413e6a533352594524e7b9e0d2530",
+      "currentContent": "431e7ff6f79eb63bb7a4e82480129bc294f413e6a533352594524e7b9e0d2530",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 85
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 83,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 83,
+        "line": 25
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 83,
+        "line": 248
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 84,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 84,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 69,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "49f2ea930ec8c09941d9590b05888c7bc4555381d3a2ea268222b9a1cfecb3d5",
+      "currentContent": "49f2ea930ec8c09941d9590b05888c7bc4555381d3a2ea268222b9a1cfecb3d5",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 16
+      }
+    },
+    {
+      "artifact": 69,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "49f2ea930ec8c09941d9590b05888c7bc4555381d3a2ea268222b9a1cfecb3d5",
+      "currentContent": "49f2ea930ec8c09941d9590b05888c7bc4555381d3a2ea268222b9a1cfecb3d5",
+      "madeBy": {
+        "commit": 0,
+        "path": 85,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 85,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 85,
+        "line": 14
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 85,
+        "line": 14
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 85,
+        "line": 14
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 85,
+        "line": 19
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 85,
+        "line": 22
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 881
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 882
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 86,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 59,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "currentContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "madeBy": {
+        "commit": 0,
+        "path": 86,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 86,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 86,
+        "line": 124
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 86,
+        "line": 161
+      }
+    },
+    {
+      "artifact": 70,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "9c68b1ed9fcf7eed088bb5bc1e2585e9c8d45bab6d4e8d511d324fb35dca7179",
+      "currentContent": "9c68b1ed9fcf7eed088bb5bc1e2585e9c8d45bab6d4e8d511d324fb35dca7179",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 30
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 87,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 87,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 87,
+        "line": 58
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 87,
+        "line": 96
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 87,
+        "line": 110
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 88,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 89,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 89,
+        "line": 88
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 89,
+        "line": 151
+      }
+    },
+    {
+      "artifact": 71,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "7f2ea5c95127c04f1918c17a3c73740675808695253829f3226247b9a7ec37ce",
+      "currentContent": "7f2ea5c95127c04f1918c17a3c73740675808695253829f3226247b9a7ec37ce",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 47
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 90,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 90,
+        "line": 66
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 90,
+        "line": 106
+      }
+    },
+    {
+      "artifact": 72,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "d0f141e96e5794caeed743104511717a6bfff4e83e57d1f38725ac1e5d48306c",
+      "currentContent": "d0f141e96e5794caeed743104511717a6bfff4e83e57d1f38725ac1e5d48306c",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 99
+      }
+    },
+    {
+      "artifact": 59,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "currentContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "madeBy": {
+        "commit": 0,
+        "path": 92,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 92,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 92,
+        "line": 19
+      }
+    },
+    {
+      "artifact": 59,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "currentContent": "5ca54d4aacd1890500b3380214d8749fd567e926abfea8f32a895d0ab119e468",
+      "madeBy": {
+        "commit": 0,
+        "path": 92,
+        "line": 30
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 92,
+        "line": 46
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 92,
+        "line": 75
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 92,
+        "line": 117
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 92,
+        "line": 138
+      }
+    },
+    {
+      "artifact": 73,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "cfc14c5ed2b59269b6795efe126195a3039b1b9543bb8a6861fbc668c4c81594",
+      "currentContent": "cfc14c5ed2b59269b6795efe126195a3039b1b9543bb8a6861fbc668c4c81594",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 23
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 22
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 36
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 54
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 145
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 172
+      }
+    },
+    {
+      "artifact": 37,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "currentContent": "f801635fc16f382a1175cefa04458a9957ed0b649300d03fa07a612d6c8c728f",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 272
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 616
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 625
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 94,
+        "line": 642
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 95,
+        "line": 13
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 95,
+        "line": 125
+      }
+    },
+    {
+      "artifact": 45,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "currentContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "madeBy": {
+        "commit": 0,
+        "path": 96,
+        "line": 12
+      }
+    },
+    {
+      "artifact": 45,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "currentContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "madeBy": {
+        "commit": 0,
+        "path": 96,
+        "line": 41
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 96,
+        "line": 187
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 96,
+        "line": 193
+      }
+    },
+    {
+      "artifact": 45,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "currentContent": "847c3f58f17897700f2b818c416939e287a6dd043fa9332591a65ae7cb25fe02",
+      "madeBy": {
+        "commit": 0,
+        "path": 96,
+        "line": 234
+      }
+    },
+    {
+      "artifact": 31,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "currentContent": "af262c516893a8720366c32a27600d77ac06a66db9c065f38f9ff8b4be307c1d",
+      "madeBy": {
+        "commit": 0,
+        "path": 96,
+        "line": 240
+      }
+    },
+    {
+      "artifact": 32,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "currentContent": "b8db9d89b1207b29846ef8ef24f1bb00d2f6e494e00b6d1bc16afb1f1e452a8b",
+      "madeBy": {
+        "commit": 0,
+        "path": 96,
+        "line": 356
+      }
+    },
+    {
+      "artifact": 74,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ce8cd803e4ffcfe7fe5ab69e8d56e4b605f7d3c2799c30c90639e32fc0d5608d",
+      "currentContent": "ce8cd803e4ffcfe7fe5ab69e8d56e4b605f7d3c2799c30c90639e32fc0d5608d",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 92
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 97,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 97,
+        "line": 31
+      }
+    },
+    {
+      "artifact": 11,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "currentContent": "aedfe55f91c4bbae3bad3fe1292eb2ac30c8f9f813641db389e308693f6232e5",
+      "madeBy": {
+        "commit": 0,
+        "path": 97,
+        "line": 48
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 97,
+        "line": 96
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 97,
+        "line": 96
+      }
+    },
+    {
+      "artifact": 61,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "currentContent": "c93ec8b797859af0e75050c461176cf7729075797cf99c3d3174d48e4e00485f",
+      "madeBy": {
+        "commit": 0,
+        "path": 97,
+        "line": 121
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 97,
+        "line": 134
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 98,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 75,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "82678617f7b4184ba58c82b8e97f2035b0e146b6632a89fae9688a540e34b20d",
+      "currentContent": "82678617f7b4184ba58c82b8e97f2035b0e146b6632a89fae9688a540e34b20d",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 78
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 99,
+        "line": 8
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 99,
+        "line": 63
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 901
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 100,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 33,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "currentContent": "e76d43f88c453b768b826cc3a90edddd7d8af0fbb55758abd590dfeb68a7b2b3",
+      "madeBy": {
+        "commit": 0,
+        "path": 100,
+        "line": 8
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 101,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 76,
+      "evidence": "recorded",
+      "source": "architecture-source-path",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd7c1df61bff42f2c7ada86bcc09d61293a7c1d79fe3cfbf675a8286ab85f1d0",
+      "currentContent": "dd7c1df61bff42f2c7ada86bcc09d61293a7c1d79fe3cfbf675a8286ab85f1d0",
+      "madeBy": {
+        "commit": 0,
+        "path": 72,
+        "line": 61
+      }
+    },
+    {
+      "artifact": 57,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "currentContent": "a3b885405b3ba9cd9c4862fc6aa43a692a69a3b97e1aad7884872cc96b071bf5",
+      "madeBy": {
+        "commit": 0,
+        "path": 102,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 876
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 103,
+        "line": 5
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 880
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 884
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 888
+      }
+    },
+    {
+      "artifact": 42,
+      "evidence": "cited",
+      "source": "tests-table",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "currentContent": "4cb61b13beb0750f9b89b0e3be34f08949009a0c5ce3400d358f7c35688d68c9",
+      "madeBy": {
+        "commit": 0,
+        "path": 12,
+        "line": 894
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 173
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 174
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 218
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 233
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 250
+      }
+    },
+    {
+      "artifact": 10,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "currentContent": "f47fb52ff3181f96b01d9b37be4dea3b8ec4ff0a19414cb12e170a50772f3d6d",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 383
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 412
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 474
+      }
+    },
+    {
+      "artifact": 40,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "currentContent": "53580c5b73621fc70daf897d29ba291d14c5918494bab1285063302f2d6cecf4",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 474
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 105,
+        "line": 518
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 4
+      }
+    },
+    {
+      "artifact": 16,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "currentContent": "ea6dda1dc1878257e4548b83162e5b69cc666b84f68273d44455767b48c462ad",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 38
+      }
+    },
+    {
+      "artifact": 56,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "currentContent": "a659d393accb7217eb51070feab9d7a32bc2aab6918ce56d68c919dafcc15ff3",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 46
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 56
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 108
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 420
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 438
+      }
+    },
+    {
+      "artifact": 66,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "currentContent": "e931009efdf4999ee012708763d7c3be1de072b051b5e5360bdb97c79e6dc232",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 441
+      }
+    },
+    {
+      "artifact": 60,
+      "evidence": "cited",
+      "source": "code-citation",
+      "state": "current",
+      "linked": 0,
+      "current": 0,
+      "linkedContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "currentContent": "dd269293c2b46a6b12f43f44bd6e3db19f0a8dc8be613b5df7b0620705802844",
+      "madeBy": {
+        "commit": 0,
+        "path": 106,
+        "line": 465
+      }
+    }
+  ],
+  "versions": [
+    {
+      "commit": 0,
+      "base": null,
+      "file": "versions/1c98ef4662e583f03d10856022ea5c323aa4c761.json",
+      "builds": []
+    }
+  ]
+}
