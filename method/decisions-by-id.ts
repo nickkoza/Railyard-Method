@@ -129,7 +129,11 @@ function carrySection(file: string, lines: string[], from: number, to: number, t
     const id = block.id ?? take();
     const ordinal = `${String(n)}. `;
     lines[block.start] = `${ordinal}[${id}] ${head.slice(block.marker.length)}`;
-    const was = block.marker.length;
+    // A numbered decision's marker already carrying an ID reads as `N. [xxx] `, but what follows
+    // it was written to align under `N. ` alone, as the spec shape shows ([RVv]): measuring the
+    // whole marker here shifted an untouched decision's continuation lines by the width of its
+    // own ID, 3 spaces becoming 6 ([RVv], found 2026-09-27, indenting Railyard's own daemon.md).
+    const was = block.kind === "numbered" && block.id !== undefined ? block.marker.length - (block.id.length + 3) : block.marker.length;
     const now = ordinal.length;
     let inFence: { readonly by: number; readonly close: string } | undefined;
     for (let i = block.start + 1; i < block.end; i += 1) {

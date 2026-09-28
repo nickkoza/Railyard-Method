@@ -85,6 +85,26 @@ describe("carrying decisions to numbered decisions with IDs ([RVv])", () => {
     assert.ok(carried.text.endsWith(TAIL.join("\n")), "nothing below Decisions changes");
   });
 
+  it("keeps an already-ID'd decision's continuation lines at their own indent, alongside one still to number", () => {
+    const text = spec([
+      "- **New one.**",
+      "",
+      "1. [Kp1] **Kept.** Forced: the provider explains",
+      "   why over more than one line.",
+    ]);
+    const carried = carryDecisions("docs/specs/export.md", text, IDS);
+    assert.deepEqual(carried.left, []);
+    assert.equal(carried.count, 1);
+    const lines = carried.text.split("\n");
+    const at = lines.indexOf("## Decisions");
+    assert.deepEqual(lines.slice(at + 2, at + 6), [
+      "1. [Aa1] **New one.**",
+      "",
+      "2. [Kp1] **Kept.** Forced: the provider explains",
+      "   why over more than one line.",
+    ]);
+  });
+
   it("indents what follows a decision inside it, a table and a view among it, so a view is still read", () => {
     const text = spec([
       "**The layout.** Pinned because two readers read it.",
