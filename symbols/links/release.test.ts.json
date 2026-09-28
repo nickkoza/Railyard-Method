@@ -53,25 +53,25 @@
     },
     {
       "name": "the package, installed.is importable by its package name, and what it exports is what it says",
-      "witness": "a910dad416f31201",
+      "witness": "fd2708b263225e34",
       "links": [
         {
           "id": "dXi",
           "kind": "asserted",
           "artifact": "0580c8edf2f97f94",
-          "at": "2026-09-27"
+          "at": "2026-09-28"
         },
         {
           "id": "QBm",
           "kind": "asserted",
           "artifact": "f47fb52ff3181f96",
-          "at": "2026-09-27"
+          "at": "2026-09-28"
         },
         {
           "id": "Xtd",
           "kind": "asserted",
           "artifact": "af262c516893a872",
-          "at": "2026-09-27"
+          "at": "2026-09-28"
         }
       ]
     },
@@ -173,19 +173,19 @@
     },
     {
       "name": "the package, installed.upgrades a repository, through the installed command, and lists what still names an old path",
-      "witness": "50840ce183608e5c",
+      "witness": "e22ae94e3593e217",
       "links": [
         {
           "id": "dXi",
           "kind": "asserted",
           "artifact": "0580c8edf2f97f94",
-          "at": "2026-09-27"
+          "at": "2026-09-28"
         },
         {
           "id": "o7Y",
           "kind": "asserted",
           "artifact": "df3f64954afba906",
-          "at": "2026-09-27"
+          "at": "2026-09-28"
         }
       ]
     }

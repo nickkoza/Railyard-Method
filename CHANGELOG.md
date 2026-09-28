@@ -3,6 +3,21 @@
 This project's version tracks the method, not a release cadence: it stays below 1.0 until
 the public release, and 1.0.0 is that release.
 
+## [1.0.1] - 2026-09-27
+
+### Fixed
+
+- **Every bundled command answers `--help` and `-h` with its own usage, and does nothing
+  else.** `upgrade` and `install` never received their arguments at all, so `upgrade --help`
+  carried a repository forward instead of printing usage (found upgrading Railyard,
+  2026-09-27); `install --help` would have installed for the same reason. `ids-take --help`
+  read `--help` as an invalid count and exited 2; `ids-resolve --help` read it as an ID and
+  reported that it named nothing.
+- **`decisions-by-id` no longer changes an already-ID'd decision's own indentation.** It
+  measured the whole marker of a numbered decision, ID included, instead of the ordinal
+  alone, so a decision caught in the same rewrite as one still needing an ID had its
+  continuation lines pushed from 3 spaces to 6.
+
 ## [1.0.0] - 2026-09-27
 
 First public release.

@@ -108,7 +108,7 @@ describe("the package, installed", () => {
       writeFileSync(join(repo, "NOTES.md"), "See docs/adr/ for why.\n");
       const r = spawnSync(join(consumer, "node_modules", ".bin", "railyard-upgrade"), [], { cwd: repo, encoding: "utf8" });
       assert.equal(r.status, 0, r.stderr);
-      assert.match(r.stdout, /0\.1\.0 → 1\.0\.0/);
+      assert.match(r.stdout, /0\.1\.0 → 1\.0\.1/);
       assert.match(r.stdout, /docs\/adr → docs\/waymarks/);
       assert.match(r.stdout, /NOTES\.md still names docs\/adr/);
     } finally {
@@ -151,7 +151,7 @@ describe("the package, installed", () => {
       ].join("\n"),
     );
     const out = execFileSync("node", ["use.js"], { cwd: consumer, encoding: "utf8" });
-    assert.deepEqual(JSON.parse(out), { specs: "docs/specs", n: 4, v: "1.0.0", p: "record", row: ["Aa1", "Bb2"] });
+    assert.deepEqual(JSON.parse(out), { specs: "docs/specs", n: 4, v: "1.0.1", p: "record", row: ["Aa1", "Bb2"] });
   });
 
   it("mints IDs by package path, incrementally, from a consumer's own repository", () => {
