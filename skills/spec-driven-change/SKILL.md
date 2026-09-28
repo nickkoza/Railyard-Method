@@ -97,7 +97,7 @@ that directory" is a sign at one trailhead; the next route in finds the same dro
 
 **Install the skill in the project first**, and whenever you are asked to: `install`. It
 copies this skill into `.claude/skills/`, records the method in `.railyard/method.json` as
-`{ "method": "1.0.1" }` (the key is `method`; a marker under any other key is read as no
+`{ "method": "1.0.2" }` (the key is `method`; a marker under any other key is read as no
 marker at all), and adds the scan to `.claude/settings.json`, so every session in the
 project runs it on every write, a shell command's as well as an edit's. A project installed
 before the shell was scanned gains that scan when you run `install` again. It keeps whatever else the settings hold, and a second run

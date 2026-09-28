@@ -53,7 +53,7 @@
     },
     {
       "name": "the package, installed.is importable by its package name, and what it exports is what it says",
-      "witness": "fd2708b263225e34",
+      "witness": "a3d8353300ed6043",
       "links": [
         {
           "id": "dXi",
@@ -173,7 +173,7 @@
     },
     {
       "name": "the package, installed.upgrades a repository, through the installed command, and lists what still names an old path",
-      "witness": "e22ae94e3593e217",
+      "witness": "7bde2cd20f9958d6",
       "links": [
         {
           "id": "dXi",

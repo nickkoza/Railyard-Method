@@ -344,7 +344,7 @@ commit's hash, abbreviated to five characters or more, in place of `<commit>`, a
 the name once in `.railyard/method.json`:
 
 ```json
-{ "method": "1.0.1", "repositories": { "method": "https://github.com/nickkoza/Railyard-Method" } }
+{ "method": "1.0.2", "repositories": { "method": "https://github.com/nickkoza/Railyard-Method" } }
 ```
 
 ### Checking
@@ -377,7 +377,7 @@ path is listed for you to fix. A version it doesn't recognise is refused, and no
 touched. The same file names the documents that record a moment, so no check rewrites them:
 
 ```json
-{ "method": "1.0.1", "dated": ["docs/reviews/", "evals/RESULTS.md"] }
+{ "method": "1.0.2", "dated": ["docs/reviews/", "evals/RESULTS.md"] }
 ```
 
 ### Not yet

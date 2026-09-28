@@ -1,7 +1,7 @@
 {
   "name": "railyard-method",
   "description": "Spec-driven change: the method Railyard is built with, as a skill for Claude Code",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "experimental": {
     "evals": "evals"

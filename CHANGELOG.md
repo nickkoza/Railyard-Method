@@ -3,6 +3,17 @@
 This project's version tracks the method, not a release cadence: it stays below 1.0 until
 the public release, and 1.0.0 is that release.
 
+## [1.0.2] - 2026-09-27
+
+### Fixed
+
+- **A scan's report names what a write touched, not everything already unlinked in a
+  file.** The Bash and Edit/Write hooks named every never-linked name in a file on every
+  write, unbounded by its size: a one-line edit to a 10,000-line test file returned 225 KB,
+  one line per name it had never linked, which an agent learns to stop reading. The report
+  now names only what a write actually changed — capped at twenty, with a count of the
+  rest — and folds every other already-unlinked name into one summary line.
+
 ## [1.0.1] - 2026-09-27
 
 ### Fixed
