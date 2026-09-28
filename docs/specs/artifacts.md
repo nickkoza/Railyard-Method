@@ -177,8 +177,7 @@ reference resolving exactly is traceability's ([BNb]).
    any case, through a digit standing for a letter (`0` for o, `1` for i or l, `3` for e, `4`
    for a, `5` for s, `7` for t, and the rest as commonly written), and through the spellings
    that sound the same or drop a vowel, so a misspelling, an abbreviation or a shortening
-   that still reads as the word is refused as the word is (the owner, 2026-09-27: "Even
-   misspellings or shortenings aren't ideal. Like `fuk` still gets the wrong point across").
+   that still reads as the word is refused as the word is.
    A refusal costs one re-roll and nothing else, so the filter errs towards refusing: an
    innocent word it refuses is a free re-roll, while an ID is read in every citation for as
    long as it lives. Minting still gives as many IDs as were asked for, at a cost in draws
@@ -321,7 +320,8 @@ reference resolving exactly is traceability's ([BNb]).
    into the artifacts and the symbols, where a link is a field and needs no delimiter.
 
 12. [m3i] **The objectionable-word filter is a list of this package's own, not a library**
-   ([LeX]). Forced, then conventional. Forced: the ready-made filter evaluated, `obscenity`
+   ([LeX]). The owner asked for it on 2026-09-27, misspellings and shortenings included:
+   "Like `fuk` still gets the wrong point across." Forced, then conventional. Forced: the ready-made filter evaluated, `obscenity`
    0.4.6 (MIT; its English dataset with its recommended transformers, which read case and
    digits as letters), was run over all 238,328 IDs on 2026-09-27 and flagged 436 of them,
    75 forms once case is set aside, missing most of what reads as a word at three characters:
