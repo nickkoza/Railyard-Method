@@ -138,7 +138,7 @@ enough to keep, and how a view is drawn from it without drifting away.
    imports read `./storage.js`: only a literal `.ts` specifier had been resolved, so every other
    import passed.
 
-4. [D1Q] **How a Python import names a file** ([lLm]). Forced in what it resolves, since the check has
+4. [Eq7] **How a Python import names a file** ([lLm]). Forced in what it resolves, since the check has
    to find the file Python's import system would; conventional in where it stops, since the
    import path is decided when the program runs and the check reads only the repository.
    `import a.b`, `from a.b import c`, `from . import c`, `from ..a import c`, several names
@@ -172,7 +172,7 @@ enough to keep, and how a view is drawn from it without drifting away.
    mapping (an object from URLs to paths). They are told apart by what they are, never by
    failing to read, so a model that cannot be read is still reported ([L7b]).
 
-6. [DKC] **The tools are pinned.** Forced: CALM's schema is someone else's and moves. Observed
+6. [xvb] **The tools are pinned.** Forced: CALM's schema is someone else's and moves. Observed
    2026-09-23 with `@finos/calm-cli` 1.59.0, schema release 1.0, where a node's
    `details.detailed-architecture` is the only way to point at a lower level.
 

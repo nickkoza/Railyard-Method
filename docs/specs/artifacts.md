@@ -321,7 +321,11 @@ reference resolving exactly is traceability's ([BNb]).
 
 12. [m3i] **The objectionable-word filter is a list of this package's own, not a library**
    ([LeX]). The owner asked for it on 2026-09-27, misspellings and shortenings included:
-   "Like `fuk` still gets the wrong point across." Forced, then conventional. Forced: the ready-made filter evaluated, `obscenity`
+   "Like `fuk` still gets the wrong point across." The IDs already minted that read badly were
+   retired when the filter came, the day after the first release, while nothing outside this
+   repository and the one that uses it cited them: each was given a fresh ID and every mention
+   rewritten in one change, and the retired ID is never minted again, since history holds it
+   ([9pu]). Forced, then conventional. Forced: the ready-made filter evaluated, `obscenity`
    0.4.6 (MIT; its English dataset with its recommended transformers, which read case and
    digits as letters), was run over all 238,328 IDs on 2026-09-27 and flagged 436 of them,
    75 forms once case is set aside, missing most of what reads as a word at three characters:
