@@ -23,10 +23,16 @@ export async function takenIn(root: string): Promise<(id: string) => boolean> {
   return (id) => mentions.has(id);
 }
 
+const USAGE = "usage: railyard-ids-take [count]   — count is a whole number of 1 or more";
+
 export async function main(argv: readonly string[]): Promise<number> {
+  if (argv.includes("--help") || argv.includes("-h")) {
+    process.stdout.write(`${USAGE}\n`);
+    return 0;
+  }
   const [asked = "1", ...rest] = argv;
   if (rest.length > 0 || !COUNT.test(asked)) {
-    process.stderr.write("usage: railyard-ids-take [count]   — count is a whole number of 1 or more\n");
+    process.stderr.write(`${USAGE}\n`);
     return 2;
   }
   let mentions: Mentions;

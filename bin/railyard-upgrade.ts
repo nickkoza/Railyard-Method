@@ -7,4 +7,4 @@ import { main } from "../method/upgrade-cli.ts";
 import { quietWhenTheReaderGoes } from "./pipe.ts";
 
 quietWhenTheReaderGoes();
-process.exitCode = await main();
+process.exitCode = await main(process.argv.slice(2));

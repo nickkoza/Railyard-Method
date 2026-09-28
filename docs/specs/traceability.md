@@ -838,14 +838,20 @@ flowchart LR
   and fails, rather than printing "Unlinked" for work it did not do. No raw error escapes
   them, as none escapes `trace` (found 2026-09-26: `links --help` read `--help` as a file
   and printed Node's raw ENOENT).
-- **Every command answers `--help` with its own usage, in words, and does the command's
-  work only when it was actually asked to.** This holds for `check` and for the bundled
-  entry point (`railyard --help`) as it does for `trace` and the links commands: asked for
-  help, a command says how it is used and does nothing else, and exits 0 — never the
-  command's own exit status for a run it did not make, and never a usage error's exit
-  status for a request that was answered (found 2026-09-27: `check --help` ran the check;
-  `railyard --help`, asked at the entry point rather than of one command, was read as an
-  unknown command and exited 2, the same as `railyard nonsense`).
+- **Every command answers `--help` and `-h` with its own usage, in words, and does the
+  command's work only when it was actually asked to.** This holds across the whole bundled
+  tool — `check`, `trace`, `ids-take`, `ids-resolve`, `upgrade`, `install`, `links`, `link`,
+  `unlink`, `scan`, `tests-by-id` and `decisions-by-id` — and for the bundled entry point
+  (`railyard --help`): asked for help, a command says how it is used and does nothing else,
+  and exits 0 — never the command's own exit status for a run it did not make, and never a
+  usage error's exit status for a request that was answered (found 2026-09-27: `check --help`
+  ran the check; `railyard --help`, asked at the entry point rather than of one command, was
+  read as an unknown command and exited 2, the same as `railyard nonsense`. Found again the
+  same day, upgrading Railyard itself: `upgrade --help` carried the repository forward instead
+  of printing usage, because the entry point called it with no arguments at all; `install
+  --help` would have installed for the same reason; `ids-take --help` read `--help` as an
+  invalid count and exited 2 rather than 0; `ids-resolve --help` read it as an ID to resolve
+  and reported that it named nothing).
 - **Every command stops quietly when whoever reads its output stops reading.** Piped into a
   reader that closes early, such as `links <file> | head`, a command prints no error and no
   trace, and still finishes the work it was asked to do (found 2026-09-27, grading a
@@ -889,7 +895,7 @@ Every criterion has a row: the test that holds it, or what is missing. Tier in b
 | [qHR] (a query is answered from the record and never from git: `backward` and `forward` spawn no git process at all, and `index` is the only command that may) | — | Planned — both read git today, and one `forward` spawns 5,850 of them. The test is that the count is zero, which is checkable without measuring anything |
 | NFR (a query answered from a symbols directory returns in 50 ms at p95, start-up counted, over a directory the size of Railyard's) | — | Planned — 1.7 s today, of which 137 ms is start-up before any record is read. Needs a record that can be read without parsing it whole, and a query path that imports no validator and strips no types at run time |
 | Failure behavior (the links commands' usage for `--help`, and a file that is not there named, never a raw error; `unlink` fails, in words, when nothing was linked) | `skills/hook.test.ts` [2], through the bundled tool; `method/links.test.ts` [1] and `skills/tools.test.ts` [2] for `unlink` | Written |
-| Failure behavior (every command answers `--help` with its own usage and no side effect, and exits 0; `check` and the entry point included) | `skills/tools.test.ts` [2], through the bundled tool | Written |
+| Failure behavior (every command answers `--help` and `-h` with its own usage and no side effect, and exits 0; every bundled command and the entry point included) | `skills/tools.test.ts` [2], through the bundled tool | Written |
 | Failure behavior (every command stops quietly when its reader closes early: no error and no trace) | `skills/tools.test.ts` [2], through the bundled tool, its output read by a reader that closes after one byte | Written |
 | Failure behavior (a symbols file missing, belonging to another version, or that cannot be read) | `traceability/symbols.test.ts` [1] | Written. A missing directory or index, a build hash the directory does not carry, a file that is not JSON or not the format, a version whose own commit is not the one its index names, and a hash two versions carry, are each refused in words naming the file or the hash. No other version ever answers in a version's place, and a position the version records nothing for is untraced |
 | [BNb] (a bracketed ID resolves exactly, and a bare three-character run never does; a bracketed ID nothing carries is a finding naming its file) | `method/artifacts.test.ts` [1], which reports a cited ID nothing carries | Written, for the check. The trace's own resolution of a bracketed ID is held by `traceability/backward.test.ts` [2], and a query given an artifact by any of its own IDs, bare, bracketed or after its file, by `traceability/identifiers.test.ts` [2] |

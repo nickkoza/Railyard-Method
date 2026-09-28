@@ -7,7 +7,13 @@ import { decisionsReport } from "./decisions-by-id.ts";
 import { carriedReport } from "./tests-by-id.ts";
 import { upgrade } from "./upgrade.ts";
 
-export async function main(): Promise<number> {
+const USAGE = "usage: railyard upgrade                           carry this repository forward to this version of the method";
+
+export async function main(argv: readonly string[] = []): Promise<number> {
+  if (argv.includes("--help") || argv.includes("-h")) {
+    process.stdout.write(`${USAGE}\n`);
+    return 0;
+  }
   const done = await upgrade(process.cwd());
   if (done.done === "nothing") {
     console.log("Already at this version of the method; nothing to do.");

@@ -136,8 +136,14 @@ function sessionFolder(): string | undefined {
   }
 }
 
+const USAGE = "usage: railyard install                           install the skill into this repository, and its scan into its settings";
+
 /** railyard install: run from the skill's folder, into the repository it is run in. */
-export function main(): number {
+export function main(argv: readonly string[] = []): number {
+  if (argv.includes("--help") || argv.includes("-h")) {
+    process.stdout.write(`${USAGE}\n`);
+    return 0;
+  }
   // The bundled tool lives at <skill>/tools/railyard.mjs.
   const from = dirname(dirname(realpathSync(process.argv[1] ?? "")));
   try {

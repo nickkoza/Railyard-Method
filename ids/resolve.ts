@@ -141,7 +141,13 @@ export function resolveIds(root: string, ids: readonly string[]): readonly Resol
   });
 }
 
+const USAGE = "usage: railyard-ids-resolve [<ID>...]   — what each stable ID names; with none, how many are declared";
+
 export function main(argv: readonly string[]): number {
+  if (argv.includes("--help") || argv.includes("-h")) {
+    process.stdout.write(`${USAGE}\n`);
+    return 0;
+  }
   const root = process.cwd();
   if (argv.length === 0) {
     const all = index(root);

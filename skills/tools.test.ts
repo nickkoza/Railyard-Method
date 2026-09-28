@@ -7,7 +7,7 @@
 // never falls behind the code.
 import { describe, it, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { execFileSync, spawn, spawnSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -150,6 +150,52 @@ describe("[18E]: the skill carries its tools", () => {
     assert.equal(r.status, 0, r.err);
     assert.match(r.out, /usage:.*check/is);
     assert.ok(!/No findings|^\d+ findings?/m.test(r.out), `check --help ran the check instead of printing help:\n${r.out}`);
+  });
+
+  it("prints upgrade's own usage for --help and -h, rather than upgrading a repository that needs it", () => {
+    const stale = join(base, "help-upgrade");
+    mkdirSync(join(stale, ".railyard"), { recursive: true });
+    writeFileSync(join(stale, ".railyard/method.json"), JSON.stringify({ method: "0.1.0" }));
+    execFileSync("git", ["init", "-q"], { cwd: stale });
+    execFileSync("git", ["add", "-A"], { cwd: stale });
+    execFileSync("git", ["-c", "user.name=t", "-c", "user.email=t@t", "commit", "-q", "-m", "one"], { cwd: stale });
+    const before = readFileSync(join(stale, ".railyard/method.json"), "utf8");
+    for (const flag of ["--help", "-h"]) {
+      const r = spawnSync("node", [tool, "upgrade", flag], { cwd: stale, encoding: "utf8" });
+      assert.equal(r.status, 0, r.stderr);
+      assert.match(r.stdout, /usage:.*upgrade/is);
+      assert.ok(!/Upgraded|recorded it at|Already at this version/.test(r.stdout), `upgrade ${flag} carried the repository instead of printing usage:\n${r.stdout}`);
+    }
+    assert.equal(readFileSync(join(stale, ".railyard/method.json"), "utf8"), before, "upgrade --help left the repository's version marker untouched");
+  });
+
+  it("prints install's own usage for --help and -h, rather than installing", () => {
+    const fresh = join(base, "help-install");
+    mkdirSync(fresh, { recursive: true });
+    execFileSync("git", ["init", "-q"], { cwd: fresh });
+    for (const flag of ["--help", "-h"]) {
+      const r = spawnSync("node", [tool, "install", flag], { cwd: fresh, encoding: "utf8" });
+      assert.equal(r.status, 0, r.stderr);
+      assert.match(r.stdout, /usage:.*install/is);
+    }
+    assert.ok(!existsSync(join(fresh, ".claude")), "install --help left no .claude folder behind");
+  });
+
+  it("prints ids-take's own usage for --help and -h, rather than taking an ID or refusing as a bad count", () => {
+    for (const flag of ["--help", "-h"]) {
+      const r = run("ids-take", flag);
+      assert.equal(r.status, 0, r.err);
+      assert.match(r.out, /usage:.*ids-take/is);
+    }
+  });
+
+  it("prints ids-resolve's own usage for --help and -h, rather than resolving the flag as an ID", () => {
+    for (const flag of ["--help", "-h"]) {
+      const r = run("ids-resolve", flag);
+      assert.equal(r.status, 0, r.err);
+      assert.match(r.out, /usage:.*ids-resolve/is);
+      assert.ok(!/names nothing here/.test(r.out), `ids-resolve ${flag} treated the flag as an ID:\n${r.out}`);
+    }
   });
 
   it("stops quietly when its reader closes early, as `links <file> | head` does", async () => {
