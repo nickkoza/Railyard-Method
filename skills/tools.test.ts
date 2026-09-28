@@ -73,7 +73,7 @@ describe("[18E]: the skill carries its tools", () => {
   it("upgrades the repository it is run in", () => {
     const upgraded = run("upgrade");
     assert.equal(upgraded.status, 0, upgraded.err);
-    assert.match(upgraded.out, /0\.1\.0 → 1\.0\.2/);
+    assert.match(upgraded.out, /0\.1\.0 → 1\.0\.3/);
   });
 
   it("carries a repository's Tests rows from numbers to IDs, from the copy alone ([R6P])", () => {

@@ -3,6 +3,20 @@
 This project's version tracks the method, not a release cadence: it stays below 1.0 until
 the public release, and 1.0.0 is that release.
 
+## [1.0.3] - 2026-09-27
+
+### Added
+
+- **No minted ID reads as an objectionable word.** Every minter (`ids-take`, the exported
+  `mintIds`, and `decisions-by-id`, which takes its IDs through it) refuses a candidate that
+  reads as a profanity, a slur, a sexual term or a hostile acronym, and draws again. A
+  candidate is read in any case, with a digit read as the letter it stands for, and with
+  letters that sound alike folded together, so a misspelling, an abbreviation or a dropped
+  vowel that still reads as the word is refused as the word is. The list is the method's
+  own: the ready-made filter evaluated missed most of what reads as a word at three
+  characters. It refuses about 2% of the ID space, so an ID costs about 1.02 draws more
+  than it did. IDs already carried are never changed: the filter applies to minting only.
+
 ## [1.0.2] - 2026-09-27
 
 ### Fixed
