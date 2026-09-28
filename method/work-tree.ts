@@ -6,6 +6,12 @@
 // differ from the last commit, and compares each one's modification time and size with what it saw
 // the last time it ran (traceability's Decisions).
 //
+// The same note also keeps, per file, each named thing's own witness as of the last time that
+// file's names were reported: what tells a later write's report what it actually changed, as
+// opposed to what was already true of the file before it ([G0i], the Decisions). Neither a link's
+// own witness (an unlinked name carries none) nor git's `HEAD` (a file never committed has none)
+// holds for every file, so this note — already kept for the shell write — is the one extended.
+//
 // What it saw is kept in the repository's own git directory, never in the tree: there it is never
 // committed or shown as a change, belongs to one work tree, and needs no ignore rule. It is a note of
 // what was last looked at, not a record: losing it costs one scan that names the whole change again.
@@ -17,7 +23,12 @@ import { z } from "zod";
 const STATE = "railyard-scan.json";
 
 /** Read from a file this tool wrote, and validated, since anything may have written over it since. */
-const Seen = z.strictObject({ seen: z.record(z.string(), z.string()) });
+const Seen = z.strictObject({
+  seen: z.record(z.string(), z.string()),
+  /** Per file, each named thing's witness as of the last time that file was reported. */
+  names: z.record(z.string(), z.record(z.string(), z.string())).default({}),
+});
+type State = z.infer<typeof Seen>;
 
 export type Changes = {
   /** Files that differ from the last commit and changed since the last scan, the most recently written first. */
@@ -40,19 +51,19 @@ function statePath(root: string): string | undefined {
   }
 }
 
-function readSeen(path: string): Record<string, string> {
+function readState(path: string): State {
   try {
     const parsed = Seen.safeParse(JSON.parse(readFileSync(path, "utf8")));
-    return parsed.success ? parsed.data.seen : {};
+    return parsed.success ? parsed.data : { seen: {}, names: {} };
   } catch {
-    return {};
+    return { seen: {}, names: {} };
   }
 }
 
-function writeSeen(path: string, seen: Record<string, string>): void {
+function writeState(path: string, state: State): void {
   // Written whole and moved into place, so two hooks at once leave one note or the other, never half of each.
   const next = `${path}.${String(process.pid)}`;
-  writeFileSync(next, `${JSON.stringify({ seen })}\n`);
+  writeFileSync(next, `${JSON.stringify(state)}\n`);
   renameSync(next, path);
 }
 
@@ -88,7 +99,8 @@ export function changedSinceLastScan(root: string, relevant: (file: string) => b
   } catch {
     return undefined;
   }
-  const before = readSeen(path);
+  const state = readState(path);
+  const before = state.seen;
   const now: Record<string, string> = {};
   const written: { readonly file: string; readonly at: number }[] = [];
   const deleted: string[] = [];
@@ -99,7 +111,7 @@ export function changedSinceLastScan(root: string, relevant: (file: string) => b
     if (sig === "gone") deleted.push(c.file);
     else written.push({ file: c.file, at: Number(sig.split(":")[0]) });
   }
-  writeSeen(path, now);
+  writeState(path, { ...state, seen: now });
   return { written: written.sort((a, b) => b.at - a.at || a.file.localeCompare(b.file)).map((w) => w.file), deleted: deleted.sort() };
 }
 
@@ -107,5 +119,28 @@ export function changedSinceLastScan(root: string, relevant: (file: string) => b
 export function remember(root: string, file: string): void {
   const path = statePath(root);
   if (path === undefined) return;
-  writeSeen(path, { ...readSeen(path), [file]: signature(root, file) });
+  const state = readState(path);
+  writeState(path, { ...state, seen: { ...state.seen, [file]: signature(root, file) } });
+}
+
+/**
+ * The names among `things` new since the last time `file`'s names were reported, or whose witness
+ * has changed since ([G0i]): what a write actually touched, as opposed to what was already true of
+ * the file before it. The note is updated to what is there now, whether or not a name is touched,
+ * so the next write's "before" is always this write's "after."
+ *
+ * Undefined outside a git repository, where the note has nowhere fixed to live: every name then
+ * reads as touched, the same as before this bound existed — noisy is the safe direction to fail in,
+ * never silent ([Wuq]). The first time this runs over a file already full of history, the note
+ * holds nothing for it yet, so everything reads as touched, once — the same rule a whole new file
+ * already reads by.
+ */
+export function touchedNames(root: string, file: string, things: readonly { readonly name: string; readonly witness: string }[]): ReadonlySet<string> | undefined {
+  const path = statePath(root);
+  if (path === undefined) return undefined;
+  const state = readState(path);
+  const before = state.names[file] ?? {};
+  const touched = new Set(things.filter((t) => before[t.name] !== t.witness).map((t) => t.name));
+  writeState(path, { ...state, names: { ...state.names, [file]: Object.fromEntries(things.map((t) => [t.name, t.witness])) } });
+  return touched;
 }

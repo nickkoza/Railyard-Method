@@ -4,14 +4,50 @@
   "path": "skills/hook.test.ts",
   "entries": [
     {
+      "name": "[G0i]: a file's report is bounded to what a write touched, not to everything already unlinked in it.names only the one function a one-line edit changed, among 500 never-linked ones, through the Edit hook",
+      "witness": "180d6e9cc09de1dc",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a file's report is bounded to what a write touched, not to everything already unlinked in it.names only the one function a shell-run write changed, among 500 never-linked ones, through the Bash hook",
+      "witness": "143eb3ba0572e122",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a file's report is bounded to what a write touched, not to everything already unlinked in it.shows twenty of the forty functions one write changed, and says how many more, through the Edit hook",
+      "witness": "d6fd9321b7c53a39",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
       "name": "[G0i]: a write through the shell is scanned, as the hook runs it after a Bash command.answers a command that changed 3,000 files with what it names bounded, and a count of the rest",
       "witness": "333a90dd56458260",
       "links": [
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -22,8 +58,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -34,8 +70,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -46,8 +82,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -58,8 +94,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -70,8 +106,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -82,8 +118,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -94,8 +130,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -130,8 +166,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         },
         {
           "id": "HPg",
@@ -154,8 +190,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -166,8 +202,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -178,8 +214,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -190,8 +226,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         },
         {
           "id": "Wuq",
@@ -208,8 +244,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -232,8 +268,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         },
         {
           "id": "HPg",
@@ -250,8 +286,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     }

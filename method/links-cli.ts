@@ -12,7 +12,7 @@ import { isAbsolute, join, relative, sep } from "node:path";
 import { changedUnder, isCode, link, linksPath, readLinks, scan, unlink } from "./links.ts";
 import type { Confirm, Scan } from "./links.ts";
 import { isArtifact } from "./paths.ts";
-import { changedSinceLastScan, remember } from "./work-tree.ts";
+import { changedSinceLastScan, remember, touchedNames } from "./work-tree.ts";
 import { namedThings } from "../traceability/anchor.ts";
 
 function today(): string {
@@ -48,8 +48,23 @@ function thing(file: string, name: string): string {
   return /^[\w./#~@+:,=-]+$/.test(both) ? both : `'${both.replace(/'/g, "'\\''")}'`;
 }
 
-/** What a scan found, in words an agent acts on; empty where there is nothing to do. */
-export function report(r: Scan, tool: string): string {
+/** At most this many named things are listed in full for one file's report; a count says the rest. */
+const SHOWN = 20;
+
+/** A count as a person reads it: 3,000. */
+function count(n: number): string {
+  return n.toLocaleString("en-US");
+}
+
+/**
+ * What a scan found, in words an agent acts on; empty where there is nothing to do. `touched`
+ * bounds the unlinked names shown in full to those this write actually changed — new ones, and
+ * ones whose code differs from what the last write left ([G0i], the Decisions); every other name
+ * already unlinked before this write, and left alone by it, is folded into one line. Undefined
+ * shows every unlinked name, as `scan <file>` and `links <file>` do: there is no "this write" to
+ * bound by when the file is inspected rather than written.
+ */
+export function report(r: Scan, tool: string, touched?: ReadonlySet<string>): string {
   const lines: string[] = [];
   const cite = (ids: readonly string[]): string => ids.map((i) => `[${i}]`).join(", ");
   /** A name new here that another file of the same change had linked, and lost: moved, most likely. */
@@ -57,28 +72,40 @@ export function report(r: Scan, tool: string): string {
     const a = r.arrived.find((x) => x.name === n);
     return a === undefined ? undefined : `- ${n}: new here, and ${a.from} had it linked to ${cite(a.ids)} and has it no longer. If it moved, \`${tool} link ${thing(r.file, n)} ${a.ids.join(" ")}\` and \`${tool} unlink ${thing(a.from, n)}\`.`;
   };
+  const shownUnlinked = r.unlinked.filter((n) => touched === undefined || touched.has(n));
+  const quiet = r.unlinked.length - shownUnlinked.length;
+  const quietLine = (): string | undefined => quiet === 0 ? undefined :
+    `${count(quiet)} other name${quiet === 1 ? "" : "s"} in this file ${quiet === 1 ? "is" : "are"} linked to nothing; \`${tool} links ${r.file}\` lists them.`;
+
   if (!r.tracked) {
     if (r.unlinked.length === 0) return "";
+    if (shownUnlinked.length === 0) return quietLine() ?? "";
     lines.push(`${r.file} has no links yet, so nothing traces it back to what it implements. Link each of its named things to the criteria or decisions it implements:`);
-    for (const n of r.unlinked) lines.push(arrivedLine(n) ?? `- ${n}: \`${tool} link ${thing(r.file, n)} <ID>...\``);
+    for (const n of shownUnlinked.slice(0, SHOWN)) lines.push(arrivedLine(n) ?? `- ${n}: \`${tool} link ${thing(r.file, n)} <ID>...\``);
+    if (shownUnlinked.length > SHOWN) lines.push(`And ${count(shownUnlinked.length - SHOWN)} more: \`${tool} links ${r.file}\` lists them.`);
+    const quietSaid = quietLine();
+    if (quietSaid !== undefined) lines.push(quietSaid);
     return lines.join("\n");
   }
+  const bullets: string[] = [];
   for (const s of r.suspect) {
     const what = s.why === "code" ? "its code changed" : "the text of what it implements changed";
-    lines.push(`- ${s.name}: ${what} since it was linked to ${cite(s.ids)}. If it still implements them, confirm with \`${tool} link ${thing(r.file, s.name)} ${s.ids.join(" ")}\`; if not, link what it does implement, or \`${tool} unlink ${thing(r.file, s.name)}\`.`);
+    bullets.push(`- ${s.name}: ${what} since it was linked to ${cite(s.ids)}. If it still implements them, confirm with \`${tool} link ${thing(r.file, s.name)} ${s.ids.join(" ")}\`; if not, link what it does implement, or \`${tool} unlink ${thing(r.file, s.name)}\`.`);
   }
   for (const m of r.missing) {
-    lines.push(m.to === undefined
+    bullets.push(m.to === undefined
       ? `- ${m.name}: gone, and it was linked to ${cite(m.ids)}. Link whatever implements them now, and \`${tool} unlink ${thing(r.file, m.name)}\`.`
       : `- ${m.name}: gone, and it was linked to ${cite(m.ids)}; ${m.to} has a ${m.name} now. If it moved, \`${tool} link ${thing(m.to, m.name)} ${m.ids.join(" ")}\` and \`${tool} unlink ${thing(r.file, m.name)}\`; if not, link whatever implements them now.`);
   }
-  for (const g of r.gone) lines.push(`- ${g.name}: linked to [${g.id}], which no longer names anything. Link what it implements now, and \`${tool} unlink ${thing(r.file, g.name)} ${g.id}\`.`);
-  for (const n of r.unlinked) lines.push(arrivedLine(n) ?? `- ${n}: new, and linked to nothing. \`${tool} link ${thing(r.file, n)} <ID>...\``);
-  return lines.length === 0 ? "" : [`${r.file}: its links need answering in this turn.`, ...lines].join("\n");
+  for (const g of r.gone) bullets.push(`- ${g.name}: linked to [${g.id}], which no longer names anything. Link what it implements now, and \`${tool} unlink ${thing(r.file, g.name)} ${g.id}\`.`);
+  for (const n of shownUnlinked) bullets.push(arrivedLine(n) ?? `- ${n}: new, and linked to nothing. \`${tool} link ${thing(r.file, n)} <ID>...\``);
+  if (bullets.length === 0) return quietLine() ?? "";
+  lines.push(`${r.file}: its links need answering in this turn.`, ...bullets.slice(0, SHOWN));
+  if (bullets.length > SHOWN) lines.push(`And ${count(bullets.length - SHOWN)} more: \`${tool} links ${r.file}\` lists them.`);
+  const quietSaid = quietLine();
+  if (quietSaid !== undefined) lines.push(quietSaid);
+  return lines.join("\n");
 }
-
-/** At most this many links are named after one write; a count says how many more, and `check` names them all. */
-const SHOWN = 20;
 
 /** What a write to an artifact left to confirm ([G0i]), in words an agent acts on; empty where nothing. */
 export function artifactReport(artifact: string, changed: readonly Confirm[], tool: string): string {
@@ -94,11 +121,6 @@ export function artifactReport(artifact: string, changed: readonly Confirm[], to
 
 /** Of the files a command changed that have links, at most this many are reported in full. */
 const IN_FULL = 10;
-
-/** A count as a person reads it: 3,000. */
-function count(n: number): string {
-  return n.toLocaleString("en-US");
-}
 
 /** A list of files named in one line: the first few, and how many more. */
 function some(files: readonly string[]): string {
@@ -134,7 +156,8 @@ export function shellReport(root: string, tool: string): string {
       over.push(f);
       continue;
     }
-    const text = report(scan(root, f), tool);
+    const things = namedThings(readFileSync(join(root, f), "utf8"));
+    const text = report(scan(root, f), tool, touchedNames(root, f, things));
     if (text === "") continue;
     parts.push(text);
     full += 1;
@@ -169,8 +192,9 @@ function hook(): number {
       return 0;
     }
     // A file already linked is kept whatever it is; otherwise only code is asked about.
-    if (readLinks(root, file) === undefined && (!isCode(file) || namedThings(readFileSync(path, "utf8")).length === 0)) return 0;
-    say(report(scan(root, file), self(root)));
+    const things = namedThings(readFileSync(path, "utf8"));
+    if (readLinks(root, file) === undefined && (!isCode(file) || things.length === 0)) return 0;
+    say(report(scan(root, file), self(root), touchedNames(root, file, things)));
     remember(root, file);
   } catch (error) {
     say(`The railyard scan could not run after this write: ${error instanceof Error ? error.message : String(error)}. The file's links were not checked.`);

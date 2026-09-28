@@ -5,13 +5,13 @@
   "entries": [
     {
       "name": "changedSinceLastScan",
-      "witness": "d781c10cc45d373d",
+      "witness": "a5643840877226cf",
       "links": [
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -22,8 +22,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -34,8 +34,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -46,32 +46,32 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
     {
-      "name": "readSeen",
-      "witness": "65c177da659796b4",
+      "name": "readState",
+      "witness": "1e1b23a812acadc2",
       "links": [
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
     {
       "name": "remember",
-      "witness": "8facff9aac74dce2",
+      "witness": "7f2bd0155ce85239",
       "links": [
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -82,8 +82,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -94,20 +94,32 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
     {
-      "name": "writeSeen",
-      "witness": "e6f4d4fe843e244f",
+      "name": "touchedNames",
+      "witness": "8942e74672c13644",
       "links": [
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "writeState",
+      "witness": "481b2bec05d9dcc8",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     }

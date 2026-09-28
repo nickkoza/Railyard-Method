@@ -240,3 +240,59 @@ describe("[G0i]: a write through the shell is scanned, as the hook runs it after
     }
   });
 });
+
+/** `n` small functions, each unique so each has its own witness: `def f0(x):\n    return x\n`, and so on. */
+function manyFunctions(n: number): string {
+  return Array.from({ length: n }, (_, i) => `def f${String(i)}(x):\n    return x\n`).join("\n");
+}
+
+describe("[G0i]: a file's report is bounded to what a write touched, not to everything already unlinked in it", () => {
+  before(() => {
+    repo = mkdtempSync(join(tmpdir(), "hook-bounded-"));
+    cpSync(join(ROOT, "skills/spec-driven-change"), join(repo, ".claude/skills/spec-driven-change"), { recursive: true });
+    tool = join(repo, ".claude/skills/spec-driven-change/tools/railyard.mjs");
+    file("docs/specs/grasp.md", "# Grasp\n\n**ID:** [Ga1]\n\n## Acceptance criteria\n\n1. [Gb2] A trial ends in success or one failure reason.\n");
+    const git = (...args: string[]): void => { spawnSync("git", args, { cwd: repo }); };
+    git("init", "-q");
+    git("add", "-A");
+    git("-c", "user.name=T", "-c", "user.email=t@example.com", "commit", "-q", "-m", "init");
+  });
+  after(() => { rmSync(repo, { recursive: true, force: true }); });
+
+  it("names only the one function a one-line edit changed, among 500 never-linked ones, through the Edit hook", () => {
+    file("sim/big.py", manyFunctions(500));
+    hook("sim/big.py"); // primes the note, as the file's first write would
+    assert.equal(run(["link", "sim/big.py#f0", "Gb2"]).status, 0);
+    file("sim/big.py", manyFunctions(500).replace("def f7(x):\n    return x", "def f7(x):\n    return x + 1"));
+    const r = hook("sim/big.py");
+    assert.equal(r.status, 0);
+    assert.equal(r.context.split("\n").filter((l) => l.startsWith("- ")).length, 1);
+    assert.match(r.context, /- f7: new, and linked to nothing\. `.*link sim\/big\.py#f7 <ID>\.\.\.`/);
+    assert.match(r.context, /^498 other names in this file are linked to nothing; `.*links sim\/big\.py` lists them\.$/m);
+  });
+
+  it("names only the one function a shell-run write changed, among 500 never-linked ones, through the Bash hook", () => {
+    file("sim/big2.py", manyFunctions(500));
+    assert.equal(run(["link", "sim/big2.py#f0", "Gb2"]).status, 0);
+    assert.equal(hook("sim/big2.py").status, 0); // primes the note, as an earlier write already made
+    const git = (...args: string[]): void => { spawnSync("git", args, { cwd: repo }); };
+    git("add", "-A");
+    git("-c", "user.name=T", "-c", "user.email=t@example.com", "commit", "-q", "-m", "add big2");
+    file("sim/big2.py", manyFunctions(500).replace("def f9(x):\n    return x", "def f9(x):\n    return x + 1"));
+    const r = shell("true");
+    assert.equal(r.status, 0);
+    assert.equal(r.context.split("\n").filter((l) => l.startsWith("- ")).length, 1);
+    assert.match(r.context, /- f9: new, and linked to nothing\. `.*link sim\/big2\.py#f9 <ID>\.\.\.`/);
+    assert.match(r.context, /^498 other names in this file are linked to nothing; `.*links sim\/big2\.py` lists them\.$/m);
+  });
+
+  it("shows twenty of the forty functions one write changed, and says how many more, through the Edit hook", () => {
+    file("sim/many.py", manyFunctions(40));
+    hook("sim/many.py"); // primes the note
+    file("sim/many.py", manyFunctions(40).replaceAll("return x", "return x + 1"));
+    const r = hook("sim/many.py");
+    assert.equal(r.status, 0);
+    assert.equal(r.context.split("\n").filter((l) => l.startsWith("- ")).length, 20);
+    assert.match(r.context, /And 20 more: `.*links sim\/many\.py` lists them\./);
+  });
+});

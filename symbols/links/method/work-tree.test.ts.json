@@ -1,0 +1,67 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "method/work-tree.test.ts",
+  "entries": [
+    {
+      "name": "touchedNames: what a write actually changed, from what the last one left.is undefined outside a git repository, where the note has nowhere fixed to live",
+      "witness": "e3fdab006d687f3a",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "touchedNames: what a write actually changed, from what the last one left.keeps one file's note apart from another's",
+      "witness": "43f3c5cf0eb22c11",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "touchedNames: what a write actually changed, from what the last one left.reads a name as touched only when its witness differs from what the last call left",
+      "witness": "ee2c2d642e10ca57",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "touchedNames: what a write actually changed, from what the last one left.reads a name new since the last call as touched",
+      "witness": "e87428b05b04bb83",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "touchedNames: what a write actually changed, from what the last one left.reads every name as touched the first time it sees a file",
+      "witness": "c6100660559b381e",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { changedUnder, checkLinks, link, linksPath, readLinks, scan, unlink } from "./links.ts";
+import type { Scan } from "./links.ts";
 import { artifactReport, report } from "./links-cli.ts";
 import { summary } from "./check-cli.ts";
 import { execFileSync } from "node:child_process";
@@ -214,5 +215,47 @@ describe("[G0i]: check shows the state of the links, as notices and never as fin
     link(root, "sim/grasp.py", "run_trial", ["Gb2"], "2026-09-24");
     link(root, "sim/tip.py", "tip_check", ["Gb2"], "2026-09-24");
     assert.deepEqual(checkLinks(root), []);
+  });
+});
+
+describe("[G0i]: report bounds unlinked names to what a write touched", () => {
+  const base: Scan = { file: "big.py", tracked: true, suspect: [], missing: [], gone: [], arrived: [], unlinked: [] };
+
+  it("names only the touched unlinked names, and folds the rest into one line", () => {
+    const r: Scan = { ...base, unlinked: Array.from({ length: 500 }, (_, i) => `f${String(i)}`) };
+    const said = report(r, "rail", new Set(["f7"]));
+    assert.equal(said.split("\n").filter((l) => l.startsWith("- ")).length, 1);
+    assert.match(said, /- f7: new, and linked to nothing\. `rail link big\.py#f7 <ID>\.\.\.`/);
+    assert.match(said, /^499 other names in this file are linked to nothing; `rail links big\.py` lists them\.$/m);
+  });
+
+  it("caps the touched names shown at twenty, with a count of the rest, and no quiet line when nothing else is unlinked", () => {
+    const names = Array.from({ length: 40 }, (_, i) => `f${String(i)}`);
+    const r: Scan = { ...base, unlinked: names };
+    const said = report(r, "rail", new Set(names));
+    assert.equal(said.split("\n").filter((l) => l.startsWith("- ")).length, 20);
+    assert.match(said, /And 20 more: `rail links big\.py` lists them\./);
+    assert.doesNotMatch(said, /other names? in this file/);
+  });
+
+  it("says only the one-line summary when this write touched none of them", () => {
+    const r: Scan = { ...base, unlinked: ["f0", "f1"] };
+    assert.equal(report(r, "rail", new Set()), "2 other names in this file are linked to nothing; `rail links big.py` lists them.");
+  });
+
+  it("shows every unlinked name with no touched set given, as an inspection rather than a write", () => {
+    const r: Scan = { ...base, unlinked: ["f0", "f1"] };
+    const said = report(r, "rail");
+    assert.match(said, /- f0: new, and linked to nothing/);
+    assert.match(said, /- f1: new, and linked to nothing/);
+    assert.doesNotMatch(said, /other names? in this file/);
+  });
+
+  it("names a suspect link and folds the untouched unlinked names beneath it", () => {
+    const r: Scan = { ...base, suspect: [{ name: "g", ids: ["Gc3"], why: "code" }], unlinked: ["f0", "f1", "f2"] };
+    const said = report(r, "rail", new Set());
+    assert.match(said, /- g: its code changed since it was linked/);
+    assert.equal(said.split("\n").filter((l) => l.startsWith("- ")).length, 1);
+    assert.match(said, /3 other names in this file are linked to nothing; `rail links big\.py` lists them\./);
   });
 });

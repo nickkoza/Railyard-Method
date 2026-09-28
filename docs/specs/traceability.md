@@ -314,6 +314,16 @@ flowchart LR
       the skill: its agent wrote about 761 times through the shell and 69 times through the
       file tools, so the scan saw under a tenth of the writes, and 94 links went stale
       unseen).
+    - **A file's report names what this write changed, not everything already true of
+      it.** A file scanned on every later write accumulates names nobody has linked yet,
+      and naming all of them again each time is a wall the agent stops reading (found
+      2026-09-27: a one-line edit to a 10,000-line file returned 225 KB, one line for
+      every name it had never linked). So only the names new or changed by this write are
+      shown in full — at most twenty, with a count of the rest — and every other name
+      already unlinked before this write, which the write left alone, is one line: how
+      many, and the command that lists them all. Nothing already true is silenced
+      forever, only until it is answered: the same count is there again next time, so a
+      file never quietly reads as current when it is not.
     - **A write to an artifact names the code it leaves to confirm.** Changing the text of a
       criterion, a decision, a principle or a model changes what the code linked to it is
       held to, so a write to an artifact is answered as a write to code is, in the same turn:
@@ -458,6 +468,14 @@ flowchart LR
   from the hook's delivery to its answer, on the owner's machine. A build or a formatter
   run through the shell rewrites that many, and a hook that holds every such command for
   seconds is one an agent learns to work around.
+
+- **A file's report stays in the kilobytes, however many of its names have never been
+  linked.** Measured 2026-09-27 over a read-only copy of Railyard's `desk.test.ts`
+  (10,197 lines, 642 named things, one linked, in a scratch repository): a one-line edit,
+  scanned once before to prime the note and once after to answer it, fell from 276,775
+  to 469 bytes — 641 lines naming every never-linked name to 3, the one the edit touched
+  and a count of the rest. An agent that reads a scan's answer after every write is the
+  point ([G0i]); a wall of lines it has already learned to skip is not a report.
 
 - **A query answers within 30 s**, either way, measured from the process starting to
   its answer on stdout, over a repository of this one's size — 632 files, 768 commits
@@ -628,6 +646,23 @@ flowchart LR
      rest, and every changed file with no links at all, are named in one line each kind, with
      how many there are, so a command that rewrites thousands of files still answers in one
      screen.
+   - **What one write touched is told from the same note, kept per name rather than per
+     file.** A name is touched when its witness differs from what the note last held for
+     it, or the note holds nothing for it yet. Three sources of "before" were open: the
+     witness a link already carries — but an unlinked name carries none, which is exactly
+     the file this bounds; git's `HEAD` version — but a file never committed has none
+     either, and the note must hold for that file too; and this same last-seen note the
+     shell write already keeps, extended to carry every named thing's witness, not only
+     the file's size and time. The third is the one answer that holds in both gaps, so it
+     is the one kept, for a write through a file tool and one through the shell alike. The
+     note is updated to what is there now whether or not the name was shown, so the next
+     write's "before" is always this write's "after." **Outside a git repository, where
+     the note has nowhere fixed to live, every name reads as touched** — the same as
+     before this bound existed. Silence would be the wrong direction to fail in ([Wuq]);
+     a name shown that did not need to be costs a line, one already shown before this
+     existed. **The first write to bound over a file already full of history shows
+     everything, once** — the note holds nothing for it yet, so nothing yet reads as
+     untouched — the same rule a whole new file already reads by.
    - **A thing moved between files is said to have moved.** Moved, it reads as gone from one
      file and new in another, and the agent that moved it is the one who knows it is the same
      thing ([5jT]). So the scan looks among the other files of the same change (those that
@@ -872,10 +907,12 @@ Every criterion has a row: the test that holds it, or what is missing. Tier in b
 | [G0i] (the lines a change is about to touch answer with their links; after the change the invalidated links are named, re-anchored where the functionality moved, and new ones added; a regenerate never replaces an assertion with an inference) | `method/links.test.ts` [1], a thing moved to another file of the same change named as moved, with the command that moves its link, from either file; `skills/hook.test.ts` [2]; `evals/leaving-the-trail/` [eval] | Written. Nothing regenerates the links files |
 | [G0i], noticing (the scan raised from a hook on every write and installed with the environment; untracked where nothing installs it; never gating; symbols kept in the repository) | `skills/hook.test.ts` [2], the hook's command run as Claude Code runs it; `method/links.test.ts` [1], untracked files counted by `check` as a notice | Written. Held end to end against Claude Code 2.1.281 (the skill's Decisions) |
 | [G0i], a write through the shell (the files a command changed since the last scan scanned, and nothing it left alone named again; a write through a file tool not named again after it; a command changing many files answered with at most ten in full and a count of the rest; installed with the scan) | `skills/hook.test.ts` [2], a Bash hook payload as Claude Code delivers it, over a git repository; `method/install.test.ts` [1] | Written |
+| [G0i], bounding one file's report (only the names new or changed by this write shown in full, at most twenty with a count of the rest; every other name already unlinked before the write, and left alone by it, folded into one line naming how many and the command that lists them all; outside git, or on a file's first write under this bound, everything shows, as it always did) | `method/links.test.ts` [1], `report` over a constructed scan and a touched set; `method/work-tree.test.ts` [1], the per-name note a write leaves for the next one; `skills/hook.test.ts` [2], a file of many never-linked names edited once through each hook | Written. Measured 2026-09-27 over a read-only copy of Railyard's `desk.test.ts` (10,197 lines, 642 named things, one linked) in a scratch repository: a one-line edit's report fell from 276,775 to 469 bytes, 641 lines to 3, both after the same priming write |
 | [G0i], a write to an artifact (each link whose artifact's text the write changed named, with the command that confirms it; nothing said where none changed) | `method/links.test.ts` [1]; `skills/hook.test.ts` [2], a spec written as Claude Code's hook delivers it | Written |
 | [Zs7] (a file with no symbols is inferred and its beyond-recorded links proposed until confirmed; a file with symbols is never inferred over again, and lines added to it carry asserted links; a wholesale re-index refuses, or warns, over a tracked tree) | `method/links.test.ts` [1] | Partial. A file with no links file is untracked and its things are named for linking; nothing is inferred over a links file. Inferring and proposing links for an untracked file, and a re-index warning over a tracked tree, are Planned |
 | [Cz9] (no build surface carries a spec's name, a criterion's or a waymark's number, or a decision's reasoning: a served page, a published package, a source map, an image's layers; and a refusal's own text cites no document) | — | Planned — a deterministic conformance check (CALM layer 2), since the rule is mechanical and a reviewer reading diffs is exactly what it must not depend on |
 | NFR (after a shell command that changed 3,000 files, the scan answers within 1 s) | `skills/hook.test.ts` [2], 3,000 files written and the Bash hook run over them, asserting its bound on what it names; the time by hand, the hook's command run over 3,000 new files in a scratch repository | Measured 2026-09-27: 233 to 324 ms over five runs with nothing seen before, and 142 to 156 ms over three for a command after which none of the 3,000 had changed, on the owner's laptop, Node 24.17.0 |
+| NFR (a file's report stays in the kilobytes, however many of its names have never been linked) | `skills/hook.test.ts` [2], 500 never-linked names and a one-line edit to one, asserting the report names only that one, through both hooks; by hand, over a read-only copy of Railyard's `desk.test.ts` in a scratch repository | Measured 2026-09-27: 276,775 to 469 bytes, 641 lines to 3, for the same one-line edit scanned once before this bound and once after |
 | NFR (the scan answers within 200 ms at p95 from the hook's delivery, over a directory the size of Railyard's) | by hand, the hook's command run 20 times on a linked file over a copy of Railyard's `docs/` (3.8 MB) | Measured 2026-09-24: 77 to 106 ms, about 94 ms at p95, on the owner's laptop. Nothing holds it yet |
 | NFR (a query answers within 30 s either way, over a repository of this one's size) | Measured by hand against this repository's own HEAD: the timed comparison itself lives in Railyard, which is where that corpus is (`traceability/cli.test.ts:193`) | Written. Measured 2026-09-27: `forward [irC]` answers in 0.47–0.61 s over three runs, `backward` in 0.22 s — both well under 30 s. Fixed by [QBm]'s row below: `forward` no longer walks the symbols directory as source, which is what cost the 1,892 s measured 2026-09-16 |
 | [EaR] (a stable reference; *suspect* once the artifact changes) | `traceability/backward.test.ts` [2] and `traceability/forward.test.ts` [2], against a fixture repository with real git | Written. Each artifact is named by its path plus a commit, with its date and time. That commit is the artifact's own last change: a criterion's, not its spec's. A link shows as suspect once the artifact changed after the link was made, and as current otherwise. A link made before its artifact existed is suspect, and says so. An artifact the link names that no longer exists is said to be missing. The reference is the artifact's stable ID where it has one; an artifact with none is held by its path instead, until an ID is assigned to it |

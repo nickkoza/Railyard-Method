@@ -10,8 +10,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -22,8 +22,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -52,8 +52,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -64,8 +64,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -76,8 +76,68 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: report bounds unlinked names to what a write touched.caps the touched names shown at twenty, with a count of the rest, and no quiet line when nothing else is unlinked",
+      "witness": "373d76702e33e922",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: report bounds unlinked names to what a write touched.names a suspect link and folds the untouched unlinked names beneath it",
+      "witness": "42a5a5e6e864f3ce",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: report bounds unlinked names to what a write touched.names only the touched unlinked names, and folds the rest into one line",
+      "witness": "5f594942ac40b105",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: report bounds unlinked names to what a write touched.says only the one-line summary when this write touched none of them",
+      "witness": "63dc41ea5f60326e",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: report bounds unlinked names to what a write touched.shows every unlinked name with no touched set given, as an inspection rather than a write",
+      "witness": "e4f0efb03696b479",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -136,8 +196,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -148,8 +208,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -184,8 +244,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -196,8 +256,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     },
@@ -208,8 +268,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "86618428fd4e5ab2",
-          "at": "2026-09-27"
+          "artifact": "56f0fa53dec7914d",
+          "at": "2026-09-28"
         }
       ]
     }
