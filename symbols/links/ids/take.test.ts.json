@@ -4,14 +4,50 @@
   "path": "ids/take.test.ts",
   "entries": [
     {
+      "name": "ids:take refusing what reads as an objectionable word ([LeX]).costs a few percent more draws at most, measured over ten thousand IDs",
+      "witness": "72ddb0b37126b0a9",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "ids:take refusing what reads as an objectionable word ([LeX]).never asks whether a flagged draw is free: it is refused before the repository is consulted",
+      "witness": "be6917bc7e96f4bf",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "ids:take refusing what reads as an objectionable word ([LeX]).re-rolls past every flagged draw, counting each, even when nothing holds it",
+      "witness": "b3b173075a21593b",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
       "name": "ids:take.gives back exactly what it drew, and judges nothing about its shape",
-      "witness": "3326234cad90fb3f",
+      "witness": "bbe8089d7fa9497c",
       "links": [
         {
           "id": "8g5",
           "kind": "asserted",
           "artifact": "7369b3b3d7ef786a",
-          "at": "2026-09-27"
+          "at": "2026-09-28"
         }
       ]
     },

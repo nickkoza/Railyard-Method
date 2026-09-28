@@ -1,0 +1,79 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/objectionable.test.ts",
+  "entries": [
+    {
+      "name": "objectionable ([LeX]).does not refuse IDs that read as nothing",
+      "witness": "88e4be25cc0d11fd",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "objectionable ([LeX]).refuses a small share of the space, so a refusal stays a cheap re-roll",
+      "witness": "b94fc7aa97b886b9",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "objectionable ([LeX]).refuses each listed word of three letters, and each longer one's consonant skeleton",
+      "witness": "e09e77140e7d512e",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "objectionable ([LeX]).refuses every listed form, in every case and every digit-for-letter spelling of it",
+      "witness": "de5e129f5f7b14b2",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "objectionable ([LeX]).refuses everything the ready-made filter flags at three characters, so the list never refuses less",
+      "witness": "a3ed2d7c99fa04c6",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "objectionable ([LeX]).refuses the forms the owner named, however they are spelled",
+      "witness": "3f55dc8e42fc86f9",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    }
+  ]
+}

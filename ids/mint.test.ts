@@ -14,6 +14,7 @@ import { randomBytes } from "node:crypto";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { mentionsIn, mentionsSince, mintIds, Unreadable } from "./mint.ts";
+import { objectionable } from "./objectionable.ts";
 
 /** A scratch repository with real git, removed after `body` runs. */
 async function scratch(body: (root: string, git: (...args: readonly string[]) => void) => Promise<void>): Promise<void> {
@@ -108,6 +109,27 @@ describe("mintIds", () => {
         assert.equal(mentions.has(id), false, `${id} was drawn though mentionsIn already holds it`);
       }
       assert.equal(new Set(ids).size, 5, "an ID drawn earlier in the batch is taken, though nothing is written yet");
+    });
+  });
+});
+
+describe("mintIds refusing what reads as an objectionable word ([LeX])", () => {
+  it("never offers one, nor asks a consumer's rule about one, and still gives the count asked for", async () => {
+    await scratch(async (root, git) => {
+      writeFileSync(join(root, "a.md"), "plain\n");
+      git("add", "a.md");
+      git("commit", "-q", "-m", "start");
+      const mentions = await mentionsIn(root);
+      const asked: string[] = [];
+      // Three thousand IDs: at the share of the space the filter refuses, a mint this size
+      // draws dozens of flagged candidates, so one reaching the consumer would be seen.
+      const ids = await mintIds(mentions, 3000, (id) => {
+        asked.push(id);
+        return false;
+      });
+      assert.equal(ids.length, 3000, "the count asked for, whatever was refused along the way");
+      assert.deepEqual(ids.filter(objectionable), [], "no minted ID reads as an objectionable word");
+      assert.deepEqual(asked.filter(objectionable), [], "a flagged candidate is refused before the consumer's rule is asked");
     });
   });
 });

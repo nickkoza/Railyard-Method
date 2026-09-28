@@ -6,7 +6,8 @@
 // The rule an ID is judged by — every tracked file as it stands, every version of every file
 // any ref reaches, and every commit message ([9pu]) — lives in `mint.ts`, exported so whatever
 // else mints an ID reads the same answer. `freeId` owns only the question of which draws are
-// free, and judges neither the corpus nor the alphabet.
+// free, refusing any that reads as an objectionable word ([LeX]), and judges neither the corpus
+// nor the alphabet.
 //
 // It writes nothing. Taking an ID is the author's act: this says which are free, and the
 // author puts one in the artifact's header.

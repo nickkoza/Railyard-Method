@@ -62,6 +62,7 @@
   "devDependencies": {
     "@finos/calm-cli": "1.59.0",
     "esbuild": "0.28.2",
+    "obscenity": "0.4.6",
     "typescript": "6.0.3"
   },
   "files": [

@@ -10,7 +10,11 @@
 // repository and its history, generated files included. Measured 2026-09-16: 76% of the 238,328 possible
 // IDs are free here, so an ID costs about 1.3 draws.
 //
+// A draw that reads as an objectionable word is refused before anything is asked of it, and
+// costs a re-roll like any other ([LeX]): every minter draws through here, so none offers one.
+//
 // It writes nothing. Taking an ID is the author's act; this only says which are free.
+import { objectionable } from "./objectionable.ts";
 
 export type Drawn = { readonly id: string; readonly draws: number };
 
@@ -26,14 +30,16 @@ const CAP = 1000;
  * The first drawn ID that `present` does not hold, and what it cost in draws.
  *
  * It judges nothing about the shape of what it draws: the draw source owns the alphabet,
- * and this owns only the question of which are free. The caller owns what "taken" means,
- * which is how an ID drawn earlier in the same run counts as taken before anything is
- * written down, and `present` may answer at once or later: a consumer's own rule may have
- * to read something to know. When `present` fails, nothing is offered.
+ * and this owns only the question of which are free, and which read as an objectionable word
+ * ([LeX]): one that does is refused before `present` is asked of it, and counts as a draw.
+ * The caller owns what "taken" means, which is how an ID drawn earlier in the same run
+ * counts as taken before anything is written down, and `present` may answer at once or
+ * later: a consumer's own rule may have to read something to know. When `present` fails, nothing is offered.
  */
 export async function freeId(present: (id: string) => boolean | Promise<boolean>, draw: () => string): Promise<Drawn> {
   for (let draws = 1; draws <= CAP; draws += 1) {
     const id = draw();
+    if (objectionable(id)) continue;
     if (!(await present(id))) return { id, draws };
   }
   throw new Error(`no free ID in ${String(CAP)} draws; the three-character space is exhausted, or everything reads as taken`);

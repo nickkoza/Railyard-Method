@@ -5,6 +5,7 @@
 // nowhere in the repository, and re-rolling past a hit is the whole mechanism.
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
+import { randomInt } from "node:crypto";
 import { freeId } from "./take.ts";
 
 /** A draw source that yields the given IDs in order, then throws rather than looping. */
@@ -57,6 +58,36 @@ describe("ids:take", () => {
 
   it("gives back exactly what it drew, and judges nothing about its shape", async () => {
     const got = await freeId(holding(), draws("zzz"));
-    assert.equal(got.id, "zzz", "the draw source decides the alphabet; this only decides which are free");
+    assert.equal(got.id, "zzz", "the draw source decides the alphabet; this only decides which are free, and which read as a word");
+  });
+});
+
+describe("ids:take refusing what reads as an objectionable word ([LeX])", () => {
+  const FLAGGED = ["fuk", "FUK", "fUk", "f0k", "fck", "a55", "sh1", "cum", "kum", "fag", "tit", "t1t", "kkk", "n1g", "nig", "jew", "wtf", "gtf"];
+
+  it("re-rolls past every flagged draw, counting each, even when nothing holds it", async () => {
+    const got = await freeId(holding(), draws(...FLAGGED, "Ay4"));
+    assert.equal(got.id, "Ay4");
+    assert.equal(got.draws, FLAGGED.length + 1, "each refusal costs one draw, and is counted");
+  });
+
+  it("never asks whether a flagged draw is free: it is refused before the repository is consulted", async () => {
+    const asked: string[] = [];
+    await freeId((id) => {
+      asked.push(id);
+      return false;
+    }, draws(...FLAGGED, "Ay4"));
+    assert.deepEqual(asked, ["Ay4"]);
+  });
+
+  it("costs a few percent more draws at most, measured over ten thousand IDs", async () => {
+    const ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const draw = (): string => Array.from({ length: 3 }, () => ALPHABET.charAt(randomInt(ALPHABET.length))).join("");
+    let total = 0;
+    const n = 10_000;
+    for (let i = 0; i < n; i += 1) total += (await freeId(holding(), draw)).draws;
+    const mean = total / n;
+    process.stdout.write(`# objectionable: ${String(total)} draws for ${String(n)} IDs, ${mean.toFixed(4)} each\n`);
+    assert.ok(mean < 1.03, `an ID cost ${mean.toFixed(4)} draws with nothing taken, more than a few percent over one`);
   });
 });

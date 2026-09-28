@@ -100,6 +100,18 @@
       ]
     },
     {
+      "name": "mintIds refusing what reads as an objectionable word ([LeX]).never offers one, nor asks a consumer's rule about one, and still gives the count asked for",
+      "witness": "c2e6b4de3003f004",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
       "name": "mintIds with a consumer's own rule ([9pu]).never offers an ID the consumer's rule says is taken, whether it answers at once or later",
       "witness": "29da5999a07eb4d3",
       "links": [

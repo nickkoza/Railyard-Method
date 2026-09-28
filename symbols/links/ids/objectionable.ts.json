@@ -1,0 +1,31 @@
+{
+  "format": "railyard-links",
+  "formatVersion": "0.1.0",
+  "path": "ids/objectionable.ts",
+  "entries": [
+    {
+      "name": "objectionable",
+      "witness": "5929f43edfe4f908",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "name": "readings",
+      "witness": "ca3781a929e100e5",
+      "links": [
+        {
+          "id": "LeX",
+          "kind": "asserted",
+          "artifact": "f12cb1798656a644",
+          "at": "2026-09-28"
+        }
+      ]
+    }
+  ]
+}

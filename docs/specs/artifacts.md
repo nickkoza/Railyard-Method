@@ -171,6 +171,21 @@ reference resolving exactly is traceability's ([BNb]).
    the decisions as it carries the Tests rows: checked before anything is moved, and refused
    whole where a section cannot be carried.
 
+10. [LeX] **No minted ID reads as an objectionable word** ([8g5], [9pu]). Every minter,
+   `ids-take`, `mintIds` and the commands that take IDs through it, refuses a candidate that
+   reads as a profanity, a slur, a sexual term or a hostile acronym, and draws again: read in
+   any case, through a digit standing for a letter (`0` for o, `1` for i or l, `3` for e, `4`
+   for a, `5` for s, `7` for t, and the rest as commonly written), and through the spellings
+   that sound the same or drop a vowel, so a misspelling, an abbreviation or a shortening
+   that still reads as the word is refused as the word is (the owner, 2026-09-27: "Even
+   misspellings or shortenings aren't ideal. Like `fuk` still gets the wrong point across").
+   A refusal costs one re-roll and nothing else, so the filter errs towards refusing: an
+   innocent word it refuses is a free re-roll, while an ID is read in every citation for as
+   long as it lives. Minting still gives as many IDs as were asked for, at a cost in draws
+   that stays within a few percent of the unfiltered one. The filter applies to minting
+   only: an ID already carried is never changed because it would now be refused, as no ID
+   ever is ([8g5]).
+
 ## Non-functional requirements
 
 - `ids-take` answers within 5 s, wall clock from invocation to the IDs written, for a count
@@ -305,6 +320,23 @@ reference resolving exactly is traceability's ([BNb]).
    distinctive enough in software generally, and kept: links are moving out of code comments
    into the artifacts and the symbols, where a link is a field and needs no delimiter.
 
+12. [m3i] **The objectionable-word filter is a list of this package's own, not a library**
+   ([LeX]). Forced, then conventional. Forced: the ready-made filter evaluated, `obscenity`
+   0.4.6 (MIT; its English dataset with its recommended transformers, which read case and
+   digits as letters), was run over all 238,328 IDs on 2026-09-27 and flagged 436 of them,
+   75 forms once case is set aside, missing most of what reads as a word at three characters:
+   `f0k`, `fuc`, `fux`, `sht`, `cnt`, `dik`, `cok`, `kkk`, `jiz`, `kum`, `wtf` and `gtf` among
+   them. Its matching is built for whole words in running text, and an ID is three characters
+   with no text around it. Conventional: the list is written out by hand, three characters to
+   an entry, grouped by the word each reads as, and an ID is refused when any reading of it
+   is on the list: lowercased, each digit read as each letter it commonly stands for, and the
+   letters that sound alike (`c`, `k` and `q`; `s` and `z`; `u` and `v`; `i` and `y`) folded
+   together, on the list's entries and the candidate alike. A two-character entry is refused
+   wherever it appears in an ID. Nothing outside this package supplies it, so the skill's
+   bundled tool carries no second dependency and no second notice. `obscenity` is kept as a
+   development dependency only, for the test that holds the list to refusing everything it
+   flags at three characters, so the list never refuses less than the ready-made filter would.
+
 ## Tests
 
 | Criterion | Test | Status |
@@ -319,6 +351,7 @@ reference resolving exactly is traceability's ([BNb]).
 | [9pu] (an ID in a tracked file, in a deleted file's history, or only in a commit message is never offered; outside a repository, one line and a non-zero exit; exported as `mentionsIn`/`mentionsSince`/`mintIds`, the incremental read excluding the previous tips and missing nothing new; a bare clone's history and messages read, and its answer saying no tracked tree was; the read returning a promise; `mintIds` refusing what a consumer's own rule, synchronous or not, says is taken) | `ids/cli.test.ts` [2], against scratch repositories with real git; `ids/mint.test.ts` [2], against scratch repositories with real git; `release.test.ts` [2], as a consumer imports it | Written |
 | [R6P] (numbers and ranges carried to IDs, the note kept, numbers after a note carried with the rest and the note said of its criterion, a row with a number it cannot be sure of left whole, a criterion cited by number in a row's text carried to its ID and listed, one it cannot carry named, another spec's left, the links to a spec it rewrote counted and the command listing them named, a row it cannot carry left and named with a non-zero exit, nothing else changed, a second run changing nothing, a dry run writing nothing; the command the skill's tool carries) | `method/tests-by-id.test.ts` [1]; `skills/tools.test.ts` [2], from a copy of the skill's folder | Written |
 | [RVv] (a bullet, a bold paragraph and a numbered decision without an ID carried to `N. [ID]` with fresh IDs, an ID already carried kept; what follows a decision indented inside it, a view among it still read; a section's decisions numbered from 1; nothing outside Decisions changed; a list after a bold or numbered decision, a paragraph ending in a colon and an unclosed fence refused, that section left and named with a non-zero exit; the links to a rewritten artifact counted; a second run changing nothing; a dry run writing nothing; the command the skill's tool carries; the upgrade to 1.0.0 carrying them, and refusing whole) | `method/decisions-by-id.test.ts` [1]; `method/upgrade.test.ts` [1]; `skills/tools.test.ts` [2], from a copy of the skill's folder | Written |
+| [LeX] (every listed form, in every case and every digit-for-letter spelling, never minted by `freeId`, `mintIds` or `ids-take`, a source proposing them first; the requested count still returned; the draws a mint costs measured against a bound; every form `obscenity` flags at three characters refused too; the share of the whole space refused, measured) | `ids/objectionable.test.ts` [1]; `ids/take.test.ts` [1]; `ids/mint.test.ts` [2], against a scratch repository with real git | Written |
 | NFR (the exported read never holds the event loop for more than 100 ms) | `ids/mint.test.ts` [2], over a generated repository and over one large tracked file | Written |
 | NFR (an answer holds at most 4 MiB) | `ids/mint.test.ts` [2], with membership over the whole ID space unchanged | Written |
 | NFR (`ids-take` within 5 s on a repository of Railyard's size) | By hand, `ids-take 10` in Railyard: 3.7 to 4.2 s over three runs, 2026-09-27; 3.26 to 3.50 s over three once the read streamed, at Railyard cffc5ff7, the same day | Measured |
