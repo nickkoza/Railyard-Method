@@ -185,6 +185,16 @@ reference resolving exactly is traceability's ([BNb]).
    only: an ID already carried is never changed because it would now be refused, as no ID
    ever is ([8g5]).
 
+11. [fqw] **The work is the gap between the artifacts and the code, and a ready list may order it.**
+    Asked to implement, a session needs nothing beyond the repository: the work is every criterion
+    whose Tests row is not yet Written or Passing, and every piece of code the record shows has
+    gone stale against what it implements. A repository may also keep a list of what its owner has
+    marked ready, top first, each at the version it was marked — a tool such as Railyard keeps one
+    — and where it does, that list is the order. Nothing waits on a list that is not there. An item
+    leaves the list in the same change that brings what was built into sync with it; the check
+    reports an item whose artifact has changed since it was marked as stale, and one that names
+    nothing as a finding.
+
 ## Non-functional requirements
 
 - `ids-take` answers within 5 s, wall clock from invocation to the IDs written, for a count
@@ -341,6 +351,13 @@ reference resolving exactly is traceability's ([BNb]).
    development dependency only, for the test that holds the list to refusing everything it
    flags at three characters, so the list never refuses less than the ready-made filter would.
 
+13. [uQB] **A ready list, where a repository keeps one, is `.railyard/ready.md`, one numbered line
+    per item** ([fqw]). Conventional: any place and shape would do, and every tool and session that
+    keeps or reads one must use the same one. A
+    line is the item's ID, the version it was marked at as traceability names a version ([EaR]), and
+    the date: `1. [Gb2] at 4b19e99b · 2026-10-28`. Its order is the line order; the numbers are only
+    Markdown's.
+
 ## Tests
 
 | Criterion | Test | Status |
@@ -356,6 +373,7 @@ reference resolving exactly is traceability's ([BNb]).
 | [R6P] (numbers and ranges carried to IDs, the note kept, numbers after a note carried with the rest and the note said of its criterion, a row with a number it cannot be sure of left whole, a criterion cited by number in a row's text carried to its ID and listed, one it cannot carry named, another spec's left, the links to a spec it rewrote counted and the command listing them named, a row it cannot carry left and named with a non-zero exit, nothing else changed, a second run changing nothing, a dry run writing nothing; the command the skill's tool carries) | `method/tests-by-id.test.ts` [1]; `skills/tools.test.ts` [2], from a copy of the skill's folder | Written |
 | [RVv] (a bullet, a bold paragraph and a numbered decision without an ID carried to `N. [ID]` with fresh IDs, an ID already carried kept; what follows a decision indented inside it, a view among it still read; a section's decisions numbered from 1; nothing outside Decisions changed; a list after a bold or numbered decision, a paragraph ending in a colon and an unclosed fence refused, that section left and named with a non-zero exit; the links to a rewritten artifact counted; a second run changing nothing; a dry run writing nothing; the command the skill's tool carries; the upgrade to 1.0.0 carrying them, and refusing whole) | `method/decisions-by-id.test.ts` [1]; `method/upgrade.test.ts` [1]; `skills/tools.test.ts` [2], from a copy of the skill's folder | Written |
 | [LeX] (every listed form, in every case and every digit-for-letter spelling, never minted by `freeId`, `mintIds` or `ids-take`, a source proposing them first; the requested count still returned; the draws a mint costs measured against a bound; every form `obscenity` flags at three characters refused too; the share of the whole space refused, measured) | `ids/objectionable.test.ts` [1]; `ids/take.test.ts` [1]; `ids/mint.test.ts` [2], against a scratch repository with real git | Written |
+| [fqw] (asked to implement with no list, the work is the criteria not yet Written or Passing and the code gone stale; a ready list, where kept, orders it; an item leaving with the change that brings it in sync; stale and dangling items reported by the check) | — | Planned |
 | NFR (the exported read never holds the event loop for more than 100 ms) | `ids/mint.test.ts` [2], over a generated repository and over one large tracked file | Written |
 | NFR (an answer holds at most 4 MiB) | `ids/mint.test.ts` [2], with membership over the whole ID space unchanged | Written |
 | NFR (`ids-take` within 5 s on a repository of Railyard's size) | By hand, `ids-take 10` in Railyard: 3.7 to 4.2 s over three runs, 2026-09-27; 3.26 to 3.50 s over three once the read streamed, at Railyard cffc5ff7, the same day | Measured |

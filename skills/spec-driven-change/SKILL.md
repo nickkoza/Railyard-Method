@@ -11,6 +11,15 @@ difference, and the order you close it in is not a preference.
 
 ## Before you write code
 
+**Asked to implement, find the gap, then start from the record.** The work is every criterion
+whose Tests row is not yet Written or Passing, and every piece of code the record shows has gone
+stale against what it implements. If you were handed an item, that is the work; if the repository
+keeps a ready list (`.railyard/ready.md`), its order is the owner's, so take its top item nobody is
+working on, build against the artifact as it was marked — stale since? say so and ask — and remove
+its line when what you built is in sync. With no list and no item, the gap is the work. Either
+way, before you read your way in, ask the record what each changed or removed requirement already
+reaches (`trace <ID>`): that code is your first step.
+
 **Find which artifact the change belongs to, and change it first.**
 
 | What is changing | Where it goes |
@@ -233,6 +242,8 @@ nobody will look for them later.
   chain makes every reader walk it to learn what holds, and git keeps what changed.
 - **A rule for every decision** is a principle, and a change of structure changes the
   model.
+- **A feature added, removed or changed** reaches code: ask the links what code first, as the
+  decision is made (see "The links are how you find your way in the code").
 
 Then say which files changed, so the owner sees what landed. Exploring is not an exemption:
 a design tried, measured and kept is a decision the moment it is kept.
@@ -268,8 +279,27 @@ A name with a space in it is quoted for the shell, target and all:
 `link 'test/cli.test.ts#adds a bookmark' <ID>`. `links <file>` lists the names. Which component a file belongs to is the model's to say, by its source paths, not a
 link's.
 
-**Before you change a file, ask what it implements:** `links <file>`. Those are the
-requirements your change can break.
+**The links are how you find your way in the code. Reach for them first.** Whenever a feature
+is added, removed or changed, and whenever someone asks about the code — where something is
+done, what a piece of code is for, what a change would touch — ask the record before you
+search, grep or read your way there:
+
+- **From a requirement to its code:** `trace <ID>` for a criterion or a decision, or
+  `trace forward <path>` for a whole spec, waymark or model. Before a requirement changes or
+  goes, that answer is the work: the code to revisit when its meaning changes, the code to
+  delete when it goes. If you have already edited the artifact, read it with `--at` the
+  commit before your edit.
+- **From code to its requirements:** `links <file>` for what a file implements, and
+  `trace <file>:<line>` for why a line exists. Before you change a file, those are the
+  requirements your change can break.
+- **For something new:** trace the requirements beside it — the criteria of the spec it joins,
+  the node it belongs to — to find where it lands and what it must not disturb.
+
+Ask first, as the decision is made, not after the edit. Nothing else finds that code
+reliably: a search finds the words you thought of, and a check against the architecture model
+finds code no component owns but misses the code woven into the components that remain, which
+is most of it. Where the record is thin, say so, and fall back to reading — then link what you
+learn, so the next one does not have to.
 
 **After every write, the scan says what your change did to the links.** The skill runs it
 for you, and its report arrives with the write. Answer it in the same turn:
