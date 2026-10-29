@@ -232,14 +232,14 @@
       ]
     },
     {
-      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.works to 1.0.3, the version the skill is",
-      "witness": "fe8d70b88f98737e",
+      "name": "[o7Y]: carrying a repository from 0.1.0 to 0.2.0.works to 1.0.4, the version the skill is",
+      "witness": "eea33affb28fb610",
       "links": [
         {
           "id": "o7Y",
           "kind": "asserted",
           "artifact": "df3f64954afba906",
-          "at": "2026-09-28"
+          "at": "2026-10-29"
         }
       ]
     },
