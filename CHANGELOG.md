@@ -3,6 +3,27 @@
 This project's version tracks the method, not a release cadence: it stays below 1.0 until
 the public release, and 1.0.0 is that release.
 
+## [1.0.4] - 2026-10-28
+
+### Added
+
+- **The skill reaches for the links first.** On any feature added, removed or changed, and any
+  question about the code, an agent asks the record (`trace <ID>`, `links <file>`) before it
+  searches; a removal planned from the architecture model alone misses the code woven into the
+  components that remain.
+- **Asked to implement, the work is the gap** between the artifacts and the code; a repository may
+  keep a ready list (`.railyard/ready.md`) that orders it, and nothing waits on one that is not there.
+- **One file answers for all its lines** (`railyard-trace backward <file>`, `traceAll`'s `paths`), at
+  that file's cost, for a reader browsing code.
+- **An evaluation case** holding the links-first rule: a feature whose code no search for its
+  words finds.
+
+### Fixed
+
+- A whole spec's forward trace now finds the code comments citing its criteria and decisions.
+- The whole-file and repository-wide listings now include links asserted with `link`, as backward
+  always did.
+
 ## [1.0.3] - 2026-09-27
 
 ### Added
