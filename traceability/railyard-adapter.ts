@@ -309,7 +309,9 @@ export const railyardAdapter: Adapter = {
   pattern(artifact, at) {
     // The ID first, because it is what a citation is today; the older forms stay, for a citation
     // in a document outside the migrated surface, and in the history a commit-message search reads.
-    const ids = [...idIndex(at)].filter(([, held]) => same(held, artifact)).map(([id]) => `\\[${literal(id)}\\]`);
+    // A whole document is cited through what it holds as well: its criteria's and decisions' IDs ([QzV]).
+    const ids = [...idIndex(at)].filter(([, held]) => same(held, artifact) || (artifact.anchor === null && held.path === artifact.path))
+      .map(([id]) => `\\[${literal(id)}\\]`);
     const older = artifact.kind === "adr"
       ? [`ADR-0*${withoutZeros(/(\d+)$/.exec(artifact.label)?.[1] ?? /(\d{3,4})-[^/]*$/.exec(artifact.path)?.[1] ?? "0")}([^0-9]|$)`]
       : artifact.kind === "criterion"

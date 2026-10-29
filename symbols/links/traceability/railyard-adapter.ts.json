@@ -155,19 +155,25 @@
     },
     {
       "name": "pattern",
-      "witness": "9e389375814c0712",
+      "witness": "7dce3904d8bc9451",
       "links": [
         {
           "id": "BNb",
           "kind": "asserted",
           "artifact": "3127e0c35e94a85b",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
         },
         {
           "id": "EaR",
           "kind": "asserted",
           "artifact": "ea6dda1dc1878257",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
+        },
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-10-28"
         }
       ]
     },
