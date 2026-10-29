@@ -1,6 +1,5 @@
 ---
 type: llm
-target: last_message
 weight: 1
 ---
 
