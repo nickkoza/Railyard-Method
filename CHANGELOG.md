@@ -3,6 +3,15 @@
 This project's version tracks the method, not a release cadence: it stays below 1.0 until
 the public release, and 1.0.0 is that release.
 
+## [1.0.5] - 2026-10-28
+
+### Added
+
+- **The artifacts speak in one impersonal voice.** A principle, a rule in the skill with an example,
+  and a check: `railyard-check` reports a specification, waymark or principle that quotes someone's
+  words or attributes its text to a person and a day, so it is rewritten as a statement of what
+  holds. Git keeps who said it, and when.
+
 ## [1.0.4] - 2026-10-28
 
 ### Added
