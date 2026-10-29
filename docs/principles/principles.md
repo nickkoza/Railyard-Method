@@ -202,3 +202,12 @@ they arrive monthly, they are decisions wearing the wrong label.
     naming what fails without it, and is measured in an evaluation run with the rule and
     without it, to see whether it changes what an agent does. A long instruction file loses adherence,
     so a paragraph added weakens every paragraph beside it.
+
+21. [Me8] **The artifacts speak in one impersonal voice.** A requirement, a decision or a principle
+    is stated as what holds, never as somebody's words in quotation marks, and never with who said
+    it or on what day. What an owner decides in conversation is abstracted into the artifact's own
+    voice, the way a good specification states a need rather than transcribing the meeting it came
+    from; git keeps who changed what, and when. A quotation is evidence of a conversation, and an
+    artifact is not a record of one: a reader has to translate it, and its wording outlives what it
+    meant. A role — the owner, the operator — is part of a product's vocabulary and is named as
+    such, never as a byline.

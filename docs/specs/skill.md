@@ -248,6 +248,11 @@ carry, and evaluations that measure whether it changes what an agent does.
     git's. A criterion carrying them is read as requiring the mechanism, and its history
     outlives the reason it was written.
 
+20. [8MR] **The skill turns what the owner says into the artifact's own voice** ([Me8], [pSw]). It
+    tells the agent, where it says what the owner decides in conversation lands in the artifacts,
+    to abstract what was said into a statement of what holds — with an example of a quotation
+    rewritten — and never to quote the owner or name who said it or when.
+
 ## Decisions
 
 1. [TA4] **Evaluations are `claude plugin eval` cases, laid out as that command expects.** Forced:
@@ -334,13 +339,13 @@ carry, and evaluations that measure whether it changes what an agent does.
    so it is dated ([epm]) and never rewritten by a check.
 
 12. [DBb] **The tests run in CI on every push and pull request; the evaluations still run by hand**
-   (the owner, 2026-09-23; landed 2026-09-27). `.github/workflows/ci.yml` runs `npm ci`, `tsc
+   `.github/workflows/ci.yml` runs `npm ci`, `tsc
    --noEmit`, `npm test` and `npm run check`, on Node 24. The evaluations are the half of the
    plan not yet landed: they cost real money on an API key, so a maintainer runs them by hand
    against a change that touches the skill or its cases, rather than on every push.
 
 13. [3K9] **The version stays below 1.0 until the public release, which is 1.0.0, and the history is
-   squashed before it** (the owner, 2026-09-23). Squashing gives every commit a new hash, so a
+   squashed before it**. Squashing gives every commit a new hash, so a
    repository that pins the method by commit, or cites it as `[method@commit:ID]`, has to move
    both to the new history in the same change, or every such citation becomes unresolvable at
    once. Railyard is one.
@@ -445,5 +450,6 @@ carry, and evaluations that measure whether it changes what an agent does.
 | [3BW] (a waymark's shape; a decision that stops holding rewritten or deleted where it stands, never superseded) | `evals/waymark-correction/` [eval] | Written |
 | [7L6] (artifacts before code across a long exploratory session; the done list read again before done) | `evals/artifacts-across-a-session/` [eval], graded on the order of the writes in its trace | Written, not yet validated: no run has read its trace yet, because its shell cannot run inside a sandbox, where the release's evaluations ran. It needs `--scaffold` and `--allow-tools`, which `npm run evals` passes from the case's own files; without them it runs in an empty directory and scores nothing in either arm |
 | [xTV] (a criterion states only the requirement: no mechanism, no who or when) | `evals/criterion-is-the-requirement/` [eval] | Written |
+| [8MR] (the skill says to abstract the owner's words into the artifact's voice, with an example, and never to quote or date them) | `skills/skill.test.ts` [1] | Written |
 | [xCF], the multi-step case (a rule about order graded on the order of the writes) | `evals/artifacts-across-a-session/` [eval] | Written, not yet validated (the row above) |
 | [xCF], every case run as its files say (`--scaffold` where a case names a scaffold script; `--allow-tools` with each gated tool a case lists, and none it does not; a case needing neither adding nothing; what the person passes kept) | `tools/evals.test.ts` [1] | Written |

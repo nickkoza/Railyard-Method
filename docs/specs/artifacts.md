@@ -195,6 +195,12 @@ reference resolving exactly is traceability's ([BNb]).
     reports an item whose artifact has changed since it was marked as stale, and one that names
     nothing as a finding.
 
+12. [pSw] **An artifact quotes no one, and dates no one's words** ([Me8]). The check reports a
+    specification, waymark or principle that attributes its text to a person and a day —
+    `(the owner, 2026-10-28)` — or carries a person's words in quotation marks — `the owner: "…"` — naming
+    the line, so it is rewritten in the artifact's own voice. A code span, a fenced block and a
+    dated document are left alone, since they record or show text rather than state what holds.
+
 ## Non-functional requirements
 
 - `ids-take` answers within 5 s, wall clock from invocation to the IDs written, for a count
@@ -374,6 +380,7 @@ reference resolving exactly is traceability's ([BNb]).
 | [RVv] (a bullet, a bold paragraph and a numbered decision without an ID carried to `N. [ID]` with fresh IDs, an ID already carried kept; what follows a decision indented inside it, a view among it still read; a section's decisions numbered from 1; nothing outside Decisions changed; a list after a bold or numbered decision, a paragraph ending in a colon and an unclosed fence refused, that section left and named with a non-zero exit; the links to a rewritten artifact counted; a second run changing nothing; a dry run writing nothing; the command the skill's tool carries; the upgrade to 1.0.0 carrying them, and refusing whole) | `method/decisions-by-id.test.ts` [1]; `method/upgrade.test.ts` [1]; `skills/tools.test.ts` [2], from a copy of the skill's folder | Written |
 | [LeX] (every listed form, in every case and every digit-for-letter spelling, never minted by `freeId`, `mintIds` or `ids-take`, a source proposing them first; the requested count still returned; the draws a mint costs measured against a bound; every form `obscenity` flags at three characters refused too; the share of the whole space refused, measured) | `ids/objectionable.test.ts` [1]; `ids/take.test.ts` [1]; `ids/mint.test.ts` [2], against a scratch repository with real git | Written |
 | [fqw] (asked to implement with no list, the work is the criteria not yet Written or Passing and the code gone stale; a ready list, where kept, orders it; an item leaving with the change that brings it in sync; stale and dangling items reported by the check) | — | Planned |
+| [pSw] (an attribution to a person and a day, or a person's words in quotation marks, reported with its line; code spans, fenced blocks and dated documents left alone) | `method/artifacts.test.ts` [1] | Written |
 | NFR (the exported read never holds the event loop for more than 100 ms) | `ids/mint.test.ts` [2], over a generated repository and over one large tracked file | Written |
 | NFR (an answer holds at most 4 MiB) | `ids/mint.test.ts` [2], with membership over the whole ID space unchanged | Written |
 | NFR (`ids-take` within 5 s on a repository of Railyard's size) | By hand, `ids-take 10` in Railyard: 3.7 to 4.2 s over three runs, 2026-09-27; 3.26 to 3.50 s over three once the read streamed, at Railyard cffc5ff7, the same day | Measured |
