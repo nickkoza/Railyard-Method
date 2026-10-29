@@ -1,0 +1,8 @@
+# The repository this case works in is written by scaffold.sh, which only a case.yaml can
+# name. Run with --scaffold and --allow-tools Write Edit 'Bash(node:*)' 'Bash(python3 -m unittest:*)',
+# or the agent works in an empty directory and the case scores nothing in either arm. The
+# scaffold commits the repository, so a machine whose git refuses commits at that hour cannot run it.
+schema_version: "1.0"
+name: symbols-before-removal
+context:
+  scaffold_script: scaffold.sh

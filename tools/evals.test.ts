@@ -47,7 +47,7 @@ describe("[xCF]: every case run as its files say", () => {
     ]);
   });
 
-  it("reads this repository's cases: the multi-step one gets its repository and its tools", () => {
-    assert.deepEqual(flagsFor(join(import.meta.dirname, "../evals")), ["--scaffold", "--allow-tools", "Bash(python3 -m unittest:*)", "Bash(python3 sim/grasp.py:*)", "Edit", "Write"]);
+  it("reads this repository's cases: the scaffolded ones get their repositories and their tools", () => {
+    assert.deepEqual(flagsFor(join(import.meta.dirname, "../evals")), ["--scaffold", "--allow-tools", "Bash(node:*)", "Bash(python3 -m unittest:*)", "Bash(python3 sim/grasp.py:*)", "Edit", "Write"]);
   });
 });
