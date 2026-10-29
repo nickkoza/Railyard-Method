@@ -81,6 +81,13 @@ describe("traceForward", () => {
     assert.notEqual(one?.content, two?.content, "a criterion's witness is its own text, not its spec's");
   });
 
+  it("answers one file's lines alone, exactly as the whole repository's listing does ([UAk])", () => {
+    const whole = traceAll({ repo: w.fixture.dir, at: w.stops.sha }).entries.filter((e) => e.path === "src/widget/spin.ts");
+    const alone = traceAll({ repo: w.fixture.dir, at: w.stops.sha, paths: ["src/widget/spin.ts"] });
+    assert.ok(whole.length > 0, "the fixture traces the file");
+    assert.deepEqual(alone.entries, whole);
+  });
+
   it("gives a spec every position of each of its criteria", () => {
     const answer = forward("docs/specs/widget.md");
     assert.equal(answer.artifact.kind, "spec");
@@ -297,6 +304,22 @@ describe("a Tests row read by the IDs it names", () => {
   ].join("\n");
   const tested = (dir: string, id: string): string[] =>
     traceForward({ repo: dir, reference: id }).positions.filter((p) => p.link.source === "tests-table").map((p) => p.position.path).sort();
+
+  it("gives a spec the comments that cite its criteria and decisions by ID ([QzV])", () => {
+    const f = fixtureRepository();
+    try {
+      const text = spec(["[Aa1] It exports."], []).replace("## Tests", "## Decisions\n\n1. [Cc3] **Rows are written whole.**\n\n## Tests");
+      f.commit("A spec, and code citing its criterion and its decision", {
+        "docs/specs/transfer.md": text,
+        "src/export.ts": "// [Aa1]\nexport function exportAll(): void {}\n// [Cc3]\nexport function writeRow(): void {}\n",
+      });
+      const cited = traceForward({ repo: f.dir, reference: "docs/specs/transfer.md" }).positions
+        .filter((p) => p.link.source === "code-citation").map((p) => `${p.position.path} ${String(p.link.artifact.id)}`).sort();
+      assert.deepEqual(cited, ["src/export.ts Aa1", "src/export.ts Cc3"]);
+    } finally {
+      f.remove();
+    }
+  });
 
   it("keeps each test on its own criterion when the criteria are swapped", () => {
     const f = fixtureRepository();

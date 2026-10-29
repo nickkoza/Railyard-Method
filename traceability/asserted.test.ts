@@ -5,7 +5,7 @@
 // queries both ways, as recorded when the code was made, from the links file committed beside it.
 import { describe, it, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { traceBackward, traceForward } from "./index.ts";
+import { traceAll, traceBackward, traceForward } from "./index.ts";
 import { fixtureRepository } from "./testing/fixture.ts";
 import type { Fixture } from "./testing/fixture.ts";
 import { link } from "../method/links.ts";
@@ -31,6 +31,16 @@ describe("[CS8]: asserted links, read by the queries", () => {
     const answer = traceBackward({ repo: fixture.dir, path: "sim/grasp.py", line: 3 });
     const asserted = answer.links.filter((l) => l.source === "asserted-link");
     assert.deepEqual(asserted.map((l) => [l.artifact.label, l.kind]), [["[Gb2]", "recorded"]]);
+  });
+
+  it("answers a whole file with the same asserted links, line by line, as backward does ([QzV], [UAk])", () => {
+    const whole = traceAll({ repo: fixture.dir, paths: ["sim/grasp.py"] });
+    for (const line of [1, 2, 3, 4, 5, 6]) {
+      const one = traceBackward({ repo: fixture.dir, path: "sim/grasp.py", line }).links.filter((l) => l.source === "asserted-link");
+      const entry = whole.entries.find((e) => e.line === line);
+      assert.deepEqual((entry?.links ?? []).filter((l) => l.source === "asserted-link"), one, `line ${String(line)}`);
+    }
+    assert.ok(whole.entries.some((e) => e.links.some((l) => l.source === "asserted-link")), "the file's asserted links are listed");
   });
 
   it("answers a line in no linked thing with no asserted link", () => {

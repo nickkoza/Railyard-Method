@@ -422,6 +422,10 @@ flowchart LR
     first from its own test to the other's. Where they carry none, as in history written
     before there were IDs, the number is the only name there is, and it is read: a trace
     reads every commit, and history written before IDs existed stays readable.
+25. [UAk] **A file answers for all its lines at once.** Every traced line of one file, and what
+    each traces to, is listed by one query whose cost is that file's rather than the repository's,
+    so a reader browsing code can show a file's links as it opens. It answers exactly what the
+    repository-wide listing answers for the same file and commit.
 
 ## Non-functional requirements
 
@@ -901,6 +905,7 @@ Every criterion has a row: the test that holds it, or what is missing. Tier in b
 |---|---|---|
 | [63N] (every link says how it is known; a cited link is never shown as verified), for what is already recorded | `traceability/backward.test.ts` [2] and `traceability/forward.test.ts` [2], against a fixture repository with real git | Written. Each link carries its kind and its concrete source: an architecture node's source path is recorded, and citations in commit messages, commit trailers and the code, and a Tests table's row, are cited. No cited link is recorded. A link shown by a criterion's tests running it, and one proposed and confirmed, are Planned below |
 | [QzV] (both ways), for source positions | `traceability/forward.test.ts` [2], against a fixture repository with real git | Written. From a waymark, a spec, one criterion and an architecture node, each position that traces to it is listed, and a backward query of each listed position names the same artifact. Page elements and deployments are Planned below |
+| [UAk] (one file's traced lines listed alone, equal to the repository-wide listing's for that file) | `traceability/forward.test.ts` [2], against the widget fixture | Written |
 | [LPv] (what was built before traceability, from what is already recorded) | `traceability/backward.test.ts` [2], against a fixture repository with real git | Partial. Commit history, citations in the code and each spec's Tests table are read, and each link is marked with how it is known. The lines each criterion's tests run are Planned below. Nothing is proposed, so nothing waits on the owner |
 | [CS8] (a link asserted at authoring carries its own evidence kind, distinct from the derived kinds; nothing is granted by it) | `method/links.test.ts` [1]; `traceability/asserted.test.ts` [2], both queries reading it, recorded, from the links file committed beside the code, each link dated by its own lines there | Written. Nothing in the method consults a link, so nothing is granted by one |
 | [5jT] (a link goes suspect when the code under it changes, as it does when its artifact changes; an edit elsewhere in the file leaves it current; an anchor that resolves against a changed witness is suspect, and one that no longer resolves is missing) | `method/links.test.ts` [1]; `traceability/anchor.test.ts` [1], a witness of a thing's own lines, untouched by an edit inside a thing it holds or above it, and a test named by its title, inside the `describe` that holds it; `skills/hook.test.ts` [2], a test linked by its title from the command line | Written |

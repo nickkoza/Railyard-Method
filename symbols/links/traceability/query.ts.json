@@ -17,19 +17,25 @@
     },
     {
       "name": "AllQuery",
-      "witness": "1d390202cd030796",
+      "witness": "f7b97cc049f7acbe",
       "links": [
         {
           "id": "LPv",
           "kind": "asserted",
           "artifact": "dd269293c2b46a6b",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
         },
         {
           "id": "QBm",
           "kind": "asserted",
           "artifact": "f47fb52ff3181f96",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
+        },
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
         }
       ]
     },
@@ -59,13 +65,19 @@
     },
     {
       "name": "assertedAt",
-      "witness": "06e97f85280f1115",
+      "witness": "4985b182f1fdefe2",
       "links": [
         {
           "id": "CS8",
           "kind": "asserted",
           "artifact": "f801635fc16f382a",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
+        },
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
         }
       ]
     },
@@ -275,19 +287,37 @@
     },
     {
       "name": "traceAll",
-      "witness": "ef09f10e57d35c54",
+      "witness": "cf1a356e61cd0e0a",
       "links": [
+        {
+          "id": "CS8",
+          "kind": "asserted",
+          "artifact": "f801635fc16f382a",
+          "at": "2026-10-28"
+        },
         {
           "id": "LPv",
           "kind": "asserted",
           "artifact": "dd269293c2b46a6b",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
         },
         {
           "id": "QBm",
           "kind": "asserted",
           "artifact": "f47fb52ff3181f96",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
+        },
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-10-28"
+        },
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
         }
       ]
     },

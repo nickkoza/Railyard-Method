@@ -82,6 +82,18 @@
       ]
     },
     {
+      "name": "railyard-trace.answers backward from a whole file, every traced line of it, exactly as the repository-wide listing does ([UAk])",
+      "witness": "07c52d9c91a5d738",
+      "links": [
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
+        }
+      ]
+    },
+    {
       "name": "railyard-trace.answers forward as text, each position with its link, and as JSON",
       "witness": "2cb69b392b071820",
       "links": [
@@ -191,13 +203,13 @@
     },
     {
       "name": "railyard-trace.says how to use it, with status 2, when it is used wrongly; and with status 0 when asked",
-      "witness": "f2a88ee74e853cf8",
+      "witness": "1a4445c4f2d175e9",
       "links": [
         {
           "id": "Wuq",
           "kind": "asserted",
           "artifact": "80506d56daebe37e",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
         }
       ]
     },

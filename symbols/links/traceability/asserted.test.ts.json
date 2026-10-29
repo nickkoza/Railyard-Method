@@ -28,6 +28,24 @@
       ]
     },
     {
+      "name": "[CS8]: asserted links, read by the queries.answers a whole file with the same asserted links, line by line, as backward does ([QzV], [UAk])",
+      "witness": "a2f5b1d6039e1b24",
+      "links": [
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-10-28"
+        },
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
+        }
+      ]
+    },
+    {
       "name": "[CS8]: asserted links, read by the queries.lists, from a criterion, the thing linked to it, by its span",
       "witness": "0b606455122a842f",
       "links": [

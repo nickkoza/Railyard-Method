@@ -11,12 +11,14 @@ import { GitFailure } from "./git.ts";
 import { indexCommit } from "./indexing.ts";
 import { lookUp } from "./lookup.ts";
 import { TraceRefusal } from "./model.ts";
-import { traceBackward, traceForward } from "./query.ts";
+import { traceAll, traceBackward, traceForward } from "./query.ts";
+import type { AllAnswer } from "./query.ts";
 import { renderBackward, renderForward, renderIndexed, renderStamped, renderSymbols } from "./render.ts";
 
 const USAGE = [
   "usage: railyard-trace <file>:<line> | <ID> [--repo <dir>] [--at <commit>] [--json]",
   "       railyard-trace backward <file>:<line>[:<column>] [--repo <dir>] [--at <commit>] [--json]",
+  "       railyard-trace backward <file> [--repo <dir>] [--at <commit>] [--json]",
   "       railyard-trace backward <file>:<line>[:<column>] --symbols <dir> [--build <hash>]",
   "                                [--built <dir>] [--root <dir>] [--json]",
   "       railyard-trace forward <artifact> [--repo <dir>] [--at <commit>] [--json]",
@@ -25,6 +27,7 @@ const USAGE = [
   "",
   "  <file>:<line>, <ID>     backward from a position, and forward from an artifact's ID ([Ay4], or Ay4)",
   "  backward <file>:<line>  the artifacts that caused the line; the file is relative to the repository's root.",
+  "  backward <file>         every traced line of the file, and what each traces to, read at that file's cost",
   "                          With --symbols it is answered from the symbols file, reading no repository",
   "  forward <artifact>      the source positions that trace to an artifact, named by its stable ID as it is",
   "                          cited ([Ay4], or Ay4), by its file and its ID (docs/specs/x.md#Ay4), by its path",
@@ -61,6 +64,7 @@ type Command =
     readonly built: string | undefined;
     readonly root: string | undefined;
   })
+  | (Options & { readonly command: "file"; readonly path: string })
   | (Options & { readonly command: "forward"; readonly reference: string })
   | (Options & { readonly command: "index"; readonly symbols: string; readonly builds: readonly string[] })
   | { readonly command: "stamp"; readonly paths: readonly string[]; readonly json: boolean };
@@ -122,6 +126,13 @@ function parse(argv: readonly string[]): Command {
   if (target === undefined || rest.length > 0) throw new UsageError(`${command} takes one ${command === "backward" ? "<file>:<line>" : "<artifact>"}`);
   if (command === "forward") return { command, reference: target, ...options };
   const position = /^(.+?):(\d+)(?::(\d+))?$/.exec(target);
+  // [UAk]: a file with no line asks for every traced line of it, from the repository.
+  if (position === null && !given.has("--symbols")) {
+    for (const option of ["--build", "--built", "--root"]) {
+      if (given.has(option)) throw new UsageError(`${option} is read with the symbols, so it needs --symbols <dir>`);
+    }
+    return { command: "file", path: target, ...options };
+  }
   if (position === null) throw new UsageError(`${target} is not <file>:<line>`);
   const symbols = given.get("--symbols")?.at(-1);
   const column = position[3] === undefined ? undefined : Number(position[3]);
@@ -154,6 +165,10 @@ function answer(command: Exclude<Command, { readonly command: "help" }>): string
     }
     const found = traceBackward({ repo: command.repo, at: command.at, path: command.path, line: command.line });
     return command.json ? `${JSON.stringify(found, null, 2)}\n` : renderBackward(found);
+  }
+  if (command.command === "file") {
+    const found = traceAll({ repo: command.repo, at: command.at, paths: [command.path] });
+    return command.json ? `${JSON.stringify(found, null, 2)}\n` : renderFile(found);
   }
   if (command.command === "index") {
     const done = indexCommit({ repo: command.repo, at: command.at, symbols: command.symbols, builds: command.builds });
@@ -189,5 +204,17 @@ export function main(argv: readonly string[]): number {
     process.stderr.write(`railyard-trace: ${error.message}\n`);
     return 1;
   }
+}
+
+/** [UAk]: a file's traced lines as text, each line once with what it traces to. */
+function renderFile(found: AllAnswer): string {
+  const out = [`at ${found.at.commit.slice(0, 12)}`];
+  for (const entry of found.entries) {
+    out.push(`${entry.path}:${String(entry.line)}`);
+    for (const link of entry.links) out.push(`  ${link.kind}  ${link.source}  ${link.artifact.label}  ${link.state}`);
+  }
+  if (found.entries.length === 0) out.push("untraced");
+  for (const u of found.unreadable) out.push(`could not read ${u.path}: ${u.reason}`);
+  return `${out.join("\n")}\n`;
 }
 

@@ -298,10 +298,12 @@ function linkLines(docLines: readonly string[], name: string, ids: readonly stri
  * Every asserted link at the commit read, from the links files committed beside the code
  * (traceability's Decisions). A links file that cannot be read is named, and the rest still answer.
  */
-function assertedAt(ctx: Context, files: ReadonlySet<string>, unreadable: Unreadable[]): Asserted[] {
+function assertedAt(ctx: Context, files: ReadonlySet<string>, unreadable: Unreadable[], only?: ReadonlySet<string>): Asserted[] {
   const out: Asserted[] = [];
   for (const doc of [...files].filter((f) => f.startsWith(LINKS_DIR) && f.endsWith(".json")).sort()) {
     const path = doc.slice(LINKS_DIR.length, -".json".length);
+    // [UAk]: asked about some files, only their links files are read, so one file costs one file's.
+    if (only !== undefined && !only.has(path)) continue;
     try {
       const text = ctx.repo.read(ctx.at.commit, doc) ?? "";
       const kept = JSON.parse(text) as { entries?: readonly { name?: unknown; links?: readonly { id?: unknown }[] }[] };
@@ -616,6 +618,8 @@ export type AllQuery = {
    * directory checked in beside the source it describes is the index itself ([QBm]).
    */
   readonly exclude?: readonly string[] | undefined;
+  /** Only these files, relative to the repository's root: one file's lines, at that file's cost ([UAk]). */
+  readonly paths?: readonly string[] | undefined;
 };
 
 export type AllAnswer = { readonly at: Version; readonly entries: readonly Traced[]; readonly unreadable: readonly Unreadable[] };
@@ -640,7 +644,22 @@ export function traceAll(query: AllQuery): AllAnswer {
   const excluded = (query.exclude ?? []).map((dir) => (dir.endsWith("/") ? dir : `${dir}/`));
   // `exclude` still names a directory being written that the commit does not carry yet; one already checked in is
   // known from the tree itself, so a caller that forgets to name it is no longer walking the record ([QBm]).
+  const only = query.paths === undefined ? undefined : new Set(query.paths);
+  // Links asserted as the code was written, read once for the walk and found for each line as backward finds them ([QzV], [CS8]).
+  const asserted = assertedAt(ctx, at.files(), unreadable, only);
+  // One link's date is the same for every line of its span: worked out once, as a commit's citations are.
+  const assertedDates = new Map<string, MadeBy>();
+  const assertedDate = (doc: string, lines: readonly number[]): MadeBy => {
+    const key = `${doc}:${lines.join(",")}`;
+    let made = assertedDates.get(key);
+    if (made === undefined) {
+      made = assertedBy(ctx, doc, lines);
+      assertedDates.set(key, made);
+    }
+    return made;
+  };
   for (const path of [...at.sourceFiles()].sort()) {
+    if (only !== undefined && !only.has(path)) continue;
     if (excluded.some((dir) => path.startsWith(dir))) continue;
     if (ctx.adapters.some((a) => a.isArtifactFile(path))) continue;
     const text = at.read(path);
@@ -660,7 +679,14 @@ export function traceAll(query: AllQuery): AllAnswer {
         cited = commit === undefined ? [] : citedInCommit(ctx, commit);
         byCommit.set(lineSha, cited);
       }
-      const links = settleAll(ctx, [...ofFile.found, ...citedInScope(ctx, path, lines, scope, blame, line, lineSha), ...cited]);
+      const assertedHere: Found[] = [];
+      for (const a of asserted.filter((x) => x.path === path && x.start <= line && line <= x.end)) {
+        for (const l of a.links) {
+          const madeBy = assertedDate(a.doc, l.lines);
+          for (const artifact of unique(cite(ctx, `[${l.id}]`))) assertedHere.push({ artifact, source: "asserted-link", madeBy });
+        }
+      }
+      const links = settleAll(ctx, [...ofFile.found, ...assertedHere, ...citedInScope(ctx, path, lines, scope, blame, line, lineSha), ...cited]);
       if (links.length > 0) entries.push({ path, line, length: (lines[line - 1] ?? "").length, links });
     }
   }

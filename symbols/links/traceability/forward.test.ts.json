@@ -28,6 +28,18 @@
       ]
     },
     {
+      "name": "a Tests row read by the IDs it names.gives a spec the comments that cite its criteria and decisions by ID ([QzV])",
+      "witness": "43e18494443be392",
+      "links": [
+        {
+          "id": "QzV",
+          "kind": "asserted",
+          "artifact": "850e2735088c6050",
+          "at": "2026-10-28"
+        }
+      ]
+    },
+    {
       "name": "traceForward, after a cited spec is renamed.still lists what cites the renamed spec's criterion, and says it is missing; current at the citing commit",
       "witness": "791d6d3840834a87",
       "links": [
@@ -84,6 +96,18 @@
           "kind": "asserted",
           "artifact": "80506d56daebe37e",
           "at": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "name": "traceForward.answers one file's lines alone, exactly as the whole repository's listing does ([UAk])",
+      "witness": "7c905701f4f761fe",
+      "links": [
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
         }
       ]
     },

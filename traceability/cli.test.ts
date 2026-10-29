@@ -11,7 +11,7 @@ import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { BackwardAnswer, ForwardAnswer, SymbolsAnswer } from "./index.ts";
+import { BackwardAnswer, ForwardAnswer, SymbolsAnswer, traceAll } from "./index.ts";
 import { damagedRepository, fixtureRepository, widgetRepository } from "./testing/fixture.ts";
 import type { Widget } from "./testing/fixture.ts";
 
@@ -57,6 +57,13 @@ describe("railyard-trace", () => {
     ]);
   });
 
+  it("answers backward from a whole file, every traced line of it, exactly as the repository-wide listing does ([UAk])", () => {
+    const out = answered(trace("backward", "src/widget/spin.ts", "--repo", w.fixture.dir, "--at", w.stops.sha, "--json"));
+    const expected = traceAll({ repo: w.fixture.dir, at: w.stops.sha, paths: ["src/widget/spin.ts"] });
+    assert.deepEqual(JSON.parse(out), JSON.parse(JSON.stringify(expected)));
+    includesAll(answered(trace("backward", "src/widget/spin.ts", "--repo", w.fixture.dir, "--at", w.stops.sha)), ["src/widget/spin.ts:6", "CALM node `widget`"]);
+  });
+
   it("answers backward as JSON in the answer's own shape", () => {
     const out = answered(trace("backward", "src/widget/spin.ts:6", "--repo", w.fixture.dir, "--at", w.stops.sha, "--json"));
     const answer = BackwardAnswer.parse(JSON.parse(out));
@@ -96,7 +103,7 @@ describe("railyard-trace", () => {
   });
 
   it("says how to use it, with status 2, when it is used wrongly; and with status 0 when asked", () => {
-    for (const args of [[], ["backward"], ["forward"], ["backward", "no-line-number"], ["backward", "x:1", "--nonsense"], ["sideways", "x:1"], ["backward", "x:1", "--repo"]]) {
+    for (const args of [[], ["backward"], ["forward"], ["backward", "a-whole-file", "--build", "abc"], ["backward", "x:1", "--nonsense"], ["sideways", "x:1"], ["backward", "x:1", "--repo"]]) {
       const ran = trace(...args);
       assert.equal(ran.status, 2, `${args.join(" ")}: ${ran.stdout}${ran.stderr}`);
       assert.match(ran.stderr, /usage/i);

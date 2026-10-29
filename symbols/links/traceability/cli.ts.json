@@ -5,13 +5,19 @@
   "entries": [
     {
       "name": "answer",
-      "witness": "20a32ddaaedb9212",
+      "witness": "5c00f86cec7e4dcf",
       "links": [
         {
           "id": "QBm",
           "kind": "asserted",
           "artifact": "f47fb52ff3181f96",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
+        },
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
         }
       ]
     },
@@ -35,13 +41,31 @@
     },
     {
       "name": "parse",
-      "witness": "19bdee4734822ad4",
+      "witness": "cd802dcd4a7e3047",
       "links": [
         {
           "id": "QBm",
           "kind": "asserted",
           "artifact": "f47fb52ff3181f96",
-          "at": "2026-09-27"
+          "at": "2026-10-28"
+        },
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "name": "renderFile",
+      "witness": "37da972e827df4a7",
+      "links": [
+        {
+          "id": "UAk",
+          "kind": "asserted",
+          "artifact": "577f41b9dcaa8526",
+          "at": "2026-10-28"
         }
       ]
     },
