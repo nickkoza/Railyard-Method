@@ -1,6 +1,6 @@
 # [MSW] — The index core is Rust, it lives in the method's repository, and what ships is WASM
 
-**Status:** Accepted · **Date:** 2026-09-21 · **Source:** the owner, 2026-09-21: "pin down the layout and convert to Rust within Railyard-method, knowing we'll eventually probably split it to Railyard-cli as we want to expand its features", and "don't ship Rust in the skill. Ship the WASM" · **Builds on:** [8rB], [QBm], [lWl] · **ID:** [MSW]
+**Status:** Accepted · **Date:** 2026-09-21 · **Source:** the layout pinned and the core converted to Rust within Railyard-method, to be split into its own CLI as its features grow; the skill ships the WASM build, never Rust · **Builds on:** [8rB], [QBm], [lWl] · **ID:** [MSW]
 
 ## Context
 

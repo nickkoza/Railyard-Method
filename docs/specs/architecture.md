@@ -51,8 +51,8 @@ enough to keep, and how a view is drawn from it without drifting away.
    model's decomposition ([W7x]) is for. A view over the limit is reported, not drawn smaller
    by leaving the check out.
 
-5. [CLM] **Every component can be seen in some view** (the owner, 2026-09-25: comprehension
-   is kept, not hoped for). A component counts as seen where a view draws it, or draws a box
+5. [CLM] **Every component can be seen in some view**, so that comprehension is kept, not hoped
+   for. A component counts as seen where a view draws it, or draws a box
    that contains it, by the model's own composition or deployment. So an overview with a
    subsystem collapsed to one box covers everything inside it, and the views stay small
    ([SKi]) while nothing goes unseen: a component added to the model is reported until a
@@ -113,7 +113,7 @@ enough to keep, and how a view is drawn from it without drifting away.
      box is a component or a boundary like any other: its ID is the model's, it counts towards
      the view's size ([SKi]), and what the model says it contains counts as seen in the view
      ([CLM]). A box named for nothing in the model groups by a rule the model does not hold, so
-     it is not drawn (the owner, 2026-09-25).
+     it is not drawn.
    - A connection is `a --> b`, and exists in the model as a `connects` relationship from `a`
      to `b`, or, where `a` is an actor, an `interacts` relationship naming `b` among its nodes;
      or as either of those from something `a` contains to something `b` contains, each by

@@ -619,8 +619,7 @@ flowchart LR
    file modes is open, and not tracked in this repository.
 
 5. [UkM] **Links are kept per source file as the code is written, and committed with it** ([CS8],
-   [G0i], [Zs7]; the owner, 2026-09-24: "Symbols shouldn't be on commit, they should be
-   generated as we go"). Each source file that has links has one file of its own,
+   [G0i], [Zs7]): links are made as the code is, never generated afterwards at commit. Each source file that has links has one file of its own,
    `symbols/links/<its path>.json`, holding an entry per named thing: its qualified name
    (`Class.method`, or the name alone), a witness hashing that thing's own lines (the lines of
    anything named inside it excluded, so an edit to one method leaves its class current), and
@@ -819,14 +818,14 @@ flowchart LR
    What follows is what it becomes, and it is why [CS8], [5jT], [G0i] and [Zs7] are Planned. Nothing below
    describes what runs today.
 
-12. [GCy] **A link is addressed by name and witnessed by hash** (the owner, 2026-09-16) — two
+12. [GCy] **A link is addressed by name and witnessed by hash** — two
    fields, where line numbers are both at once. That is why an edit anywhere above a link
    destroys it today, and why most of this repository's links rot for reasons that carry no
    information.
 
    - **The anchor names the thing,** and an agent writes it as it writes the code, by
-     judgement rather than derivation (the owner: "LLMs are smart enough to generally be
-     able to figure out how to anchor reasonably logically").
+     judgement rather than derivation: a model can choose a sensible anchor without a rule
+     to derive it.
    - **The witness is a hash of that anchor's own content,** computed by the scan
      ([G0i]) and never by the agent. A name can be typed from memory mid-edit and a
      digest cannot; requiring one of an agent would degrade the record silently, which is
