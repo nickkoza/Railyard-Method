@@ -78,6 +78,25 @@ describe("the artifact checks, over repositories built to break each rule", () =
     });
   });
 
+  describe("[pSw]: an artifact quotes no one, and dates no one's words", () => {
+    it("reports an attribution to the owner and a day, and the owner's words in quotation marks, by line", () => {
+      clean();
+      file("docs/specs/other.md", "# Other\n\n**ID:** [Wh8]\n\nThe desk keeps its place (the owner, 2026-10-28).\nIt opens fast (the owner: \"make it instant\").\nThe owner said \"no prompts\".\n");
+      const found = run().filter((f) => f.startsWith("pSw"));
+      assert.ok(found.some((f) => f.includes("docs/specs/other.md:5")), found.join("\n"));
+      assert.ok(found.some((f) => f.includes("docs/specs/other.md:6")), found.join("\n"));
+      assert.ok(found.some((f) => f.includes("docs/specs/other.md:7")), found.join("\n"));
+    });
+
+    it("leaves the owner as a role, a code span, a fenced block and a dated document alone", () => {
+      clean();
+      file("docs/specs/other.md", "# Other\n\n**ID:** [Wh8]\n\nOnly the owner marks it ready, and the owner's stamp answers.\nA quote reads like `(the owner, 2026-10-28)`.\n\n```\nthe owner: \"x\"\n```\n");
+      file(".railyard/method.json", JSON.stringify({ method: "0.2.0", dated: ["docs/reviews/"] }));
+      file("docs/reviews/2026-01-01.md", "The owner said \"ship it\" (the owner, 2026-01-01).\n");
+      assert.deepEqual(run().filter((f) => f.startsWith("pSw")), []);
+    });
+  });
+
   describe("[BNb]: a cited ID names something that exists", () => {
     it("reports a cited ID nothing carries, in prose and in a code comment", () => {
       clean();

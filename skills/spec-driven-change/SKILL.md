@@ -231,6 +231,16 @@ Whatever you leave for later, say so in your report as unfinished.
 Conversation is where most requirements and decisions are made, and it is the one place
 nobody will look for them later.
 
+**Write it in the artifact's own voice: never quote the owner, and never say who said it or
+when.** What they decide is abstracted into a statement of what holds, the way a good
+specification states a need rather than transcribing the meeting it came from. A quotation is a
+record of a conversation, and an artifact is not one: every later reader has to translate it, and
+its wording outlives what it meant. Git keeps who changed what, and when. "The owner" may still
+appear as a role — the one who marks work ready — never as a byline. Instead of
+`The desk keeps its place (the owner, 2026-10-28: "when I close and reopen it should keep my tabs")`,
+write `Closing and reopening the desk restores the view and each book as they were.` The check
+reports an artifact that quotes or dates someone's words.
+
 - **A requirement stated** ("it has to hold the phone at the robot camera's height") is a
   criterion in the spec that owns it, with its Tests row, Planned if it is not built yet.
 - **A choice among alternatives** ("let's use the ribbed pad", "drop Y") is a waymark: what

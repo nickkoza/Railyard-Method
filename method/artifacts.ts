@@ -74,6 +74,27 @@ function modelProse(text: string): string {
   }).join("\n");
 }
 
+/**
+ * [pSw]: a line of an artifact that dates a person's words or carries them in quotation marks — "(the owner,
+ * 2026-10-28)", "the owner: \"…\"", "the owner said \"…\"". The owner as a role ("only the owner marks it") is not
+ * one. Code spans are blanked first, and fenced blocks are skipped by the caller.
+ */
+const ATTRIBUTED = /\(\s*the owner\b[^)]*?\b\d{4}-\d{2}-\d{2}|\bthe owner(?:'s words)?\s*(?:,\s*\d{4}-\d{2}-\d{2}\s*)?:\s*["\u201c]|\bthe owner\s+(?:said|says|asked|wrote|put it|told)\b[^.\n]{0,40}["\u201c]/i;
+
+function quotesSomeone(text: string): number[] {
+  const lines: number[] = [];
+  let fenced = false;
+  text.split("\n").forEach((line, i) => {
+    if (/^\s*(```|~~~)/.test(line)) {
+      fenced = !fenced;
+      return;
+    }
+    if (fenced) return;
+    if (ATTRIBUTED.test(line.replace(/`[^`]*`/g, "``"))) lines.push(i + 1);
+  });
+  return lines;
+}
+
 export function checkArtifacts(root: string): Finding[] {
   const found: Finding[] = [];
   const files = tracked(root);
@@ -131,6 +152,15 @@ export function checkArtifacts(root: string): Finding[] {
       }
     }
     if (n !== undefined && own !== undefined && WELL_FORMED.test(own)) waymarks.set(Number(n), own);
+  }
+  // [pSw]: the artifacts state what holds in their own voice; none quotes or dates a person's words.
+  for (const dir of [ARTIFACT_PATHS.specs, ARTIFACT_PATHS.waymarks, ARTIFACT_PATHS.principles]) {
+    for (const file of directlyUnder(dir)) {
+      if (recordsAMoment(root, file)) continue;
+      for (const line of quotesSomeone(read(file))) {
+        found.push({ rule: "pSw", message: `${file}:${String(line)} quotes or dates someone's words; state what holds in the artifact's own voice — git keeps who said it, and when` });
+      }
+    }
   }
   const principles = new Map<number, string>();
   for (const file of directlyUnder(ARTIFACT_PATHS.principles)) {

@@ -86,6 +86,18 @@
           "at": "2026-09-27"
         }
       ]
+    },
+    {
+      "name": "the skill.tells the agent to state what the owner decides in the artifact's own voice, never quoting or dating them, with an example ([8MR])",
+      "witness": "bfc34143d72fb971",
+      "links": [
+        {
+          "id": "8MR",
+          "kind": "asserted",
+          "artifact": "0a3e84bcdb85cd5a",
+          "at": "2026-10-29"
+        }
+      ]
     }
   ]
 }

@@ -59,6 +59,14 @@ describe("the skill", () => {
     assert.deepEqual(stray, []);
   });
 
+  it("tells the agent to state what the owner decides in the artifact's own voice, never quoting or dating them, with an example ([8MR])", () => {
+    const section = SKILL.slice(SKILL.indexOf("## What the owner decides in conversation"));
+    const own = section.slice(0, section.indexOf("\n## ", 4));
+    assert.match(own, /never quote the owner/i, "the rule, stated plainly");
+    assert.match(own, /git keeps who/i, "why: the history already holds who and when");
+    assert.match(own, /Instead of[\s\S]{0,200}write/i, "an example of a quotation rewritten");
+  });
+
   it("names every conventional path", () => {
     const unnamed = CONVENTIONAL_PATHS.filter((p) => !SKILL.includes(`${p}/`));
     assert.deepEqual(unnamed, [], "an agent following the skill would put these artifacts where no tool looks");

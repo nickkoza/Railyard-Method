@@ -172,6 +172,18 @@
       ]
     },
     {
+      "name": "the artifact checks, over repositories built to break each rule.[pSw]: an artifact quotes no one, and dates no one's words",
+      "witness": "bed9b2c1f12519e5",
+      "links": [
+        {
+          "id": "pSw",
+          "kind": "asserted",
+          "artifact": "e373a6bb15e3c767",
+          "at": "2026-10-29"
+        }
+      ]
+    },
+    {
       "name": "the artifact checks, over repositories built to break each rule.[pY5]: a citation of something with an ID is the ID.leaves a dead form, a quoted form, and a form in a string alone",
       "witness": "18ee15285a877c8b",
       "links": [
