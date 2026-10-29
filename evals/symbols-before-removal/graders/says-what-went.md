@@ -2,6 +2,10 @@
 type: llm
 weight: 1
 ---
+<!-- anchors: emailed reports, monthly CSV, reports page -->
+
+The owner is dropping emailed reports, and keeping the monthly CSV and the downloads from the
+reports page.
 
 The owner asked for every file and function removed or changed. The feature's code is:
 `wants_delivery` and the send step in `run_month` (`reports/jobs/monthly.py`); the `Courier`

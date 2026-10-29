@@ -64,14 +64,14 @@
       ]
     },
     {
-      "name": "[xCF]: every case run as its files say.reads this repository's cases: the multi-step one gets its repository and its tools",
-      "witness": "ce241085a0d9a847",
+      "name": "[xCF]: every case run as its files say.reads this repository's cases: the scaffolded ones get their repositories and their tools",
+      "witness": "b6fdbe29c2f201b4",
       "links": [
         {
           "id": "xCF",
           "kind": "asserted",
           "artifact": "64fe98aeefcc4103",
-          "at": "2026-09-27"
+          "at": "2026-10-29"
         }
       ]
     },
