@@ -36,8 +36,8 @@ describe("[o7Y]: carrying a repository from 0.1.0 to 0.2.0", () => {
   beforeEach(() => { root = mkdtempSync(join(tmpdir(), "upgrade-")); });
   afterEach(() => { rmSync(root, { recursive: true, force: true }); });
 
-  it("works to 1.0.5, the version the skill is", async () => {
-    assert.equal(METHOD_VERSION, "1.0.5");
+  it("works to 1.0.6, the version the skill is", async () => {
+    assert.equal(METHOD_VERSION, "1.0.6");
   });
 
   it("moves the architecture models and the waymarks under docs/, and everything inside them", async () => {

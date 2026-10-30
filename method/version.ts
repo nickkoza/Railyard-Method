@@ -31,7 +31,7 @@ export const MARKER = ".railyard/method.json";
  * chosen afresh because consistency is the whole of its value — two version schemes in one
  * repository is two things to learn and one to get wrong.
  */
-export const METHOD_VERSION = "1.0.5";
+export const METHOD_VERSION = "1.0.6";
 
 /** What a skill should do about the version it found, and the facts it needs to do it. */
 export type Plan =

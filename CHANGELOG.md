@@ -3,6 +3,16 @@
 This project's version tracks the method, not a release cadence: it stays below 1.0 until
 the public release, and 1.0.0 is that release.
 
+## [1.0.6] - 2026-10-29
+
+### Fixed
+
+- **A write to an artifact names only the links under the text it changed.** The scan after a
+  write to a spec, a waymark, the principles or a model used to name every stale link into that
+  artifact, however old, so one edit could bring hundreds. It now compares with what it last
+  reported of that artifact, or the last commit, and names only what this write changed;
+  `railyard-check` still names every stale link.
+
 ## [1.0.5] - 2026-10-28
 
 ### Added
