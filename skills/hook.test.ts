@@ -296,3 +296,33 @@ describe("[G0i]: a file's report is bounded to what a write touched, not to ever
     assert.match(r.context, /And 20 more: `.*links sim\/many\.py` lists them\./);
   });
 });
+
+describe("[G0i]: a write to a spec names the links under what it changed, not those stale since before", () => {
+  const SPEC = "# Grasp\n\n**ID:** [Ga1]\n\n## Acceptance criteria\n\n1. [Gb2] A trial ends in success or one failure reason.\n2. [Gc3] Success means the item rests in the bin.\n";
+  before(() => {
+    repo = mkdtempSync(join(tmpdir(), "hook-write-"));
+    cpSync(join(ROOT, "skills/spec-driven-change"), join(repo, ".claude/skills/spec-driven-change"), { recursive: true });
+    tool = join(repo, ".claude/skills/spec-driven-change/tools/railyard.mjs");
+    file("docs/specs/grasp.md", SPEC);
+    file("sim/grasp.py", "def run_trial(seed):\n    return 'success'\n");
+    file("sim/bin.py", "def in_bin(item):\n    return item.z < 0.1\n");
+    assert.equal(run(["link", "sim/grasp.py#run_trial", "Gb2"]).status, 0);
+    assert.equal(run(["link", "sim/bin.py#in_bin", "Gc3"]).status, 0);
+    // Plumbing, since a fixture repository needs no pre-commit hook of the machine it runs on.
+    const git = (...args: string[]): string => spawnSync("git", ["-c", "user.name=T", "-c", "user.email=t@example.com", ...args], { cwd: repo, encoding: "utf8" }).stdout.trim();
+    const commit = (): void => { git("add", "-A"); git("update-ref", "HEAD", git("commit-tree", git("write-tree"), ...(git("rev-parse", "--verify", "-q", "HEAD") === "" ? [] : ["-p", "HEAD"]), "-m", "x")); };
+    git("init", "-q");
+    commit();
+    file("docs/specs/grasp.md", SPEC.replace("one failure reason", "one named failure reason"));
+    commit();
+  });
+  after(() => { rmSync(repo, { recursive: true, force: true }); });
+
+  it("names the link under the criterion it changed and not the older stale one, then nothing for a write that changes nothing more", () => {
+    file("docs/specs/grasp.md", readFileSync(join(repo, "docs/specs/grasp.md"), "utf8").replace("rests in the bin", "rests in the bin, upright"));
+    const r = hook("docs/specs/grasp.md");
+    assert.match(r.context, /link sim\/bin\.py#in_bin Gc3/);
+    assert.doesNotMatch(r.context, /run_trial/);
+    assert.equal(hook("docs/specs/grasp.md").context, "", "the same text is not reported twice");
+  });
+});

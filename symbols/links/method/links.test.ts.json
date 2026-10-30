@@ -10,8 +10,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -22,8 +22,68 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write to an artifact names the links under the text it changed, and check names every stale one.compares with what the scan last reported once it has reported, so a second write names only itself",
+      "witness": "279af0c786e155ed",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write to an artifact names the links under the text it changed, and check names every stale one.leaves check naming every stale link, those the write did not touch among them",
+      "witness": "368defa4b918ae3c",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write to an artifact names the links under the text it changed, and check names every stale one.names every changed link of an artifact the last commit does not have",
+      "witness": "5d50e076908e1857",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write to an artifact names the links under the text it changed, and check names every stale one.names the links under the criterion this write changed, and not those stale under one it left alone (the last commit as the baseline)",
+      "witness": "f1d8be9761d034a3",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write to an artifact names the links under the text it changed, and check names every stale one.treats a note it cannot read as absent",
+      "witness": "217e8b498af28e2b",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -35,7 +95,7 @@
           "id": "f4v",
           "kind": "asserted",
           "artifact": "3c9c932346508476",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -47,13 +107,13 @@
           "id": "C4P",
           "kind": "asserted",
           "artifact": "bcfaad32de5e3757",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         },
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -64,8 +124,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -76,8 +136,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -88,8 +148,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -100,8 +160,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -112,8 +172,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -124,8 +184,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -136,8 +196,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -149,7 +209,7 @@
           "id": "5jT",
           "kind": "asserted",
           "artifact": "53580c5b73621fc7",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -161,7 +221,7 @@
           "id": "5jT",
           "kind": "asserted",
           "artifact": "53580c5b73621fc7",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -173,7 +233,7 @@
           "id": "5jT",
           "kind": "asserted",
           "artifact": "53580c5b73621fc7",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -185,7 +245,7 @@
           "id": "CS8",
           "kind": "asserted",
           "artifact": "f801635fc16f382a",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -196,8 +256,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -208,8 +268,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -221,7 +281,7 @@
           "id": "Zs7",
           "kind": "asserted",
           "artifact": "ad9a46786c7cc21a",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -233,7 +293,7 @@
           "id": "5jT",
           "kind": "asserted",
           "artifact": "53580c5b73621fc7",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -244,8 +304,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -256,8 +316,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -268,8 +328,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     }

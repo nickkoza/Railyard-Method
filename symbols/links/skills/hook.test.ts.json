@@ -10,8 +10,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -22,8 +22,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -34,8 +34,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -46,8 +46,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -58,8 +58,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -70,8 +70,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -82,8 +82,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -94,8 +94,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -106,8 +106,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -118,8 +118,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -130,8 +130,20 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "[G0i]: a write to a spec names the links under what it changed, not those stale since before.names the link under the criterion it changed and not the older stale one, then nothing for a write that changes nothing more",
+      "witness": "b08fd151888bfc6e",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -143,7 +155,7 @@
           "id": "Wuq",
           "kind": "asserted",
           "artifact": "80506d56daebe37e",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -155,7 +167,7 @@
           "id": "4Ec",
           "kind": "asserted",
           "artifact": "7be8fb58b97027e5",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -166,14 +178,14 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         },
         {
           "id": "HPg",
           "kind": "asserted",
           "artifact": "9103ade2df51011f",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -185,13 +197,13 @@
           "id": "5jT",
           "kind": "asserted",
           "artifact": "53580c5b73621fc7",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         },
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -202,8 +214,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -214,8 +226,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -226,14 +238,14 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         },
         {
           "id": "Wuq",
           "kind": "asserted",
           "artifact": "80506d56daebe37e",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -244,8 +256,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -257,7 +269,7 @@
           "id": "C4P",
           "kind": "asserted",
           "artifact": "bcfaad32de5e3757",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -268,14 +280,14 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         },
         {
           "id": "HPg",
           "kind": "asserted",
           "artifact": "9103ade2df51011f",
-          "at": "2026-09-27"
+          "at": "2026-10-30"
         }
       ]
     },
@@ -286,8 +298,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     }

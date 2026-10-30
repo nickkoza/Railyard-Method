@@ -15,10 +15,11 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync
 import { dirname, join, relative, sep } from "node:path";
 import { z } from "zod";
 import { fromDirectory, indexOf } from "../ids/resolve.ts";
-import type { Indexed } from "../ids/resolve.ts";
+import type { Indexed, Source } from "../ids/resolve.ts";
 import { namedThings } from "../traceability/anchor.ts";
 import type { Finding } from "./artifacts.ts";
 import { isCode } from "./paths.ts";
+import { committedText, inGit, lastReported, noteReported } from "./work-tree.ts";
 
 const FORMAT = "railyard-links";
 const FORMAT_VERSION = "0.1.0";
@@ -257,27 +258,53 @@ export function linksTo(root: string, ids: ReadonlySet<string>): number {
 /** A thing whose links name an artifact whose text has changed since, and the IDs they name. */
 export type Confirm = { readonly file: string; readonly name: string; readonly ids: readonly string[] };
 
+/** The hash of each ID's text in `artifact`, as it is on disk now. */
+function bodiesNow(known: ReadonlyMap<string, Indexed>, artifact: string): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const [id, x] of known) if (x.path === artifact) out[id] = hashOf(x.body);
+  return out;
+}
+
+/** The hash of each ID's text in `artifact` as the last commit has it; empty where it has no committed version. */
+function bodiesCommitted(root: string, artifact: string): Record<string, string> {
+  const text = committedText(root, artifact);
+  if (text === undefined) return {};
+  const dir = dirname(artifact);
+  const source: Source = { read: (path) => (path === artifact ? text : undefined), list: (d) => (d === dir ? [artifact] : []) };
+  return bodiesNow(indexOf(source), artifact);
+}
+
 /**
  * Each linked thing whose link into `artifact` (a spec, a waymark, the principles or a model, by
- * its path) no longer witnesses that artifact's text: what a write to it leaves to confirm ([G0i]).
- * A thing whose own file is gone is `check`'s to name, not this.
+ * its path) no longer witnesses that artifact's text, for an ID whose text this write changed: it
+ * differs from what the scan last reported of the artifact, or from the last commit where it has
+ * reported none, and every ID of a new artifact counts ([G0i]). A link stale under text this write
+ * left alone is `check`'s to name. Outside git there is no "last" to compare with, and every stale
+ * link is named. A thing whose own file is gone is `check`'s to name, not this.
  */
 export function changedUnder(root: string, artifact: string): Confirm[] {
   const known = artifacts(root);
+  const before = inGit(root) ? (lastReported(root, artifact) ?? bodiesCommitted(root, artifact)) : undefined;
+  const now = bodiesNow(known, artifact);
   const out: Confirm[] = [];
   for (const path of linksFiles(join(root, "symbols", "links")).sort()) {
     const parsed = LinksFile.safeParse(JSON.parse(readFileSync(path, "utf8")));
     if (!parsed.success || !existsSync(join(root, parsed.data.path))) continue;
     for (const e of parsed.data.entries) {
       const ids = e.links.filter((l) => {
-        const now = known.get(l.id);
-        return now !== undefined && now.path === artifact && hashOf(now.body) !== l.artifact;
+        const here = known.get(l.id);
+        return here !== undefined && here.path === artifact && hashOf(here.body) !== l.artifact && (before === undefined || before[l.id] !== now[l.id]);
       }).map((l) => l.id);
       if (ids.length === 0) continue;
       out.push({ file: parsed.data.path, name: e.name, ids });
     }
   }
   return out;
+}
+
+/** Notes `artifact`'s text as reported, so the next write to it is compared with this one. Nothing outside git. */
+export function reported(root: string, artifact: string): void {
+  if (inGit(root)) noteReported(root, artifact, bodiesNow(artifacts(root), artifact));
 }
 
 /**

@@ -144,3 +144,55 @@ export function touchedNames(root: string, file: string, things: readonly { read
   writeState(path, { ...state, names: { ...state.names, [file]: Object.fromEntries(things.map((t) => [t.name, t.witness])) } });
   return touched;
 }
+
+/** Per-ID body hashes of artifacts as the scan last reported them: read from a note this tool wrote, so validated. */
+const Bodies = z.strictObject({ bodies: z.record(z.string(), z.record(z.string(), z.string())) });
+
+const BODIES = "railyard-scan-bodies.json";
+
+function bodiesPath(root: string): string | undefined {
+  try {
+    const path = git(root, ["rev-parse", "--git-path", BODIES]).trim();
+    return path === "" ? undefined : isAbsolute(path) ? path : join(root, path);
+  } catch {
+    return undefined;
+  }
+}
+
+function readBodies(path: string): Record<string, Record<string, string>> {
+  try {
+    const parsed = Bodies.safeParse(JSON.parse(readFileSync(path, "utf8")));
+    return parsed.success ? parsed.data.bodies : {};
+  } catch {
+    return {};
+  }
+}
+
+/** Whether `root` is inside a git work tree, so that "since the last scan" has a meaning. */
+export function inGit(root: string): boolean {
+  return statePath(root) !== undefined;
+}
+
+/** The hash of each ID's text in `artifact` as the scan last reported it, if it has; otherwise undefined. */
+export function lastReported(root: string, artifact: string): Record<string, string> | undefined {
+  const path = bodiesPath(root);
+  return path === undefined ? undefined : readBodies(path)[artifact];
+}
+
+/** Notes `bodies` as what the scan has now reported of `artifact`, so the next write is compared with it. */
+export function noteReported(root: string, artifact: string, bodies: Record<string, string>): void {
+  const path = bodiesPath(root);
+  if (path === undefined) return;
+  const next = `${path}.${String(process.pid)}`;
+  writeFileSync(next, `${JSON.stringify({ bodies: { ...readBodies(path), [artifact]: bodies } })}\n`);
+  renameSync(next, path);
+}
+
+/** A file as the last commit has it, or undefined where it has no committed version. */
+export function committedText(root: string, file: string): string | undefined {
+  try {
+    return git(root, ["show", `HEAD:./${file}`]);
+  } catch {
+    return undefined;
+  }
+}

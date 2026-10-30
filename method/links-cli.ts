@@ -9,7 +9,7 @@
 // would read exactly like a file whose links are all current ([Wuq]).
 import { existsSync, readFileSync } from "node:fs";
 import { isAbsolute, join, relative, sep } from "node:path";
-import { changedUnder, isCode, link, linksPath, readLinks, scan, unlink } from "./links.ts";
+import { changedUnder, isCode, reported, link, linksPath, readLinks, scan, unlink } from "./links.ts";
 import type { Confirm, Scan } from "./links.ts";
 import { isArtifact } from "./paths.ts";
 import { changedSinceLastScan, remember, touchedNames } from "./work-tree.ts";
@@ -143,7 +143,10 @@ export function shellReport(root: string, tool: string): string {
     const ids = [...new Set(kept.entries.flatMap((e) => e.links.map((l) => l.id)))];
     parts.push(`${f}: deleted, and its things were linked to ${ids.map((i) => `[${i}]`).join(", ")}. Link whatever implements them now, and remove symbols/links/${f}.json.`);
   }
-  for (const f of changes.written.filter(isArtifact)) parts.push(artifactReport(f, changedUnder(root, f), tool));
+  for (const f of changes.written.filter(isArtifact)) {
+    parts.push(artifactReport(f, changedUnder(root, f), tool));
+    reported(root, f);
+  }
   const untracked: string[] = [];
   const over: string[] = [];
   let full = 0;
@@ -188,6 +191,7 @@ function hook(): number {
     if (file.startsWith("..") || isAbsolute(file)) return 0;
     if (isArtifact(file)) {
       say(artifactReport(file, changedUnder(root, file), self(root)));
+      reported(root, file);
       remember(root, file);
       return 0;
     }

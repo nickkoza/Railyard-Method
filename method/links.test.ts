@@ -8,7 +8,7 @@ import assert from "node:assert/strict";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
-import { changedUnder, checkLinks, link, linksPath, readLinks, scan, unlink } from "./links.ts";
+import { changedUnder, checkLinks, link, linksPath, readLinks, reported, scan, unlink } from "./links.ts";
 import type { Scan } from "./links.ts";
 import { artifactReport, report } from "./links-cli.ts";
 import { summary } from "./check-cli.ts";
@@ -257,5 +257,68 @@ describe("[G0i]: report bounds unlinked names to what a write touched", () => {
     assert.match(said, /- g: its code changed since it was linked/);
     assert.equal(said.split("\n").filter((l) => l.startsWith("- ")).length, 1);
     assert.match(said, /3 other names in this file are linked to nothing; `rail links big\.py` lists them\./);
+  });
+});
+
+describe("[G0i]: a write to an artifact names the links under the text it changed, and check names every stale one", () => {
+  const git = (...args: string[]): void => { execFileSync("git", ["-c", "user.name=T", "-c", "user.email=t@example.com", ...args], { cwd: root }); };
+  // Plumbing, since the fixture repository needs no pre-commit hook of the machine it runs on.
+  const out = (...args: string[]): string => execFileSync("git", ["-c", "user.name=T", "-c", "user.email=t@example.com", ...args], { cwd: root, encoding: "utf8" }).trim();
+  const commit = (): void => {
+    git("add", "-A");
+    const parent = (() => { try { return ["-p", out("rev-parse", "HEAD")]; } catch { return []; } })();
+    git("update-ref", "HEAD", out("commit-tree", out("write-tree"), ...parent, "-m", "x"));
+  };
+  const A = "docs/specs/grasp.md";
+
+  beforeEach(() => {
+    root = mkdtempSync(join(tmpdir(), "links-write-"));
+    file(A, SPEC);
+    file("sim/grasp.py", CODE);
+    link(root, "sim/grasp.py", "run_trial", ["Gb2"], "2026-09-24");
+    link(root, "sim/grasp.py", "in_bin", ["Gc3"], "2026-09-24");
+    git("init", "-q");
+    commit();
+    // Criterion Gb2 goes stale and is committed: its link is old news to the next write.
+    file(A, SPEC.replace("one failure reason", "one named failure reason"));
+    commit();
+  });
+  afterEach(() => { rmSync(root, { recursive: true, force: true }); });
+
+  it("names the links under the criterion this write changed, and not those stale under one it left alone (the last commit as the baseline)", () => {
+    file(A, readFileSync(join(root, A), "utf8").replace("rests in the bin", "rests in the bin, upright"));
+    assert.deepEqual(changedUnder(root, A), [{ file: "sim/grasp.py", name: "in_bin", ids: ["Gc3"] }]);
+  });
+
+  it("compares with what the scan last reported once it has reported, so a second write names only itself", () => {
+    file(A, readFileSync(join(root, A), "utf8").replace("rests in the bin", "rests in the bin, upright"));
+    assert.equal(changedUnder(root, A).length, 1);
+    reported(root, A);
+    assert.deepEqual(changedUnder(root, A), [], "nothing changed since it reported");
+    file(A, readFileSync(join(root, A), "utf8").replace("A trial ends", "Every trial ends"));
+    assert.deepEqual(changedUnder(root, A), [{ file: "sim/grasp.py", name: "run_trial", ids: ["Gb2"] }]);
+  });
+
+  it("treats a note it cannot read as absent", () => {
+    const note = execFileSync("git", ["rev-parse", "--git-path", "railyard-scan-bodies.json"], { cwd: root, encoding: "utf8" }).trim();
+    writeFileSync(join(root, note), "{ not json");
+    file(A, readFileSync(join(root, A), "utf8").replace("rests in the bin", "rests in the bin, upright"));
+    assert.deepEqual(changedUnder(root, A).map((c) => c.ids), [["Gc3"]]);
+  });
+
+  it("names every changed link of an artifact the last commit does not have", () => {
+    const B = "docs/specs/other.md";
+    file(B, "# Other\n\n**ID:** [Oa1]\n\n## Acceptance criteria\n\n1. [Ob2] Thing one.\n");
+    file("sim/other.py", "def one():\n    return 1\n");
+    link(root, "sim/other.py", "one", ["Ob2"], "2026-09-24");
+    file(B, "# Other\n\n**ID:** [Oa1]\n\n## Acceptance criteria\n\n1. [Ob2] Thing one, changed.\n");
+    assert.deepEqual(changedUnder(root, B), [{ file: "sim/other.py", name: "one", ids: ["Ob2"] }]);
+  });
+
+  it("leaves check naming every stale link, those the write did not touch among them", () => {
+    file(A, readFileSync(join(root, A), "utf8").replace("rests in the bin", "rests in the bin, upright"));
+    const say = checkLinks(root).map((f) => f.message).join("\n");
+    assert.match(say, /grasp\.py#run_trial.*\[Gb2\]/);
+    assert.match(say, /grasp\.py#in_bin.*\[Gc3\]/);
   });
 });

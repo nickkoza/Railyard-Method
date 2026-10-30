@@ -4,14 +4,26 @@
   "path": "method/work-tree.ts",
   "entries": [
     {
+      "name": "bodiesPath",
+      "witness": "085ebe505049d9e4",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
       "name": "changedSinceLastScan",
       "witness": "a5643840877226cf",
       "links": [
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -22,8 +34,20 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "committedText",
+      "witness": "4ae5bb5f73f90457",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -34,8 +58,20 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "inGit",
+      "witness": "c64c82934c109e14",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -46,8 +82,44 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "lastReported",
+      "witness": "e0471eab6147fe72",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "noteReported",
+      "witness": "c297628bef3e1406",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "readBodies",
+      "witness": "d8a924e8da2e1dc1",
+      "links": [
+        {
+          "id": "G0i",
+          "kind": "asserted",
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -58,8 +130,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -70,8 +142,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -82,8 +154,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -94,8 +166,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -106,8 +178,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     },
@@ -118,8 +190,8 @@
         {
           "id": "G0i",
           "kind": "asserted",
-          "artifact": "56f0fa53dec7914d",
-          "at": "2026-09-28"
+          "artifact": "324fe37927c14221",
+          "at": "2026-10-30"
         }
       ]
     }
